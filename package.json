@@ -1,0 +1,38 @@
+{
+  "name": "@vdatacloud/cx-commons",
+  "version": "0.1.0",
+  "description": "Product CX Commons - Shared design system, UI components, and Astro integration for Data Cloud web applications",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "types": "./index.ts"
+    },
+    "./styles/global.css": "./src/styles/global.css",
+    "./components/*": "./src/components/*.astro",
+    "./sdk/*": "./src/sdk/*.ts"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "astro": "^5.0.0 || ^6.0.0 || ^7.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "astro": "^7.1.1",
+    "typescript": "^5.7.0"
+  },
+  "keywords": [
+    "astro",
+    "astro-integration",
+    "design-system",
+    "tailwindcss",
+    "cx-commons"
+  ],
+  "author": "Data Cloud LLC",
+  "license": "UNLICENSED"
+}

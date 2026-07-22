@@ -1,0 +1,138 @@
+---
+---
+
+<div
+	id="cookie-consent-banner"
+	class="hidden fixed inset-x-0 bottom-0 z-[100] p-4 sm:p-6 print:hidden"
+	role="dialog"
+	aria-live="polite"
+	aria-label="Cookie preferences"
+>
+	<div class="max-w-3xl mx-auto glass-card rounded-3xl shadow-2xl p-6 md:p-8">
+		<h2 class="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-white mb-2">
+			Cookie preferences
+		</h2>
+		<p class="text-sm font-medium text-slate-600 dark:text-slate-400 leading-relaxed mb-5">
+			We use cookies for site analytics and advertising. Nothing beyond what's strictly necessary to run the
+			Site is set until you choose to allow it. See our
+			<a href="/privacy-policy/" class="text-brand-600 dark:text-brand-400 hover:underline">Privacy Policy</a>
+			for details.
+		</p>
+
+		<div class="space-y-3 mb-6">
+			<label class="flex items-center justify-between gap-4 cursor-pointer">
+				<span class="text-sm font-bold text-slate-700 dark:text-slate-300">
+					Analytics
+					<span class="block text-xs font-medium text-slate-500 dark:text-slate-400">Google Analytics</span>
+				</span>
+				<input
+					type="checkbox"
+					id="consent-analytics"
+					class="w-5 h-5 rounded accent-brand-600 cursor-pointer"
+				/>
+			</label>
+			<label class="flex items-center justify-between gap-4 cursor-pointer">
+				<span class="text-sm font-bold text-slate-700 dark:text-slate-300">
+					Advertising
+					<span class="block text-xs font-medium text-slate-500 dark:text-slate-400">Google AdSense</span>
+				</span>
+				<input
+					type="checkbox"
+					id="consent-advertising"
+					class="w-5 h-5 rounded accent-brand-600 cursor-pointer"
+				/>
+			</label>
+		</div>
+
+		<div class="flex flex-wrap gap-3 justify-end text-xs font-black uppercase tracking-wider">
+			<button
+				id="consent-reject-all"
+				type="button"
+				class="px-5 py-2.5 rounded-2xl border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer bg-transparent"
+			>
+				Reject All
+			</button>
+			<button
+				id="consent-save"
+				type="button"
+				class="px-5 py-2.5 rounded-2xl border border-brand-200 dark:border-brand-900 text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/40 transition-colors cursor-pointer bg-transparent"
+			>
+				Save Preferences
+			</button>
+			<button
+				id="consent-accept-all"
+				type="button"
+				class="px-5 py-2.5 rounded-2xl bg-brand-600 text-white hover:bg-brand-700 transition-colors cursor-pointer"
+			>
+				Accept All
+			</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	type ConsentState = { analytics: boolean; advertising: boolean };
+
+	const STORAGE_KEY = 'cookie_consent';
+	const banner = document.getElementById('cookie-consent-banner');
+	const analyticsToggle = document.getElementById('consent-analytics') as HTMLInputElement | null;
+	const advertisingToggle = document.getElementById('consent-advertising') as HTMLInputElement | null;
+
+	function readStoredConsent(): ConsentState | null {
+		const raw = localStorage.getItem(STORAGE_KEY);
+		if (!raw) return null;
+		try {
+			return JSON.parse(raw) as ConsentState;
+		} catch {
+			return null;
+		}
+	}
+
+	function applyConsent(state: ConsentState) {
+		const w = window as typeof window & { gtag?: (...args: unknown[]) => void };
+		w.gtag?.('consent', 'update', {
+			analytics_storage: state.analytics ? 'granted' : 'denied',
+			ad_storage: state.advertising ? 'granted' : 'denied',
+			ad_user_data: state.advertising ? 'granted' : 'denied',
+			ad_personalization: state.advertising ? 'granted' : 'denied',
+		});
+	}
+
+	function saveConsent(state: ConsentState) {
+		localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+		applyConsent(state);
+		hideBanner();
+	}
+
+	function showBanner() {
+		const stored = readStoredConsent();
+		if (analyticsToggle) analyticsToggle.checked = stored?.analytics ?? false;
+		if (advertisingToggle) advertisingToggle.checked = stored?.advertising ?? false;
+		banner?.classList.remove('hidden');
+	}
+
+	function hideBanner() {
+		banner?.classList.add('hidden');
+	}
+
+	document.getElementById('consent-reject-all')?.addEventListener('click', () => {
+		saveConsent({ analytics: false, advertising: false });
+	});
+
+	document.getElementById('consent-accept-all')?.addEventListener('click', () => {
+		saveConsent({ analytics: true, advertising: true });
+	});
+
+	document.getElementById('consent-save')?.addEventListener('click', () => {
+		saveConsent({
+			analytics: analyticsToggle?.checked ?? false,
+			advertising: advertisingToggle?.checked ?? false,
+		});
+	});
+
+	(window as typeof window & { openCookiePreferences?: () => void }).openCookiePreferences = showBanner;
+
+	if (readStoredConsent() === null) {
+		showBanner();
+	}
+</script>

@@ -1,0 +1,96 @@
+---
+export interface NavItem {
+  href: string;
+  label: string;
+}
+
+export interface Props {
+  navLinks?: NavItem[];
+  brandName?: string;
+  logoSrc?: string;
+}
+
+const {
+  navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/products/tripart/', label: 'Products' },
+    { href: '/blog/', label: 'Blog' },
+    { href: '/about/', label: 'About' },
+  ],
+  brandName = 'Data Cloud LLC',
+  logoSrc = '/favicon.svg'
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="glass-nav sticky top-0 z-50 transition-colors duration-300 print:hidden">
+	<div class="container mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-4">
+		<a href="/" class="flex items-center gap-3 group">
+			<img
+				src={logoSrc}
+				alt={brandName}
+				class="w-10 h-10 group-hover:scale-105 transition-transform duration-300"
+			/>
+			<span class="text-sm font-black tracking-tight text-slate-800 dark:text-white uppercase">{brandName}</span>
+		</a>
+
+		<div class="flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-black uppercase tracking-wider">
+			{
+				navLinks.map((link) => {
+					const isActive = link.href === '/' ? currentPath === '/' : currentPath.startsWith(link.href);
+					return (
+						<a
+							href={link.href}
+							class:list={[
+								'transition-colors',
+								isActive
+									? 'text-brand-600 dark:text-brand-400'
+									: 'text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400',
+							]}
+						>
+							{link.label}
+						</a>
+					);
+				})
+			}
+			<div class="h-4 w-px bg-slate-200 dark:bg-slate-800 mx-1"></div>
+			<button
+				id="theme-toggle"
+				type="button"
+				aria-label="Toggle dark mode"
+				class="p-2 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors border-none bg-transparent cursor-pointer"
+			>
+				<svg
+					id="theme-icon-sun"
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-4 w-4 hidden dark:block"
+					viewBox="0 0 20 20"
+					fill="currentColor"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+						clip-rule="evenodd"></path>
+				</svg>
+				<svg
+					id="theme-icon-moon"
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-4 w-4 dark:hidden"
+					viewBox="0 0 20 20"
+					fill="currentColor"
+				>
+					<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+</nav>
+
+<script>
+	const toggle = document.getElementById('theme-toggle');
+	toggle?.addEventListener('click', () => {
+		const isDark = document.documentElement.classList.toggle('dark');
+		localStorage.setItem('theme', isDark ? 'dark' : 'light');
+	});
+</script>
