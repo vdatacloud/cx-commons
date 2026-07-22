@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build artifacts
+dist/
+*.tsbuildinfo
+
+# Logs & Environment
+*.log
+.env
+.env.local
+.DS_Store

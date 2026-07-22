@@ -5,6 +5,7 @@
     "moduleResolution": "bundler",
     "strict": true,
     "declaration": true,
+    "outDir": "dist",
     "skipLibCheck": true,
     "isolatedModules": true,
     "allowJs": true
