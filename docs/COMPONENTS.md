@@ -93,3 +93,54 @@ import ConsentBanner from '@vdatacloud/cx-commons/components/ConsentBanner';
 - Stores consent status under `localStorage.getItem('cookie_consent')`.
 - Format: JSON object string representing `{ analytics: boolean, advertising: boolean }`.
 - Automatically hides banner on subsequent page visits once set.
+
+---
+
+## 4. `StatusBadge.astro`
+
+A standardized status badge component that resolves state tags to design tokens from `global.css`.
+
+### Import Path
+
+```astro
+import StatusBadge from '@vdatacloud/cx-commons/components/StatusBadge';
+```
+
+### Component Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `status` | `string` | N/A | Status key (e.g. `DRAFT`, `FUNDED`, `ACTIVE`, `PROPOSED`, `DISPUTED`, `SETTLED`, `FIAT_PENDING`). |
+| `size` | `'sm' \| 'md'` | `'sm'` | Visual sizing variation of the badge container. |
+
+### Usage Example
+
+```astro
+<StatusBadge status="ACTIVE" />
+<StatusBadge status="FIAT_PENDING" size="md" />
+```
+
+---
+
+## 5. `EyebrowLabel.astro`
+
+A small, high-emphasis label placed above primary headings or categories.
+
+### Import Path
+
+```astro
+import EyebrowLabel from '@vdatacloud/cx-commons/components/EyebrowLabel';
+```
+
+### Component Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `text` | `string` | N/A | Text content of the eyebrow label. Optional if slot is supplied. |
+| `color` | `'brand' \| 'slate' \| 'muted'` | `'brand'` | Theme color definition. |
+
+### Usage Example
+
+```astro
+<EyebrowLabel text="Escrow Milestone 1" />
+```
