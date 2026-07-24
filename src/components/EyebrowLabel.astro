@@ -2,17 +2,21 @@
 export interface Props {
   text?: string;
   color?: 'brand' | 'slate' | 'muted';
+  colorClass?: string;
+  class?: string;
 }
 
-const { text, color = 'brand' } = Astro.props;
+const { text, color = 'brand', colorClass, class: className = '' } = Astro.props;
 
 const colorStyles = {
   brand: 'text-brand-600 dark:text-brand-400',
   slate: 'text-slate-800 dark:text-slate-200',
   muted: 'text-slate-500 dark:text-slate-400',
 };
+
+const currentColor = colorClass || colorStyles[color];
 ---
 
-<span class={`block text-[10px] font-black uppercase tracking-widest mb-1.5 ${colorStyles[color]}`}>
+<span class={`block text-[10px] font-black uppercase tracking-widest mb-1.5 ${currentColor} ${className}`}>
   <slot>{text}</slot>
 </span>

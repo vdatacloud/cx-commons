@@ -112,12 +112,14 @@ import StatusBadge from '@vdatacloud/cx-commons/components/StatusBadge';
 | :--- | :--- | :--- | :--- |
 | `status` | `string` | N/A | Status key (e.g. `DRAFT`, `FUNDED`, `ACTIVE`, `PROPOSED`, `DISPUTED`, `SETTLED`, `FIAT_PENDING`). |
 | `size` | `'sm' \| 'md'` | `'sm'` | Visual sizing variation of the badge container. |
+| `colorClass` | `string` | N/A | Custom badge style class escape hatch (overrides default status style mappings). |
 
 ### Usage Example
 
 ```astro
 <StatusBadge status="ACTIVE" />
 <StatusBadge status="FIAT_PENDING" size="md" />
+<StatusBadge status="CUSTOM" colorClass="text-pink-600 bg-pink-100 border-pink-200" />
 ```
 
 ---
@@ -138,9 +140,13 @@ import EyebrowLabel from '@vdatacloud/cx-commons/components/EyebrowLabel';
 | :--- | :--- | :--- | :--- |
 | `text` | `string` | N/A | Text content of the eyebrow label. Optional if slot is supplied. |
 | `color` | `'brand' \| 'slate' \| 'muted'` | `'brand'` | Theme color definition. |
+| `colorClass` | `string` | N/A | Custom text-color class escape hatch (overrides default color prop styles). |
+| `class` | `string` | N/A | Custom layout/utility classes merged onto the root element. |
 
 ### Usage Example
 
 ```astro
 <EyebrowLabel text="Escrow Milestone 1" />
+<EyebrowLabel colorClass="text-status-disputed">The Problem</EyebrowLabel>
+<EyebrowLabel class="px-6 py-4 text-left" text="Dimension" />
 ```
