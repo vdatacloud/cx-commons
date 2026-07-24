@@ -51,6 +51,7 @@
   --color-status-active: #10b981;   /* emerald-500 */
   --color-status-proposed: #f59e0b; /* amber-500 */
   --color-status-disputed: #f43f5e; /* rose-500 */
+  --color-status-arbitration: #dc2626; /* red-600 */
   --color-status-settled: #a855f7;  /* purple-500 */
   --color-status-fiat-pending: #6366f1; /* indigo-500 */
 

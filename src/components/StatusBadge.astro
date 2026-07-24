@@ -1,10 +1,11 @@
 ---
 export interface Props {
-  status: 'DRAFT' | 'FUNDED' | 'ACTIVE' | 'PROPOSED' | 'DISPUTED' | 'SETTLED' | 'FIAT_PENDING' | string;
+  status: 'DRAFT' | 'FUNDED' | 'ACTIVE' | 'PROPOSED' | 'DISPUTED' | 'ARBITRATION' | 'SETTLED' | 'FIAT_PENDING' | string;
   size?: 'sm' | 'md';
+  colorClass?: string;
 }
 
-const { status, size = 'sm' } = Astro.props;
+const { status, size = 'sm', colorClass } = Astro.props;
 
 const statusUpper = status.toUpperCase();
 
@@ -14,11 +15,12 @@ const badgeStyles: Record<string, string> = {
   ACTIVE: 'text-status-active bg-status-active/10 border-status-active/20 dark:bg-status-active/5 dark:border-status-active/10',
   PROPOSED: 'text-status-proposed bg-status-proposed/10 border-status-proposed/20 dark:bg-status-proposed/5 dark:border-status-proposed/10',
   DISPUTED: 'text-status-disputed bg-status-disputed/10 border-status-disputed/20 dark:bg-status-disputed/5 dark:border-status-disputed/10',
+  ARBITRATION: 'text-status-arbitration bg-status-arbitration/10 border-status-arbitration/20 dark:bg-status-arbitration/5 dark:border-status-arbitration/10',
   SETTLED: 'text-status-settled bg-status-settled/10 border-status-settled/20 dark:bg-status-settled/5 dark:border-status-settled/10',
   FIAT_PENDING: 'text-status-fiat-pending bg-status-fiat-pending/10 border-status-fiat-pending/20 dark:bg-status-fiat-pending/5 dark:border-status-fiat-pending/10',
 };
 
-const currentStyle = badgeStyles[statusUpper] || badgeStyles.DRAFT;
+const currentStyle = colorClass || badgeStyles[statusUpper] || badgeStyles.DRAFT;
 
 const sizeStyles = {
   sm: 'px-2.5 py-1 text-[10px] font-black tracking-widest',
