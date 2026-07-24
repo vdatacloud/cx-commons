@@ -11,7 +11,7 @@ A glassmorphic, responsive sticky header featuring brand logo branding, dynamic 
 ### Import Path
 
 ```astro
-import Nav from '@vdatacloud/cx-commons/components/Nav.astro';
+import Nav from '@vdatacloud/cx-commons/components/Nav';
 ```
 
 ### Component Props (`Props` Interface)
@@ -55,20 +55,19 @@ Standard Data Cloud footer providing legal notices, operational indicators, and 
 ### Import Path
 
 ```astro
-import Footer from '@vdatacloud/cx-commons/components/Footer.astro';
+import Footer from '@vdatacloud/cx-commons/components/Footer';
 ```
 
 ### Component Props
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
-| `companyName` | `string` | `'Data Cloud LLC'` | Copyright holder name. |
-| `year` | `number` | Current year (`new Date().getFullYear()`) | Copyright year indicator. |
+| `showTelemetry` | `boolean` | `false` | Renders telemetry visual state parameters. |
 
 ### Usage Example
 
 ```astro
-<Footer companyName="Data Cloud LLC" />
+<Footer showTelemetry={false} />
 ```
 
 ---
@@ -80,7 +79,7 @@ An accessible, privacy-compliant cookie and analytics consent banner that persis
 ### Import Path
 
 ```astro
-import ConsentBanner from '@vdatacloud/cx-commons/components/ConsentBanner.astro';
+import ConsentBanner from '@vdatacloud/cx-commons/components/ConsentBanner';
 ```
 
 ### Usage Example
@@ -91,6 +90,6 @@ import ConsentBanner from '@vdatacloud/cx-commons/components/ConsentBanner.astro
 
 ### Persistence Logic
 
-- Stores consent status under `localStorage.getItem('cookieConsent')`.
-- Options: `'granted'` | `'declined'`.
+- Stores consent status under `localStorage.getItem('cookie_consent')`.
+- Format: JSON object string representing `{ analytics: boolean, advertising: boolean }`.
 - Automatically hides banner on subsequent page visits once set.

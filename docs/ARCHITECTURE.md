@@ -12,20 +12,23 @@ All Data Cloud web applications share a unified design token system defined in `
 
 | Token | CSS Variable | Hex Equivalent | Usage |
 | :--- | :--- | :--- | :--- |
-| Brand 50 | `--color-brand-50` | `#f0f7ff` | Subtle highlights, active menu item backgrounds |
-| Brand 100 | `--color-brand-100` | `#e0effe` | Hover states, badge backgrounds |
-| Brand 400 | `--color-brand-400` | `#38bdf8` | Dark-mode accent text & borders |
-| Brand 500 | `--color-brand-500` | `#0ea5e9` | Secondary action buttons & focus rings |
-| Brand 600 | `--color-brand-600` | `#0284c7` | Primary brand accent, active text |
-| Brand 700 | `--color-brand-700` | `#0369a1` | Hover state for primary buttons |
-| Brand 900 | `--color-brand-900` | `#0c4a6e` | Dark container backgrounds |
+| Brand 50 | `--color-brand-50` | `#eff6ff` | Subtle highlights, active menu item backgrounds |
+| Brand 100 | `--color-brand-100` | `#dbeafe` | Hover states, badge backgrounds |
+| Brand 400 | `--color-brand-400` | `#60a5fa` | Dark-mode accent text & borders |
+| Brand 500 | `--color-brand-500` | `#3b82f6` | Primary action buttons & focus rings |
+| Brand 600 | `--color-brand-600` | `#2563eb` | Primary brand accent, active text |
+| Brand 700 | `--color-brand-700` | `#1d4ed8` | Hover state for primary buttons |
+| Brand 900 | `--color-brand-900` | `#1e3a8a` | Dark container backgrounds |
 
 ### Status Color Tokens (`--color-status-*`)
 
-- **Success:** `--color-status-success` (`#10b981`) — Active escrows, successful transactions, verified milestones.
-- **Warning:** `--color-status-warning` (`#f59e0b`) — Pending approvals, draft state notifications.
-- **Danger:** `--color-status-danger` (`#ef4444`) — Disputed contracts, failed operations, rejected terms.
-- **Info:** `--color-status-info` (`#3b82f6`) — General platform notifications.
+- **Draft:** `--color-status-draft` (`#94a3b8`) — Slate color scale for draft or initial states.
+- **Funded:** `--color-status-funded` (`#3b82f6`) — Brand blue color for funded but inactive escrows.
+- **Active:** `--color-status-active` (`#10b981`) — Green color for active escrows, active milestones.
+- **Proposed:** `--color-status-proposed` (`#f59e0b`) — Amber color for settlement proposals.
+- **Disputed:** `--color-status-disputed` (`#f43f5e`) — Red color for active dispute adjudications.
+- **Settled:** `--color-status-settled` (`#a855f7`) — Purple color for settled/closed escrows.
+- **Fiat Pending:** `--color-status-fiat-pending` (`#6366f1`) — Indigo color for pending off-ledger bank settlement.
 
 ---
 

@@ -82,9 +82,9 @@ In your Astro page layout (e.g. `src/layouts/Layout.astro`):
 
 ```astro
 ---
-import Nav from '@vdatacloud/cx-commons/components/Nav.astro';
-import Footer from '@vdatacloud/cx-commons/components/Footer.astro';
-import ConsentBanner from '@vdatacloud/cx-commons/components/ConsentBanner.astro';
+import Nav from '@vdatacloud/cx-commons/components/Nav';
+import Footer from '@vdatacloud/cx-commons/components/Footer';
+import ConsentBanner from '@vdatacloud/cx-commons/components/ConsentBanner';
 
 interface Props {
   title: string;
