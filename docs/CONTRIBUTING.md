@@ -6,9 +6,12 @@ This document outlines git conventions, branching strategies, semantic versionin
 
 ## 1. Branching & Commit Conventions
 
-### Branch Strategy
+### Branch Strategy & Pull Request Policy
 
-- `main`: Production-ready release code.
+> [!IMPORTANT]
+> **No Direct Pushes to `main`:** Pushing changes directly to the `main` branch is strictly prohibited. All updates must be made on feature or fix branches, pushed to remote, and merged exclusively through pull request reviews.
+
+- `main`: Locked production-ready release code. All merges require PR review.
 - `feat/<feature-name>`: New component or design token additions.
 - `fix/<bug-name>`: Bug fixes and styling corrections.
 - `docs/<doc-name>`: Documentation updates.
