@@ -111,6 +111,8 @@ Before committing changes to `@vdatacloud/cx-commons`:
    ```
    Verify that:
    - Global LNF styles (`--color-brand-*`) apply properly.
+     > [!IMPORTANT]
+     > Ensure status styles (e.g., `text-status-draft`) resolved inside `@vdatacloud/cx-commons` are successfully compiled into the host app's CSS. Verify a status class that is **not** used elsewhere in the host app's source files to confirm Tailwind v4 scans the shared components directory via the `@source` directive.
    - Navigation header and footer render cleanly.
    - Dark mode toggle operates without console errors.
 
