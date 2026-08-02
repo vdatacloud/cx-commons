@@ -29,6 +29,7 @@ All Data Cloud web applications share a unified design token system defined in `
 - **Disputed:** `--color-status-disputed` (`#f43f5e`) — Red color for active dispute adjudications.
 - **Settled:** `--color-status-settled` (`#a855f7`) — Purple color for settled/closed escrows.
 - **Fiat Pending:** `--color-status-fiat-pending` (`#6366f1`) — Indigo color for pending off-ledger bank settlement.
+- **Lapsed:** `--color-status-lapsed` (`#f43f5e`) — Rose color for delinquent subscription payment cycles.
 
 ---
 
