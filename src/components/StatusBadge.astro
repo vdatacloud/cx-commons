@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  status: 'DRAFT' | 'FUNDED' | 'ACTIVE' | 'PROPOSED' | 'DISPUTED' | 'ARBITRATION' | 'SETTLED' | 'FIAT_PENDING' | 'LAPSED' | string;
+  status: 'DRAFT' | 'FUNDED' | 'ACTIVE' | 'PROPOSED' | 'DISPUTED' | 'ARBITRATION' | 'SETTLED' | 'AWAITING_CUSTODY_APPROVAL' | 'FIAT_PENDING' | 'LAPSED' | string;
   size?: 'sm' | 'md';
   colorClass?: string;
 }
@@ -17,6 +17,7 @@ const badgeStyles: Record<string, string> = {
   DISPUTED: 'text-status-disputed bg-status-disputed/10 border-status-disputed/20 dark:bg-status-disputed/5 dark:border-status-disputed/10',
   ARBITRATION: 'text-status-arbitration bg-status-arbitration/10 border-status-arbitration/20 dark:bg-status-arbitration/5 dark:border-status-arbitration/10',
   SETTLED: 'text-status-settled bg-status-settled/10 border-status-settled/20 dark:bg-status-settled/5 dark:border-status-settled/10',
+  AWAITING_CUSTODY_APPROVAL: 'text-status-awaiting-custody-approval bg-status-awaiting-custody-approval/10 border-status-awaiting-custody-approval/20 dark:bg-status-awaiting-custody-approval/5 dark:border-status-awaiting-custody-approval/10',
   FIAT_PENDING: 'text-status-fiat-pending bg-status-fiat-pending/10 border-status-fiat-pending/20 dark:bg-status-fiat-pending/5 dark:border-status-fiat-pending/10',
   LAPSED: 'text-status-lapsed bg-status-lapsed/10 border-status-lapsed/20 dark:bg-status-lapsed/5 dark:border-status-lapsed/10',
 };
