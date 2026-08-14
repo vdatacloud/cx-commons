@@ -1,0 +1,64 @@
+name: Tag release
+
+# Runs on every push to main (i.e. every merged PR) and creates the next
+# vX.Y.Z tag, then force-moves a floating `latest` tag to the same commit
+# so downstream consumers can pin against `#latest` instead of a raw SHA.
+#
+# concurrency.group serializes runs of THIS workflow only -- if two pushes
+# land close together, the second run queues behind the first rather than
+# racing it, so "what's the latest tag" is never read by two runs at once.
+# Other workflows in this repo are unaffected and still run in parallel.
+# The retry loop below is defense in depth on top of that (e.g. someone
+# pushes a tag by hand mid-run), not the primary safeguard.
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: tag-release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Compute next version and push tags
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3 4 5; do
+            git fetch --tags --force origin
+
+            latest_semver=$(git tag -l 'v[0-9]*.[0-9]*.[0-9]*' | sort -V | tail -n1)
+            if [ -z "$latest_semver" ]; then
+              next="v0.1.0"
+            else
+              IFS='.' read -r major minor patch <<< "${latest_semver#v}"
+              next="v${major}.${minor}.$((patch + 1))"
+            fi
+
+            echo "Attempt $attempt: tagging $next"
+            git tag "$next"
+
+            if git push origin "$next"; then
+              git tag -f latest
+              git push --force origin latest
+              echo "Tagged $next and moved latest to it"
+              exit 0
+            fi
+
+            echo "Push of $next rejected (likely a race with another run) -- retrying"
+            git tag -d "$next"
+            sleep $(( (RANDOM % 5) + 1 ))
+          done
+
+          echo "Failed to push a new tag after retries" >&2
+          exit 1
