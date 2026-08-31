@@ -72,31 +72,7 @@ import Footer from '@vdatacloud/cx-commons/components/Footer';
 
 ---
 
-## 3. `ConsentBanner.astro`
-
-An accessible, privacy-compliant cookie and analytics consent banner that persists user preference in `localStorage`.
-
-### Import Path
-
-```astro
-import ConsentBanner from '@vdatacloud/cx-commons/components/ConsentBanner';
-```
-
-### Usage Example
-
-```astro
-<ConsentBanner />
-```
-
-### Persistence Logic
-
-- Stores consent status under `localStorage.getItem('cookie_consent')`.
-- Format: JSON object string representing `{ analytics: boolean, advertising: boolean }`.
-- Automatically hides banner on subsequent page visits once set.
-
----
-
-## 4. `StatusBadge.astro`
+## 3. `StatusBadge.astro`
 
 A standardized status badge component that resolves state tags to design tokens from `global.css`.
 
@@ -124,7 +100,7 @@ import StatusBadge from '@vdatacloud/cx-commons/components/StatusBadge';
 
 ---
 
-## 5. `EyebrowLabel.astro`
+## 4. `EyebrowLabel.astro`
 
 A small, high-emphasis label placed above primary headings or categories.
 
