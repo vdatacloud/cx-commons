@@ -41,7 +41,7 @@ This repository publishes `@vdatacloud/cx-commons` with modular export entry poi
 @vdatacloud/cx-commons
  ├── (default)                 --> exports index.ts (Astro integration plugin `cxCommons()`)
  ├── /styles/global.css        --> exports canonical LNF design system tokens & Tailwind rules
- ├── /components/*             --> exports shared Astro UI components (Nav, Footer, ConsentBanner)
+ ├── /components/*             --> exports shared Astro UI components (Nav, Footer)
  └── /sdk/*                    --> exports optional browser/identity SDK helpers
 ```
 
@@ -84,7 +84,6 @@ In your Astro page layout (e.g. `src/layouts/Layout.astro`):
 ---
 import Nav from '@vdatacloud/cx-commons/components/Nav';
 import Footer from '@vdatacloud/cx-commons/components/Footer';
-import ConsentBanner from '@vdatacloud/cx-commons/components/ConsentBanner';
 
 interface Props {
   title: string;
@@ -104,7 +103,6 @@ const { title } = Astro.props;
       <slot />
     </main>
     <Footer />
-    <ConsentBanner />
   </body>
 </html>
 ```

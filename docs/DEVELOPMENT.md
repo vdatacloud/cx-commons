@@ -30,7 +30,6 @@ cx-commons/
  │   └── CONTRIBUTING.md    # Release & git conventions
  └── src/
      ├── components/        # Shared Astro components (.astro)
-     │   ├── ConsentBanner.astro
      │   ├── Footer.astro
      │   └── Nav.astro
      └── styles/            # Canonical design system & CSS
