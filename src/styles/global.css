@@ -60,38 +60,100 @@
   --color-slate-950: #020617;
 
   /*
-   * Brand scale, expanded.
+   * Brand scale, rebuilt around the logo's actual blue (500) as an OKLCH-
+   * style ramp -- 2026-09-24, see the "Crayola palette anchored to the
+   * logo" design pass. brand-500 (#3a8eed) is the SVG logo's cloud color;
+   * leaf-500 is its data/green color, exposed as its own token below since
+   * nothing in the pre-existing brand-* scale carried it.
    */
   --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
+  --color-brand-100: #d9eaff;
+  --color-brand-200: #b7d7ff;
+  --color-brand-300: #89beff;
+  --color-brand-400: #4fa0ff;
+  --color-brand-500: #3a8eed; /* logo cloud */
+  --color-brand-600: #1671ce; /* links/text on light bg, 4.9:1 on white */
+  --color-brand-700: #005cb0;
+  --color-brand-800: #00498f;
+  --color-brand-900: #003a72;
+  --color-brand-950: #00264f;
+
+  --color-leaf-500: #68bc36; /* logo data */
 
   /*
    * Escrow status tokens — a single named mapping so components stop
-   * disagreeing on which color a given status is.
+   * disagreeing on which color a given status is. Values updated
+   * 2026-09-24 to the Crayola palette (status-lapsed was previously a
+   * duplicate of status-disputed; now its own color).
    */
-  --color-status-draft: #94a3b8;    /* slate-400 */
-  --color-status-funded: #3b82f6;   /* brand-500 */
-  --color-status-active: #10b981;   /* emerald-500 */
-  --color-status-proposed: #f59e0b; /* amber-500 */
-  --color-status-disputed: #f43f5e; /* rose-500 */
-  --color-status-arbitration: #dc2626; /* red-600 */
-  --color-status-settled: #a855f7;  /* purple-500 */
-  --color-status-awaiting-custody-approval: #f97316; /* orange-500 */
-  --color-status-fiat-pending: #6366f1; /* indigo-500 */
-  --color-status-lapsed: #f43f5e;   /* rose-500 */
+  --color-status-draft: #b0b7c6;    /* Cadet Blue */
+  --color-status-funded: #3a8eed;   /* logo blue */
+  --color-status-active: #68bc36;   /* logo green */
+  --color-status-proposed: #ffae42; /* Yellow Orange */
+  --color-status-disputed: #fd5e53; /* Sunset Orange */
+  --color-status-arbitration: #ee204d; /* Red */
+  --color-status-settled: #926eae;  /* Violet (Purple) */
+  --color-status-awaiting-custody-approval: #ff7538; /* Orange */
+  --color-status-fiat-pending: #7366bd; /* Blue Violet */
+  --color-status-lapsed: #cb4154;   /* Brick Red */
 
   --animate-slide-up: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in: fade-in 0.3s ease-out forwards;
   --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/*
+ * Action-tier tokens (2026-09-24): a consistent danger axis for buttons,
+ * separate from the escrow-status tokens above (those describe contract
+ * *state*, these describe an action's own consequence). Warm = dangerous,
+ * cool = safe, per the SVG logo's own blue/green pairing. All fills pass
+ * 4.5:1 contrast with their paired ink color. Light-mode values live on
+ * :root; dark mode lightens/softens rather than darkening (critical stays
+ * put -- lightening red fails contrast with both inks). See each
+ * component's own button-to-tier mapping for which tier a given action
+ * uses (e.g. daml-escrow's EscrowCard.astro).
+ */
+:root {
+  --action-ink: #1b1f27; /* text on every tier except critical */
+
+  --action-critical: #e50b46; /* Crayola Red, deepened for white text */
+  --action-critical-hover: #c7003b;
+  --action-critical-ink: #ffffff;
+  --action-high: #ff7538; /* Orange */
+  --action-high-hover: #ea6120;
+  --action-elevated: #ffae42; /* Yellow Orange */
+  --action-elevated-hover: #ea9b28;
+  --action-routine: #68bc36; /* logo green */
+  --action-routine-hover: #55a91b;
+  --action-low: #1dacd6; /* Cerulean */
+  --action-low-hover: #0d98ba; /* Blue Green */
+}
+
+.dark {
+  --action-high: #ff8d5f;
+  --action-high-hover: #ffa785;
+  --action-elevated: #ffc177;
+  --action-elevated-hover: #ffd7a9;
+  --action-routine: #7ac752;
+  --action-routine-hover: #8fd66b;
+  --action-low: #45b8df;
+  --action-low-hover: #63c7eb;
+  /* critical intentionally unchanged in dark mode, see comment above */
+}
+
+@theme inline {
+  --color-action-ink: var(--action-ink);
+  --color-action-critical: var(--action-critical);
+  --color-action-critical-hover: var(--action-critical-hover);
+  --color-action-critical-ink: var(--action-critical-ink);
+  --color-action-high: var(--action-high);
+  --color-action-high-hover: var(--action-high-hover);
+  --color-action-elevated: var(--action-elevated);
+  --color-action-elevated-hover: var(--action-elevated-hover);
+  --color-action-routine: var(--action-routine);
+  --color-action-routine-hover: var(--action-routine-hover);
+  --color-action-low: var(--action-low);
+  --color-action-low-hover: var(--action-low-hover);
 }
 
 @keyframes slide-up {
