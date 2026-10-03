@@ -126,3 +126,70 @@ import EyebrowLabel from '@vdatacloud/cx-commons/components/EyebrowLabel';
 <EyebrowLabel colorClass="text-status-disputed">The Problem</EyebrowLabel>
 <EyebrowLabel class="px-6 py-4 text-left" text="Dimension" />
 ```
+
+---
+
+## 5. `ApiErrorNotice.astro`
+
+The platform-wide notice for a canonical API error (the envelope defined in `daml-escrow-commons/apierror`, mirrored
+by `sdk/api-error`): message, code, stage, hint, copyable request and trace ids, and collapsible details with each id
+short and its full value on hover. Server-renders a plain line, then hydrates through `sdk/api-error-notice` -- the
+same renderer client code uses for errors it catches (`mountApiErrorNotice(el, err)`), so both look identical.
+
+### Import Path
+
+```astro
+import ApiErrorNotice from '@vdatacloud/cx-commons/components/ApiErrorNotice';
+```
+
+### Component Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `error` | `ApiError` | N/A | The error -- from `parseApiError(body, status)`, or `fromCantonError(...)` for a direct Canton/wallet-gateway call. |
+| `level` | `'full' \| 'summary'` | `'full'` | `summary` hides `details` and the upstream cause. |
+| `class` | `string` | N/A | Classes merged onto the root element. |
+
+### Usage Example
+
+```astro
+<ApiErrorNotice error={parseApiError(await res.text(), res.status)} level="summary" />
+```
+
+```ts
+import { apiErrorFromUnknown } from '@vdatacloud/cx-commons/sdk/api-error';
+import { mountApiErrorNotice } from '@vdatacloud/cx-commons/sdk/api-error-notice';
+try { await act(); } catch (e) { mountApiErrorNotice(el, apiErrorFromUnknown(e)); }
+```
+
+Never fall back to `alert()` -- it blocks the page and loses the request id.
+
+---
+
+## 6. `CantonId.astro`
+
+A Canton id (party, key fingerprint, transaction hash) shown the one platform way: the short form
+(`relaytest::1220ebb7…4288`, identical to Go `cantonid`/`apierror.ShortID`) -- or a `label` such as the party's
+display name, which UX should prefer -- with the full value on hover and a copy button. Works without JS; hydrates
+through `sdk/canton-id-view` (`renderCantonId` for client-built markup, `shortCantonId` for plain text).
+
+### Import Path
+
+```astro
+import CantonId from '@vdatacloud/cx-commons/components/CantonId';
+```
+
+### Component Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `value` | `string` | N/A | The full id. |
+| `label` | `string` | N/A | Text to show instead of the short form (e.g. the T1 name); the full id stays on hover. |
+| `copy` | `boolean` | `true` | Show the copy button. |
+
+### Usage Example
+
+```astro
+<CantonId value={escrow.beneficiary} label={names[escrow.beneficiary]} />
+<CantonId value={tx.hash} copy={false} />
+```

@@ -110,3 +110,19 @@ In alignment with Astro's zero-JS philosophy:
 - Layout components (`Nav`, `Footer`) emit zero client-side JavaScript by default.
 - Interactive features (e.g. dark mode toggle in `Nav.astro`) utilize inline `<script>` tags that execute vanilla DOM manipulations without heavy client-side framework runtime overhead.
 - Theme selection (`light` / `dark`) is persisted in `localStorage` under the key `'theme'` and synchronized with the root `<html>` element class list (`class="dark"`).
+
+---
+
+## 5. Shared SDK Contracts (errors and ids)
+
+Two pieces of `sdk/` are cross-language contracts with `daml-escrow-commons` (Go), not just UI helpers:
+
+| Module | Go counterpart | Contract |
+| :--- | :--- | :--- |
+| `sdk/api-error` | `apierror`, `apierror/canton` | Canonical error envelope; `canonicalApiError(e, level)` produces byte-identical JSON to Go's for both detail levels; `fromCantonError` classifies Canton refusals the same way. |
+| `sdk/canton-id` | `cantonid` | One parser and one short form for fingerprints, party ids and hashes. |
+
+Both are tested against golden fixtures copied from `daml-escrow-commons/*/testdata` into `test/fixtures`
+(`npm run sync:api-error-fixtures`); CI fails on drift. Change the Go side first, then sync and mirror here. The
+rendering modules (`sdk/api-error-notice`, `sdk/canton-id-view`) and their components build on these; what an error
+may disclose is governed by the Go package doc ("What an error may disclose"), not the renderer.
