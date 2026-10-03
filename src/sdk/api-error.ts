@@ -17,6 +17,13 @@
 
 import { shortCantonId, isFingerprint } from './canton-id';
 
+// Disclosure (same rules as Go apierror's package doc, "What an error may
+// disclose"): errors a UI builds itself -- e.g. from a direct Canton or
+// wallet call -- may carry what the user sent, values derived from their
+// own credentials, and facts about their own verified account; never
+// another party's data, identity data, secrets, or raw internal error text.
+// Use 'summary' when an error leaves the user's own screen (support
+// tickets, shared links).
 export type ApiErrorDetail = 'full' | 'summary';
 
 export interface ApiErrorUpstream {

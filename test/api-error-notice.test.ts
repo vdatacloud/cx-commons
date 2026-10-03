@@ -87,3 +87,20 @@ describe('renderApiErrorNotice', () => {
         expect(a.firstChild).toBe(first);
     });
 });
+
+describe('detail labels read as words (daml-escrow Phase 70 R2)', () => {
+    it('known keys, camelCase fallbacks and list items', async () => {
+        const { detailLabel } = await import('../src/sdk/api-error-notice');
+        expect(detailLabel('publicKeyFingerprint')).toBe('Your key fingerprint');
+        expect(detailLabel('ledgerUser')).toBe('Ledger user');
+        expect(detailLabel('someNewField')).toBe('Some new field');
+        expect(detailLabel('actAs[1]')).toBe('Acting as 2');
+        expect(detailLabel('x')).toBe('X');
+    });
+
+    it('the notice shows readable labels, never raw keys', () => {
+        const n = renderApiErrorNotice({ error: 'x', code: 'KEY_DOES_NOT_CONTROL_PARTY', details: { publicKeyFingerprint: '1220' + 'ab'.repeat(32) } });
+        expect(n.textContent).toContain('Your key fingerprint');
+        expect(n.textContent).not.toContain('publicKeyFingerprint');
+    });
+});
