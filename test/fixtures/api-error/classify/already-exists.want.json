@@ -1,0 +1,1 @@
+{"error":"the request conflicts with the ledger's current state","code":"LEDGER_CONFLICT","status":409,"stage":"onboard-allocate","hint":"a duplicate or concurrent submission -- refresh and retry","upstream":{"service":"canton","status":409,"code":"PARTY_ALLOCATION_ALREADY_EXISTS","grpcCode":"ALREADY_EXISTS","cause":"Party already exists","traceId":"7a5","node":"app-provider"}}

@@ -1,0 +1,1 @@
+{"error":"quote \" backslash \\ tab\t nl\n cr\r bs\b ff\f nul\u0000 esc\u001b ls\u2028 ps\u2029 <tag> & é 🔑","code":"INVALID_REQUEST","status":400,"details":{"a":{"b":null,"y":true},"m":["x",2.5],"z":1}}

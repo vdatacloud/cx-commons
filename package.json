@@ -15,7 +15,8 @@
     },
     "./styles/global.css": "./src/styles/global.css",
     "./components/*": "./src/components/*.astro",
-    "./sdk/*": "./src/sdk/*.ts"
+    "./sdk/*": "./src/sdk/*.ts",
+    "./schema/api-error.json": "./src/schema/api-error.schema.json"
   },
   "files": [
     "index.ts",
@@ -27,7 +28,9 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "vitest run",
+    "sync:api-error-fixtures": "scripts/sync-api-error-fixtures.sh"
   },
   "peerDependencies": {
     "@tailwindcss/typography": "^0.5.0",
@@ -37,7 +40,9 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",
     "astro": "^7.3.2",
-    "typescript": "^5.7.0"
+    "happy-dom": "^20.14.5",
+    "typescript": "^5.7.0",
+    "vitest": "^5.0.3"
   },
   "overrides": {
     "nanoid": "3.3.18"

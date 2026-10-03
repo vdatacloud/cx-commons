@@ -1,0 +1,1 @@
+{"error":"the ledger is unavailable or timed out","code":"LEDGER_UNAVAILABLE","status":503,"stage":"submit","hint":"retry shortly; if it persists, check the participant and synchronizer","upstream":{"service":"canton","status":503,"code":"SERVICE_NOT_RUNNING","grpcCode":"UNAVAILABLE","cause":"Ledger API server is shutting down","traceId":"7a3","node":"bank"}}

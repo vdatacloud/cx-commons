@@ -1,0 +1,1 @@
+{"stage":"submit","status":503,"body":{"code":"SERVICE_NOT_RUNNING","cause":"Ledger API server is shutting down","traceId":"7a3","context":{"participant":"bank"},"errorCategory":1,"grpcCodeValue":14}}

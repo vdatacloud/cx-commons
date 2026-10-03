@@ -1,0 +1,1 @@
+{"error":"the ledger endpoint answered with a non-Canton error","code":"LEDGER_REJECTED","status":502,"stage":"submit","hint":"check the JSON Ledger API URL and version, and any proxy in front of it -- see upstream.cause","upstream":{"service":"canton","status":404,"cause":"404 page not found"}}
