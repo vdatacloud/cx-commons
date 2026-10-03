@@ -1,0 +1,1 @@
+{"stage":"submit","status":400,"body":{"code":"DAML_INTERPRETATION_ERROR","cause":"Interpretation error: Error: User failure: assertion failed: amount must be positive","traceId":"7a2","context":{"participant":"bank"},"errorCategory":9,"grpcCodeValue":9}}

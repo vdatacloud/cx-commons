@@ -1,0 +1,1 @@
+{"stage":"submit","status":404,"body":{"code":"CONTRACT_NOT_FOUND","cause":"Contract could not be found with id 00abc","traceId":"7a1","context":{"participant":"bank"},"errorCategory":11,"grpcCodeValue":5}}

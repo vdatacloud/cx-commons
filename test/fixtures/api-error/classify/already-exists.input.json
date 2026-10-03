@@ -1,0 +1,1 @@
+{"stage":"onboard-allocate","status":409,"body":{"code":"PARTY_ALLOCATION_ALREADY_EXISTS","cause":"Party already exists","traceId":"7a5","context":{"participant":"app-provider"},"grpcCodeValue":6}}

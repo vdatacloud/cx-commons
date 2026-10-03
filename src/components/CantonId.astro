@@ -1,0 +1,32 @@
+---
+// A Canton id (party, key fingerprint, hash) shown the one platform way:
+// short form -- or `label`, e.g. the party's T1 display name, which UX
+// should prefer over a raw party id -- with the full value on hover and a
+// copy button. Server-renders the short form with the hover already in
+// place (works without JS); hydrates through sdk/canton-id-view to add
+// copy, the same renderer client code and the error notice use.
+import { shortCantonId } from '../sdk/canton-id';
+import { cantonIdTitle, CANTON_ID_CLASS, CANTON_ID_TEXT_CLASS, CANTON_ID_LABEL_CLASS } from '../sdk/canton-id-view';
+
+export interface Props {
+  value: string;
+  label?: string;
+  copy?: boolean;
+}
+
+const { value, label, copy = true } = Astro.props;
+---
+
+<span
+  class={CANTON_ID_CLASS}
+  data-canton-id={value}
+  data-canton-id-label={label}
+  data-canton-id-copy={copy ? 'true' : 'false'}
+>
+  <span class={label ? CANTON_ID_LABEL_CLASS : CANTON_ID_TEXT_CLASS} title={cantonIdTitle(value, label)}>{label || shortCantonId(value)}</span>
+</span>
+
+<script>
+  import { hydrateCantonIds } from '../sdk/canton-id-view';
+  hydrateCantonIds();
+</script>
