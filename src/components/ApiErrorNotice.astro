@@ -1,0 +1,28 @@
+---
+// The platform-wide error notice for a canonical ApiError
+// (daml-escrow-commons apierror / sdk/api-error). Server-renders a plain
+// fallback line, then hydrates through sdk/api-error-notice's DOM renderer
+// -- the same one client code uses for errors it catches itself, so both
+// look identical. Pass the error a service returned (or fromCantonError's
+// result); `level="summary"` hides details and the upstream cause.
+import { canonicalApiError, formatApiError, type ApiError, type ApiErrorDetail } from '../sdk/api-error';
+
+export interface Props {
+  error: ApiError;
+  level?: ApiErrorDetail;
+  class?: string;
+}
+
+const { error, level = 'full', class: className = '' } = Astro.props;
+---
+
+<div data-api-error={canonicalApiError(error, level)} data-api-error-level={level} class={className}>
+  <p role="alert" class="rounded-2xl border border-status-disputed/30 bg-status-disputed/5 p-4 text-sm text-slate-800 dark:border-status-disputed/20 dark:bg-status-disputed/10 dark:text-slate-100">
+    {formatApiError(error)}
+  </p>
+</div>
+
+<script>
+  import { hydrateApiErrorNotices } from '../sdk/api-error-notice';
+  hydrateApiErrorNotices();
+</script>
