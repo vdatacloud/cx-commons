@@ -25,11 +25,14 @@ describe('renderApiErrorNotice', () => {
     });
 
     it('full level lists every detail at full length; summary level omits them', () => {
-        const fullText = renderApiErrorNotice(signature).textContent ?? '';
+        const n = renderApiErrorNotice(signature);
+        const fullText = n.textContent ?? '';
         const d = signature.details as Record<string, string>;
-        expect(fullText).toContain(d.party);
-        expect(fullText).toContain(d.signatureReceived);
-        expect(fullText).toContain(d.expectedHash);
+        // Ids show short, with the full value on hover and in copy.
+        const full = [...n.querySelectorAll<HTMLElement>('[data-canton-id]')].map((e) => e.dataset.cantonId);
+        expect(full).toEqual(expect.arrayContaining([d.party, d.signatureReceived, d.expectedHash]));
+        expect(fullText).toContain('relaytest::1220ebb7…4288');
+        expect(fullText).not.toContain(d.signatureReceived);
         expect(fullText).toContain(signature.upstream!.cause!);
 
         const sumText = renderApiErrorNotice(signature, { level: 'summary' }).textContent ?? '';

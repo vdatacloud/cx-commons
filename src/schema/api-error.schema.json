@@ -4,39 +4,109 @@
   "title": "ApiError",
   "description": "The platform's canonical API error envelope (daml-escrow-commons apierror; TypeScript mirror in @vdatacloud/cx-commons sdk/api-error). Canonical serialization: compact JSON, properties in the order listed, details keys sorted, absent properties omitted. At Summary detail level, details and upstream.cause are omitted.",
   "type": "object",
-  "required": ["error", "code"],
+  "required": [
+    "error",
+    "code"
+  ],
   "additionalProperties": false,
   "properties": {
-    "error": { "type": "string", "minLength": 1, "description": "Human-readable message; long identifiers shortened (ShortID)." },
-    "code": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$", "description": "Stable machine-readable reason." },
-    "status": { "type": "integer", "minimum": 100, "maximum": 599, "description": "HTTP status the error is sent with." },
-    "stage": { "type": "string", "description": "The step of a multi-step flow that failed." },
-    "hint": { "type": "string", "description": "What to check or do next; long identifiers shortened." },
-    "requestId": { "type": "string", "pattern": "^[A-Za-z0-9._:-]{1,128}$" },
-    "upstream": { "$ref": "#/definitions/upstream" },
-    "details": { "type": "object", "description": "Full-length values behind shortened identifiers; shape per code (see allOf)." }
+    "error": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable message; long identifiers shortened (ShortID)."
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]*$",
+      "description": "Stable machine-readable reason."
+    },
+    "status": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 599,
+      "description": "HTTP status the error is sent with."
+    },
+    "stage": {
+      "type": "string",
+      "description": "The step of a multi-step flow that failed."
+    },
+    "hint": {
+      "type": "string",
+      "description": "What to check or do next; long identifiers shortened."
+    },
+    "requestId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._:-]{1,128}$"
+    },
+    "upstream": {
+      "$ref": "#/definitions/upstream"
+    },
+    "details": {
+      "type": "object",
+      "description": "Full-length values behind shortened identifiers; shape per code (see allOf)."
+    }
   },
   "allOf": [
     {
-      "if": { "properties": { "code": { "enum": [
-        "LEDGER_SIGNATURE_REJECTED", "LEDGER_PERMISSION_DENIED", "KEY_DOES_NOT_CONTROL_PARTY", "INVALID_SIGNATURE"
-      ] } }, "required": ["code"] },
-      "then": { "properties": { "details": { "$ref": "#/definitions/signingDetails" } } }
+      "if": {
+        "properties": {
+          "code": {
+            "enum": [
+              "LEDGER_SIGNATURE_REJECTED",
+              "LEDGER_PERMISSION_DENIED",
+              "KEY_DOES_NOT_CONTROL_PARTY",
+              "INVALID_SIGNATURE"
+            ]
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "then": {
+        "properties": {
+          "details": {
+            "$ref": "#/definitions/signingDetails"
+          }
+        }
+      }
     }
   ],
   "definitions": {
     "upstream": {
       "type": "object",
-      "required": ["service"],
+      "required": [
+        "service"
+      ],
       "additionalProperties": false,
       "properties": {
-        "service": { "type": "string", "minLength": 1, "description": "Backing service: canton, identity, circle, ..." },
-        "status": { "type": "integer" },
-        "code": { "type": "string", "description": "The service's own error id." },
-        "grpcCode": { "type": "string", "pattern": "^[A-Z_0-9]+$" },
-        "cause": { "type": "string", "maxLength": 603 },
-        "traceId": { "type": "string" },
-        "node": { "type": "string", "description": "The instance that answered, e.g. a Canton participant." }
+        "service": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Backing service: canton, identity, circle, ..."
+        },
+        "status": {
+          "type": "integer"
+        },
+        "code": {
+          "type": "string",
+          "description": "The service's own error id."
+        },
+        "grpcCode": {
+          "type": "string",
+          "pattern": "^[A-Z_0-9]+$"
+        },
+        "cause": {
+          "type": "string",
+          "maxLength": 603
+        },
+        "traceId": {
+          "type": "string"
+        },
+        "node": {
+          "type": "string",
+          "description": "The instance that answered, e.g. a Canton participant."
+        }
       }
     },
     "signingDetails": {
@@ -44,16 +114,57 @@
       "additionalProperties": false,
       "description": "Canton signing/authorization details (apierror/canton.SigningDetails).",
       "properties": {
-        "actAs": { "type": "array", "items": { "type": "string" } },
-        "expectedHash": { "type": "string", "description": "Transaction hash the participant expected signed (hex)." },
-        "ledgerUser": { "type": "string", "description": "Ledger API user the request was submitted as." },
-        "party": { "type": "string" },
-        "partyFingerprint": { "type": "string", "description": "The party's namespace: the fingerprint of the only key that can sign for it." },
-        "publicKeyFingerprint": { "type": "string", "description": "Fingerprint of the key the request presented." },
-        "signatureReceived": { "type": "string", "description": "The signature as received (hex)." },
-        "signedBy": { "type": "string", "description": "Key fingerprint the signature was submitted under." },
-        "signedMessage": { "type": "string", "description": "What the signature had to cover (nonce, or a base64 multi-hash)." }
+        "actAs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The refused command's actAs as the caller sent it (raw: may not be valid party ids)."
+        },
+        "expectedHash": {
+          "$ref": "#/definitions/hash"
+        },
+        "ledgerUser": {
+          "type": "string",
+          "description": "Ledger API user the request was submitted as."
+        },
+        "party": {
+          "$ref": "#/definitions/partyId"
+        },
+        "partyFingerprint": {
+          "$ref": "#/definitions/fingerprint"
+        },
+        "publicKeyFingerprint": {
+          "$ref": "#/definitions/fingerprint"
+        },
+        "signatureReceived": {
+          "type": "string",
+          "pattern": "^[0-9a-f]*$",
+          "description": "The signature as received (lowercase hex)."
+        },
+        "signedBy": {
+          "$ref": "#/definitions/fingerprint"
+        },
+        "signedMessage": {
+          "type": "string",
+          "description": "What the signature had to cover (nonce, or a base64 multi-hash)."
+        }
       }
+    },
+    "fingerprint": {
+      "type": "string",
+      "pattern": "^1220[0-9a-f]{64}$",
+      "description": "A Canton key fingerprint (cantonid.Fingerprint): 1220 + 64 lowercase hex."
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^1220[0-9a-f]{64}$",
+      "description": "A Canton transaction/topology hash (cantonid.Hash)."
+    },
+    "partyId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_\\- :]{1,185}::1220[0-9a-f]{64}$",
+      "description": "A Canton party id (cantonid.PartyID): hint::fingerprint, full length."
     }
   }
 }

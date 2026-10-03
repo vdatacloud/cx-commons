@@ -134,7 +134,10 @@ describe('formatting and helpers', () => {
         ]);
         expect([isValidCode('A1_B'), isValidCode('lower'), isValidCode('')]).toEqual([true, false, false]);
         expect([grpcCodeName(7), grpcCodeName(99)]).toEqual(['PERMISSION_DENIED', 'CODE_99']);
-        expect(expectedHash('Transaction hash to be signed: 1220ff. Ensure')).toBe('1220ff');
+        const h = '1220' + 'ff'.repeat(32);
+        expect(expectedHash(`Transaction hash to be signed: ${h}. Ensure`)).toBe(h);
+        expect(expectedHash(`Transaction hash to be signed: ${h.toUpperCase()}. Ensure`)).toBe(h);
+        expect(expectedHash('Transaction hash to be signed: 1220ff. Ensure')).toBe('');
     });
 });
 
@@ -150,9 +153,10 @@ describe('apiErrorFromUnknown (UI talking to Canton or a wallet directly)', () =
     });
 
     it('classifies a Canton body embedded in an Error message', () => {
-        const err = new Error('execute failed: {"code":"FAILED_TO_EXECUTE_TRANSACTION","cause":"Received 0 valid signatures. Transaction hash to be signed: 1220ab.","grpcCodeValue":3}');
+        const h = '1220' + 'ab'.repeat(32);
+        const err = new Error(`execute failed: {"code":"FAILED_TO_EXECUTE_TRANSACTION","cause":"Received 0 valid signatures. Transaction hash to be signed: ${h}.","grpcCodeValue":3}`);
         const e = apiErrorFromUnknown(err, { stage: 'execute' });
-        expect([e.code, (e.details as any)?.expectedHash]).toEqual(['LEDGER_SIGNATURE_REJECTED', '1220ab']);
+        expect([e.code, (e.details as any)?.expectedHash]).toEqual(['LEDGER_SIGNATURE_REJECTED', h]);
     });
 
     it('anything else is an upstream error for the named service', () => {

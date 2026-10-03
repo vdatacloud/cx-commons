@@ -36,4 +36,4 @@ jobs:
           ref: ${{ steps.source.outputs.sha }}
           path: .commons
       - run: scripts/sync-api-error-fixtures.sh .commons
-      - run: git diff --exit-code -- test/fixtures/api-error src/schema
+      - run: git diff --exit-code -- test/fixtures/api-error test/fixtures/canton-id src/schema

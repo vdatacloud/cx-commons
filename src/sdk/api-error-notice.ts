@@ -4,7 +4,8 @@
 // (ApiErrorNotice.astro hydrates through it). Every value is set with
 // textContent -- error text can never inject markup.
 
-import { canonicalApiError, atDetail, shortId, type ApiError, type ApiErrorDetail } from './api-error';
+import { canonicalApiError, atDetail, type ApiError, type ApiErrorDetail } from './api-error';
+import { renderCantonId } from './canton-id-view';
 
 export interface ApiErrorNoticeOptions {
     /** 'full' (default) shows details in a collapsed section; 'summary' omits them. */
@@ -56,12 +57,18 @@ function copyButton(label: string, value: () => string): HTMLButtonElement {
     return b;
 }
 
-function row(label: string, value: string, short = true): HTMLElement {
+// row is a labeled value: ids through the shared CantonId display (short,
+// full on hover, copy); plain values as-is with a copy button.
+function row(label: string, value: string, asId = true): HTMLElement {
     const r = el('div', 'flex flex-wrap items-center gap-2');
     r.append(el('dt', LABEL, label));
-    const dd = el('dd', MONO, short ? shortId(value) : value);
-    dd.title = value;
-    r.append(dd, copyButton('Copy', () => value));
+    const dd = el('dd', 'min-w-0');
+    if (asId) {
+        dd.append(renderCantonId(value));
+    } else {
+        dd.append(el('span', MONO, value), document.createTextNode(' '), copyButton('Copy', () => value));
+    }
+    r.append(dd);
     return r;
 }
 
@@ -120,7 +127,12 @@ export function renderApiErrorNotice(e: ApiError, opts: ApiErrorNoticeOptions = 
         const dl = el('dl', 'mt-2 space-y-1');
         if (shown.upstream?.cause) dl.append(row(`${shown.upstream.service} cause`, shown.upstream.cause, false));
         for (const k of Object.keys(shown.details ?? {}).sort()) {
-            dl.append(row(k, detailValue(shown.details![k]), false));
+            const v = shown.details![k];
+            if (Array.isArray(v) && v.every((x) => typeof x === 'string')) {
+                v.forEach((x, i) => dl.append(row(v.length > 1 ? `${k}[${i}]` : k, x)));
+            } else {
+                dl.append(row(k, detailValue(v), typeof v === 'string'));
+            }
         }
         det.append(dl);
         body.append(det);

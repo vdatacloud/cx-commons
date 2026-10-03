@@ -1,0 +1,93 @@
+[
+  {
+    "input": "relaytest::1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "kind": "party",
+    "hint": "relaytest",
+    "namespace": "1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "short": "relaytest::1220ebb7…4288"
+  },
+  {
+    "input": "Depositor::1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "kind": "party",
+    "hint": "Depositor",
+    "namespace": "1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "short": "Depositor::1220ebb7…4288"
+  },
+  {
+    "input": "my party:1 - x_y::1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "kind": "party",
+    "hint": "my party:1 - x_y",
+    "namespace": "1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "short": "my party:1 - x_y::1220ebb7…4288"
+  },
+  {
+    "input": "1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "kind": "fingerprint",
+    "short": "1220ebb7…4288"
+  },
+  {
+    "input": "Depositor",
+    "kind": "other",
+    "short": "Depositor"
+  },
+  {
+    "input": "Depositor::1220ab",
+    "kind": "other",
+    "short": "Depositor::1220ab"
+  },
+  {
+    "input": "Custodian::1220ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+    "kind": "other",
+    "short": "Custodian::1220ffff…ff00"
+  },
+  {
+    "input": "bad hint!::1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "kind": "other",
+    "short": "bad hint!::1220ebb7…4288"
+  },
+  {
+    "input": "a::b::1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "kind": "other",
+    "short": "a::b::1220e…4288"
+  },
+  {
+    "input": "::1220ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "kind": "other",
+    "short": "::1220ebb7…4288"
+  },
+  {
+    "input": "1220EBB7B95EC6E5CFA8DBF6AA11981E4E1645B1926E4A5AFB2C46D7EF49F7CA4288",
+    "kind": "other",
+    "short": "1220EBB7…4288"
+  },
+  {
+    "input": "1e20ebb7b95ec6e5cfa8dbf6aa11981e4e1645b1926e4a5afb2c46d7ef49f7ca4288",
+    "kind": "other",
+    "short": "1e20ebb7…4288"
+  },
+  {
+    "input": "3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f",
+    "kind": "other",
+    "short": "3f3f3f3f…3f3f"
+  },
+  {
+    "input": "VXDrn/op6YbtZHuSH+xdWUR8kW7+xMrP9w47KgxPZSE=",
+    "kind": "other",
+    "short": "VXDrn/op…ZSE="
+  },
+  {
+    "input": "someone-else::0000000000000000000000000000000000000000000000000000000000000000000000",
+    "kind": "other",
+    "short": "someone-else::00000000…0000"
+  },
+  {
+    "input": "w-ebb7b95ec6e5cfa8dbf6aa11",
+    "kind": "other",
+    "short": "w-ebb7b9…aa11"
+  },
+  {
+    "input": "",
+    "kind": "other",
+    "short": ""
+  }
+]

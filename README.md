@@ -66,7 +66,20 @@ and mirrored here byte for byte:
   - `renderApiErrorNotice(e)` / `mountApiErrorNotice(el, e)` are framework-free DOM renderers. Text is set via `textContent` only, with `dark:` coverage and copy buttons.
   - `<ApiErrorNotice error={e} level="summary" />` renders the same thing server-side.
 
-`test/fixtures/api-error` holds copies of the Go goldens, from the commit in `SOURCE`. After changing the Go package, run `npm run sync:api-error-fixtures`; CI fails if the copies drift.
+### Canton ids (`sdk/canton-id`, `sdk/canton-id-view`, `components/CantonId`)
+
+There are three kinds of Canton id. Each has one parser and one short form, mirroring daml-escrow-commons `cantonid`:
+
+| Kind | Format | Short form |
+|---|---|---|
+| fingerprint (a key) | `1220`+64 hex | `1220ebb7…4288` |
+| party | `hint::fingerprint` | `relaytest::1220ebb7…4288`; the namespace is the controlling key for an external party, or the hosting participant's (shared) otherwise |
+| hash | same as fingerprint | same as fingerprint |
+
+- `parsePartyId`, `classifyCantonId`, `shortCantonId`, `isFingerprint` and `partyControlledBy` are the helpers. `api-error`'s `shortId` is `shortCantonId`.
+- `renderCantonId(value, {label, copy})` / `<CantonId value={…} label="Joey Depositor" />` give one display everywhere: the short form or a label, the full value on hover, and a copy button that copies the full value. Prefer a T1 `label` over a raw party id in UX. The error notice shows every id this way.
+
+`test/fixtures/api-error` and `test/fixtures/canton-id` hold copies of the Go goldens, from the commit in `SOURCE`. After changing the Go package, run `npm run sync:api-error-fixtures`; CI fails if the copies drift.
 
 ---
 

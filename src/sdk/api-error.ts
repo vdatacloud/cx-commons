@@ -15,6 +15,8 @@
 // participant or wallet gateway directly, so those refusals look exactly
 // like ones relayed through a platform service.
 
+import { shortCantonId, isFingerprint } from './canton-id';
+
 export type ApiErrorDetail = 'full' | 'summary';
 
 export interface ApiErrorUpstream {
@@ -110,25 +112,12 @@ export function isValidCode(code: string): boolean {
 
 // ---- short ids ------------------------------------------------------------
 
-const SHORT_HEAD = 8;
-const SHORT_TAIL = 4;
-
-function shorten(s: string): string {
-    const cps = Array.from(s); // code points, like Go runes
-    if (cps.length <= SHORT_HEAD + SHORT_TAIL + 4) return s;
-    return cps.slice(0, SHORT_HEAD).join('') + '…' + cps.slice(cps.length - SHORT_TAIL).join('');
-}
-
 /**
- * The one short form for long ids in messages, hints and logs: a
- * "hint::namespace" id (a Canton party) keeps its hint
- * ("relaytest::1220ebb7…4288"); any other long value keeps its first 8 and
- * last 4 characters ("3f9a0c1d…77e2").
+ * The one short form for long ids in messages, hints and logs
+ * (sdk/canton-id shortCantonId; Go: apierror.ShortID / cantonid.Short).
  */
 export function shortId(s: string): string {
-    const i = s.indexOf('::');
-    if (i >= 0) return s.slice(0, i) + '::' + shorten(s.slice(i + 2));
-    return shorten(s);
+    return shortCantonId(s);
 }
 
 export function shortIds(ids: string[]): string[] {
@@ -345,10 +334,12 @@ export function grpcCodeName(code: number): string {
     return code >= 0 && code < GRPC_CODE_NAMES.length ? GRPC_CODE_NAMES[code] : `CODE_${code}`;
 }
 
-/** The transaction hash a Canton signature refusal names, or ''. */
+/** The transaction hash a Canton signature refusal names (well-formed only), or ''. */
 export function expectedHash(cause: string): string {
     const m = /hash to be signed: ([0-9a-fA-F]+)/.exec(cause);
-    return m ? m[1] : '';
+    if (!m) return '';
+    const h = m[1].toLowerCase();
+    return isFingerprint(h) ? h : ''; // only a well-formed hash, as in Go
 }
 
 function bounded(cause: string): string {
