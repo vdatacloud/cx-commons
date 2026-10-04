@@ -41,8 +41,8 @@ This repository publishes `@vdatacloud/cx-commons` with modular export entry poi
 @vdatacloud/cx-commons
  ├── (default)                 --> exports index.ts (Astro integration plugin `cxCommons()`)
  ├── /styles/global.css        --> exports canonical LNF design system tokens & Tailwind rules
- ├── /components/*             --> exports shared Astro UI components (Nav, Footer)
- ├── /sdk/*                    --> exports optional browser/identity SDK helpers
+ ├── /components/*             --> exports shared Astro UI components (Nav, Footer, StatusBadge, EyebrowLabel, ApiErrorNotice, CantonId)
+ ├── /sdk/*                    --> exports browser SDK helpers (api-error, api-error-notice, canton-id, canton-id-view, status-colors)
  └── /schema/api-error.json    --> the canonical API error JSON Schema
 ```
 
