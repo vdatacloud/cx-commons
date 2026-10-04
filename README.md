@@ -42,7 +42,7 @@ This repository publishes `@vdatacloud/cx-commons` with modular export entry poi
  ├── (default)                 --> exports index.ts (Astro integration plugin `cxCommons()`)
  ├── /styles/global.css        --> exports canonical LNF design system tokens & Tailwind rules
  ├── /components/*             --> exports shared Astro UI components (Nav, Footer, StatusBadge, EyebrowLabel, ApiErrorNotice, CantonId)
- ├── /sdk/*                    --> exports browser SDK helpers (api-error, api-error-notice, canton-id, canton-id-view, status-colors)
+ ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, api-error, api-error-notice, canton-id, canton-id-view, status-colors)
  └── /schema/api-error.json    --> the canonical API error JSON Schema
 ```
 
@@ -82,6 +82,29 @@ There are three kinds of Canton id. Each has one parser and one short form, mirr
 `test/fixtures/api-error` and `test/fixtures/canton-id` hold copies of the Go goldens, from the commit in `SOURCE`. After changing the Go package, run `npm run sync:api-error-fixtures`; CI fails if the copies drift.
 
 ---
+
+### Internationalization (`sdk/i18n`, `sdk/cx-messages`)
+
+Zero-dependency i18n for every app on the platform (English and French today; built so Japanese, Chinese and
+Korean are catalog work, not a rewrite). Vocabulary follows daml-escrow's `docs/i18n/GLOSSARY.md`.
+
+- **Messages:** an ICU MessageFormat subset -- `{name}`, `{n, plural, one {# item} other {# items}}`,
+  `{kind, select, ...}` -- over `Intl.PluralRules`. Apostrophes are plain text (French), so literal braces aren't
+  supported. Never concatenate fragments; word order differs between languages.
+- **Catalogs:** `registerMessages({ en: {...}, fr: {...} })` -- an app's catalogs override the library defaults
+  (cx-commons registers its own `cx.*` strings on import). `getTranslator(locale)` -> `t(key, params)`, falling
+  back `fr-CA` -> `fr` -> `en` -> the key; `maybe(key)` returns `undefined` instead.
+- **Choosing the language:** `resolveLocale({ cookie, acceptLanguage, supported })` -- the remembered choice
+  (`locale` cookie, `localeCookie()` / `chooseLocale()`), else `Accept-Language`, else English. No URL prefix.
+  Set `<html lang>`; client code reads it via `documentLocale()`.
+- **Formatting:** `formatNumber`, `formatMoney` (always with the code; non-ISO instruments such as USDC after the
+  amount; ledger Decimal strings keep their precision), `formatDate`, `formatDateTime`, `formatRelativeTime` --
+  use these, never `toLocaleString()`.
+- **Components** take an optional `locale` prop (else `Astro.locals.locale`, else `Astro.currentLocale`, else
+  `en`). `StatusBadge` shows `cx.status.<STATUS>` (e.g. `FUNDED` -> "Funds committed"); `ApiErrorNotice` /
+  `renderApiErrorNotice` translate `errors.<CODE>.message|hint` and `stages.<stage>` when the app registers them,
+  keeping the server's original message in the details.
+- **CJK:** elements that uppercase/letter-space carry `.cx-caps`, switched off under `:lang(ja|zh|ko)`.
 
 ## 5. Quick Start & Integration Guide
 

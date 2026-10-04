@@ -1,5 +1,9 @@
 # Shared Component Catalog & API Reference (`cx-platform`)
 
+> **Locale:** every component below accepts an optional `locale` prop (default: `Astro.locals.locale`, then
+> `Astro.currentLocale`, then `en`) and takes its built-in text from the `cx.*` catalog in `sdk/cx-messages`;
+> apps override any of it with `registerMessages`. See the README's Internationalization section.
+
 This document provides complete prop specifications, usage examples, and rendering details for all shared Astro components exported by `@vdatacloud/cx-commons`.
 
 ---
@@ -89,6 +93,7 @@ import StatusBadge from '@vdatacloud/cx-commons/components/StatusBadge';
 | `status` | `string` | N/A | Status key (e.g. `DRAFT`, `FUNDED`, `ACTIVE`, `PROPOSED`, `DISPUTED`, `SETTLED`, `FIAT_PENDING`). |
 | `size` | `'sm' \| 'md'` | `'sm'` | Visual sizing variation of the badge container. |
 | `colorClass` | `string` | N/A | Custom badge style class escape hatch (overrides default status style mappings). |
+| `label` | `string` | N/A | Overrides the translated label (`cx.status.<STATUS>`, e.g. `FUNDED` -> "Funds committed"). |
 
 ### Usage Example
 

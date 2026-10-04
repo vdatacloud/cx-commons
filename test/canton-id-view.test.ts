@@ -56,3 +56,13 @@ describe('CantonId display', () => {
         expect(shown).toContainEqual(['relaytest::1220ebb7…4288', party]);
     });
 });
+
+describe('CantonId display in another language', () => {
+    it('button text and accessible name follow the locale', () => {
+        const el = renderCantonId(party, { locale: 'fr' });
+        const b = el.querySelector('button')!;
+        expect(b.textContent).toBe('Copier');
+        expect(b.getAttribute('aria-label')).toBe('Copier l’identifiant sur le registre');
+        expect(renderCantonId(party).querySelector('button')!.getAttribute('aria-label')).toBe('Copy ledger ID');
+    });
+});
