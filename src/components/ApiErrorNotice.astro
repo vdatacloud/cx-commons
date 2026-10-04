@@ -11,12 +11,14 @@ export interface Props {
   error: ApiError;
   level?: ApiErrorDetail;
   class?: string;
+  locale?: string;
 }
 
 const { error, level = 'full', class: className = '' } = Astro.props;
+const locale = Astro.props.locale ?? (Astro.locals as { locale?: string }).locale ?? Astro.currentLocale ?? 'en';
 ---
 
-<div data-api-error={canonicalApiError(error, level)} data-api-error-level={level} class={className}>
+<div data-api-error={canonicalApiError(error, level)} data-api-error-level={level} data-api-error-locale={locale} class={className}>
   <p role="alert" class="rounded-2xl border border-status-disputed/30 bg-status-disputed/5 p-4 text-sm text-slate-800 dark:border-status-disputed/20 dark:bg-status-disputed/10 dark:text-slate-100">
     {formatApiError(error)}
   </p>

@@ -1,4 +1,7 @@
 ---
+import { getTranslator } from '../sdk/i18n';
+import '../sdk/cx-messages';
+
 export interface NavItem {
   href: string;
   label: string;
@@ -8,14 +11,18 @@ export interface Props {
   navLinks?: NavItem[];
   brandName?: string;
   logoSrc?: string;
+  locale?: string;
 }
+
+const locale = Astro.props.locale ?? (Astro.locals as { locale?: string }).locale ?? Astro.currentLocale ?? 'en';
+const t = getTranslator(locale);
 
 const {
   navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/products/tripart/', label: 'Products' },
-    { href: '/blog/', label: 'Blog' },
-    { href: '/about/', label: 'About' },
+    { href: '/', label: t.t('cx.nav.home') },
+    { href: '/products/tripart/', label: t.t('cx.nav.products') },
+    { href: '/blog/', label: t.t('cx.nav.blog') },
+    { href: '/about/', label: t.t('cx.nav.about') },
   ],
   brandName = 'Data Cloud LLC',
   logoSrc = '/favicon.svg'
@@ -35,7 +42,7 @@ const currentPath = Astro.url.pathname;
 			<span class="text-sm font-black tracking-tight text-slate-800 dark:text-white uppercase">{brandName}</span>
 		</a>
 
-		<div class="flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-black uppercase tracking-wider">
+		<div class="cx-caps flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-black uppercase tracking-wider">
 			{
 				navLinks.map((link) => {
 					const isActive = link.href === '/' ? currentPath === '/' : currentPath.startsWith(link.href);
@@ -58,7 +65,7 @@ const currentPath = Astro.url.pathname;
 			<button
 				id="theme-toggle"
 				type="button"
-				aria-label="Toggle dark mode"
+				aria-label={t.t('cx.nav.toggleDarkMode')}
 				class="p-2 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors border-none bg-transparent cursor-pointer"
 			>
 				<svg

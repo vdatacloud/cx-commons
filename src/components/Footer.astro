@@ -1,8 +1,14 @@
 ---
+import { getTranslator } from '../sdk/i18n';
+import '../sdk/cx-messages';
+
 export interface Props {
   showTelemetry?: boolean;
+  locale?: string;
 }
 const { showTelemetry = false } = Astro.props;
+const locale = Astro.props.locale ?? (Astro.locals as { locale?: string }).locale ?? Astro.currentLocale ?? 'en';
+const t = getTranslator(locale);
 const year = new Date().getFullYear();
 ---
 
@@ -13,22 +19,22 @@ const year = new Date().getFullYear();
 		class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400"
 	>
 		<div class="flex items-center gap-3">
-			<p>copyright (c) {year}, Data Cloud, LLC, All Rights Reserved</p>
+			<p>{t.t('cx.footer.copyright', { year: String(year) })}</p>
 		</div>
 
-		<div class="flex items-center gap-5 uppercase tracking-wider font-black text-[10px]">
+		<div class="cx-caps flex items-center gap-5 uppercase tracking-wider font-black text-[10px]">
 			<a href="/terms-and-conditions/" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-				Terms and Conditions
+				{t.t('cx.footer.terms')}
 			</a>
 			<a href="/privacy-policy/" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-				Privacy Policy
+				{t.t('cx.footer.privacy')}
 			</a>
 			<button
 				id="open-cookie-preferences"
 				type="button"
-				class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors border-none bg-transparent cursor-pointer uppercase tracking-wider font-black text-[10px] p-0"
+				class="cx-caps hover:text-brand-600 dark:hover:text-brand-400 transition-colors border-none bg-transparent cursor-pointer uppercase tracking-wider font-black text-[10px] p-0"
 			>
-				Cookie Preferences
+				{t.t('cx.footer.cookies')}
 			</button>
 		</div>
 	</div>

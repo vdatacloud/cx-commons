@@ -6,19 +6,23 @@
 // textContent only.
 
 import { shortCantonId, classifyCantonId, type CantonIdKind } from './canton-id';
+import { getTranslator } from './i18n';
+import './cx-messages';
 
 export interface CantonIdOptions {
     /** A human label shown instead of the short id (e.g. "Joey Depositor"); hover then shows both. */
     label?: string;
     /** Adds a copy button (default true). */
     copy?: boolean;
+    /** Locale for the button text (default: the page's <html lang>). */
+    locale?: string;
 }
 
 export const CANTON_ID_CLASS = 'inline-flex max-w-full items-center gap-1.5 align-middle';
 export const CANTON_ID_TEXT_CLASS = 'font-mono text-xs break-all text-slate-700 dark:text-slate-200';
 export const CANTON_ID_LABEL_CLASS = 'text-xs font-semibold text-slate-800 dark:text-slate-100';
 export const CANTON_ID_COPY_CLASS =
-    'rounded-md border border-slate-200 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-600 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800';
+    'cx-caps rounded-md border border-slate-200 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-600 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800';
 
 /** The hover text: the full value, under the label and short form when labeled. */
 export function cantonIdTitle(value: string, label?: string): string {
@@ -44,16 +48,17 @@ export function renderCantonId(value: string, opts: CantonIdOptions = {}): HTMLE
         const b = document.createElement('button');
         b.type = 'button';
         b.className = CANTON_ID_COPY_CLASS;
-        b.textContent = 'Copy';
-        b.setAttribute('aria-label', `Copy ${kind === 'party' ? 'party id' : kind === 'fingerprint' ? 'fingerprint' : 'value'}`);
+        const t = getTranslator(opts.locale);
+        b.textContent = t.t('cx.copy');
+        b.setAttribute('aria-label', t.t('cx.copyId', { kind }));
         b.addEventListener('click', async () => {
             try {
                 await navigator.clipboard.writeText(value);
-                b.textContent = 'Copied';
+                b.textContent = t.t('cx.copied');
             } catch {
-                b.textContent = 'Copy failed';
+                b.textContent = t.t('cx.copyFailed');
             }
-            setTimeout(() => (b.textContent = 'Copy'), 1500);
+            setTimeout(() => (b.textContent = t.t('cx.copy')), 1500);
         });
         root.append(b);
     }
@@ -67,7 +72,11 @@ export function renderCantonId(value: string, opts: CantonIdOptions = {}): HTMLE
 export function hydrateCantonIds(root: ParentNode = document): void {
     root.querySelectorAll<HTMLElement>('[data-canton-id]:not([data-canton-id-rendered])').forEach((host) => {
         const value = host.dataset.cantonId ?? '';
-        const rendered = renderCantonId(value, { label: host.dataset.cantonIdLabel || undefined, copy: host.dataset.cantonIdCopy !== 'false' });
+        const rendered = renderCantonId(value, {
+            label: host.dataset.cantonIdLabel || undefined,
+            copy: host.dataset.cantonIdCopy !== 'false',
+            locale: host.dataset.cantonIdLocale || undefined,
+        });
         rendered.dataset.cantonIdRendered = '';
         host.replaceWith(rendered);
     });

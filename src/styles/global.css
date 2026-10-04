@@ -243,3 +243,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/*
+ * Uppercase + wide tracking is a Latin-script effect. Elements that use it
+ * carry .cx-caps so it can be switched off where it harms legibility: CJK
+ * scripts have no case, and letter-spacing breaks their character rhythm
+ * (daml-escrow PLAN.md Phase 71). Set <html lang> and this applies itself.
+ */
+:where(:lang(ja), :lang(zh), :lang(ko)) .cx-caps {
+  text-transform: none;
+  letter-spacing: normal;
+}

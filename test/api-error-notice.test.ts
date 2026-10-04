@@ -104,3 +104,42 @@ describe('detail labels read as words (daml-escrow Phase 70 R2)', () => {
         expect(n.textContent).not.toContain('publicKeyFingerprint');
     });
 });
+
+describe('renderApiErrorNotice in another language', () => {
+    it('labels follow the locale; the stable code stays as sent', async () => {
+        const n = renderApiErrorNotice(signature, { locale: 'fr' });
+        const text = n.textContent ?? '';
+        expect(n.lang).toBe('fr');
+        for (const s of ['Requête', 'Détails', 'Identifiant sur le registre', 'Copier le JSON de l’erreur', 'LEDGER_SIGNATURE_REJECTED']) expect(text).toContain(s);
+        expect(text).not.toContain('Copy error JSON');
+    });
+
+    it('an app translation for the code replaces message and hint, and keeps the original in details', async () => {
+        const { registerMessages } = await import('../src/sdk/i18n');
+        registerMessages({
+            fr: {
+                errors: { LEDGER_SIGNATURE_REJECTED: { message: 'Signature refusée (HTTP {status})', hint: 'Réessayez l’action.' } },
+                stages: { execute: 'exécution' },
+            },
+        });
+        const e = { ...signature, status: 422 };
+        const n = renderApiErrorNotice(e, { locale: 'fr' });
+        const text = n.textContent ?? '';
+        expect(text).toContain('Signature refusée (HTTP 422)');
+        expect(text).toContain('Réessayez l’action.');
+        expect(text).toContain('exécution');
+        expect(text).toContain('Message d’origine');
+        expect(text).toContain(signature.error);
+
+        // English keeps the server's own (more specific) text untouched.
+        const en = renderApiErrorNotice(e, { locale: 'en' }).textContent ?? '';
+        expect(en).toContain(signature.error);
+        expect(en).not.toContain('Original message');
+    });
+
+    it('hydration carries the server-rendered locale', () => {
+        document.body.innerHTML = `<div data-api-error='${canonicalApiError(signature, 'full').replace(/'/g, '&#39;')}' data-api-error-level="full" data-api-error-locale="fr"></div>`;
+        hydrateApiErrorNotices();
+        expect(document.body.textContent).toContain('Détails');
+    });
+});

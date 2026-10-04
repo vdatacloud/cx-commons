@@ -1,11 +1,18 @@
 ---
+import { getTranslator } from '../sdk/i18n';
+import '../sdk/cx-messages';
+
 export interface Props {
   status: 'DRAFT' | 'FUNDED' | 'ACTIVE' | 'PROPOSED' | 'DISPUTED' | 'ARBITRATION' | 'SETTLED' | 'AWAITING_CUSTODY_APPROVAL' | 'FIAT_PENDING' | 'LAPSED' | string;
   size?: 'sm' | 'md';
   colorClass?: string;
+  /** Overrides the translated label (cx.status.<STATUS>). */
+  label?: string;
+  locale?: string;
 }
 
-const { status, size = 'sm', colorClass } = Astro.props;
+const { status, size = 'sm', colorClass, label } = Astro.props;
+const locale = Astro.props.locale ?? (Astro.locals as { locale?: string }).locale ?? Astro.currentLocale ?? 'en';
 
 const statusUpper = status.toUpperCase();
 
@@ -22,6 +29,8 @@ const badgeStyles: Record<string, string> = {
   LAPSED: 'text-status-lapsed bg-status-lapsed/10 border-status-lapsed/20 dark:bg-status-lapsed/5 dark:border-status-lapsed/10',
 };
 
+const text = label ?? getTranslator(locale).maybe(`cx.status.${statusUpper}`) ?? statusUpper.replaceAll('_', ' ');
+
 const currentStyle = colorClass || badgeStyles[statusUpper] || badgeStyles.DRAFT;
 
 const sizeStyles = {
@@ -30,6 +39,6 @@ const sizeStyles = {
 };
 ---
 
-<span class={`inline-flex items-center justify-center rounded-full border uppercase transition-all duration-300 ${currentStyle} ${sizeStyles[size]}`}>
-  <slot>{statusUpper.replace('_', ' ')}</slot>
+<span class={`inline-flex items-center justify-center cx-caps rounded-full border uppercase transition-all duration-300 ${currentStyle} ${sizeStyles[size]}`}>
+  <slot>{text}</slot>
 </span>
