@@ -59,8 +59,15 @@ export const cxMessages = {
                 FIAT_PENDING: 'Fiat payment pending',
                 LAPSED: 'Lapsed',
             },
+            dialog: {
+                confirm: 'Confirm',
+                cancel: 'Cancel',
+                ok: 'OK',
+                close: 'Close',
+            },
             language: {
                 label: 'Language',
+                choose: 'Choose language',
                 en: 'English',
                 fr: 'Français',
             },
@@ -118,8 +125,15 @@ export const cxMessages = {
                 FIAT_PENDING: 'Paiement fiat en attente',
                 LAPSED: 'Expiré',
             },
+            dialog: {
+                confirm: 'Confirmer',
+                cancel: 'Annuler',
+                ok: 'OK',
+                close: 'Fermer',
+            },
             language: {
                 label: 'Langue',
+                choose: 'Choisir la langue',
                 en: 'English',
                 fr: 'Français',
             },

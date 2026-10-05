@@ -1,0 +1,44 @@
+---
+// Language choice: remembered in the locale cookie (sdk/i18n chooseLocale)
+// and applied by reloading, so server-rendered text follows. No URL prefix.
+// Works for signed-out visitors too. Each language is named in itself
+// (cx.language.<code>), so a reader can always find their own.
+import { getTranslator } from '../sdk/i18n';
+import { CX_LOCALES } from '../sdk/cx-messages';
+
+interface Props {
+  /** The page's locale (default: Astro.locals.locale, else 'en'). */
+  locale?: string;
+  /** The locales to offer (default: every locale cx-commons ships strings for). */
+  locales?: readonly string[];
+  /** Extra classes for the wrapper. */
+  class?: string;
+}
+
+const locale = Astro.props.locale ?? (Astro.locals as { locale?: string }).locale ?? Astro.currentLocale ?? 'en';
+const locales = Astro.props.locales ?? CX_LOCALES;
+const { t } = getTranslator(locale);
+const lang = locale.split('-')[0];
+---
+
+<label class:list={['relative inline-flex items-center normal-case tracking-normal', Astro.props.class]}>
+  <span class="sr-only">{t('cx.language.choose')}</span>
+  <select
+    data-cx-language-switcher
+    class="appearance-none cursor-pointer rounded-xl border border-slate-200 bg-transparent py-1.5 pl-2.5 pr-6 text-[11px] font-bold text-slate-600 hover:border-brand-400 dark:border-slate-700 dark:text-slate-300"
+    title={t('cx.language.label')}
+  >
+    {locales.map((l) => (
+      <option value={l} selected={l === lang} lang={l}>{getTranslator(l).maybe(`cx.language.${l}`) ?? l}</option>
+    ))}
+  </select>
+  <svg class="pointer-events-none absolute right-1.5 h-3 w-3 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+</label>
+
+<script>
+  import { chooseLocale } from '../sdk/i18n';
+
+  document.querySelectorAll<HTMLSelectElement>('select[data-cx-language-switcher]').forEach((s) => {
+    s.addEventListener('change', () => chooseLocale(s.value));
+  });
+</script>
