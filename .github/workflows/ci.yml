@@ -20,6 +20,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
+      - run: bash scripts/test-next-version.sh
 
   # The api-error fixtures are copies of daml-escrow-commons' Go goldens;
   # they must match the commit recorded in test/fixtures/api-error/SOURCE,

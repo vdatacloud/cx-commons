@@ -1,15 +1,17 @@
 name: Tag release
 
-# Runs on every push to main (i.e. every merged PR) and creates the next
-# vX.Y.Z tag, then force-moves a floating `latest` tag to the same commit
-# so downstream consumers can pin against `#latest` instead of a raw SHA.
+# Runs on every push to main (i.e. every merged PR). The next version comes
+# from the Conventional Commits since the last v* tag (scripts/next-version.sh,
+# the same rules as every other repo -- see RELEASING.md): breaking or feat or
+# a Deprecated: footer -> minor, small changes -> patch, docs/test/ci/chore
+# only -> no release. Majors are never automatic (product releases, by hand).
+# When a version is due it is tagged, a floating `latest` tag is moved to it,
+# and the package is published to npm.
 #
 # concurrency.group serializes runs of THIS workflow only -- if two pushes
 # land close together, the second run queues behind the first rather than
-# racing it, so "what's the latest tag" is never read by two runs at once.
-# Other workflows in this repo are unaffected and still run in parallel.
-# The retry loop below is defense in depth on top of that (e.g. someone
-# pushes a tag by hand mid-run), not the primary safeguard.
+# racing it. The retry loop below is defense in depth on top of that (e.g.
+# someone pushes a tag by hand mid-run), not the primary safeguard.
 on:
   push:
     branches: [main]
@@ -30,25 +32,37 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Compute next version and push tags
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - name: Compute next version
+        id: version
+        run: |
+          next="$(bash scripts/next-version.sh)"
+          echo "next=$next" >> "$GITHUB_OUTPUT"
+          if [ -z "$next" ]; then echo "No release-worthy commits since the last tag"; else echo "Next version: $next"; fi
+
+      - name: Build and test
+        if: steps.version.outputs.next != ''
+        run: npm ci && npm run build && npm test
+
+      - name: Push tags
         id: tag
+        if: steps.version.outputs.next != ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           for attempt in 1 2 3 4 5; do
             git fetch --tags --force origin
-
-            latest_semver=$(git tag -l 'v[0-9]*.[0-9]*.[0-9]*' | sort -V | tail -n1)
-            if [ -z "$latest_semver" ]; then
-              next="v0.1.0"
-            else
-              IFS='.' read -r major minor patch <<< "${latest_semver#v}"
-              next="v${major}.${minor}.$((patch + 1))"
-            fi
+            next="$(bash scripts/next-version.sh)"
+            [ -n "$next" ] || { echo "Already released by another run"; exit 0; }
 
             echo "Attempt $attempt: tagging $next"
-            git tag "$next"
+            git tag -a "$next" -m "$next"
 
             if git push origin "$next"; then
               git tag -f latest
@@ -71,12 +85,8 @@ jobs:
       # the package's Trusted Publisher setting on npmjs.com, so there's no
       # NPM_TOKEN secret to store or rotate. Provenance is attached
       # automatically. Needs npm >= 11.5.1.
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          registry-url: https://registry.npmjs.org
-
       - name: Publish to npm
+        if: steps.tag.outputs.version != ''
         run: |
           npm install -g npm@latest
           npm version "${{ steps.tag.outputs.version }}" --no-git-tag-version
