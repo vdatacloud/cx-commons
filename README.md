@@ -41,8 +41,8 @@ This repository publishes `@vdatacloud/cx-commons` with modular export entry poi
 @vdatacloud/cx-commons
  ├── (default)                 --> exports index.ts (Astro integration plugin `cxCommons()`)
  ├── /styles/global.css        --> exports canonical LNF design system tokens & Tailwind rules
- ├── /components/*             --> exports shared Astro UI components (Nav, Footer, StatusBadge, EyebrowLabel, ApiErrorNotice, CantonId)
- ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, api-error, api-error-notice, canton-id, canton-id-view, status-colors)
+ ├── /components/*             --> exports shared Astro UI components (Nav, Footer, StatusBadge, EyebrowLabel, ApiErrorNotice, CantonId, LanguageSwitcher)
+ ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, dialogs, api-error, api-error-notice, canton-id, canton-id-view, status-colors)
  └── /schema/api-error.json    --> the canonical API error JSON Schema
 ```
 
@@ -104,6 +104,11 @@ Korean are catalog work, not a rewrite). Vocabulary follows daml-escrow's `docs/
   `en`). `StatusBadge` shows `cx.status.<STATUS>` (e.g. `FUNDED` -> "Funds committed"); `ApiErrorNotice` /
   `renderApiErrorNotice` translate `errors.<CODE>.message|hint` and `stages.<stage>` when the app registers them,
   keeping the server's original message in the details.
+- **Language switcher:** `components/LanguageSwitcher` -- sets the `locale` cookie and reloads; pass the app's
+  `locales`.
+- **Dialogs:** `sdk/dialogs` -- `confirmDialog`, `promptDialog`, `formDialog`, `acknowledge`, `notifyError`,
+  `showErrorIn`, `notifyInfo` replace `window.confirm`/`prompt`/`alert` in the page's language (see
+  `docs/COMPONENTS.md`).
 - **CJK:** elements that uppercase/letter-space carry `.cx-caps`, switched off under `:lang(ja|zh|ko)`.
 
 ## 5. Quick Start & Integration Guide

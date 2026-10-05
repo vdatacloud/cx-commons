@@ -198,3 +198,59 @@ import CantonId from '@vdatacloud/cx-commons/components/CantonId';
 <CantonId value={escrow.beneficiary} label={names[escrow.beneficiary]} />
 <CantonId value={tx.hash} copy={false} />
 ```
+
+---
+
+## 7. `LanguageSwitcher.astro`
+
+A language picker that remembers the choice in the `locale` cookie (`sdk/i18n` `chooseLocale`) and reloads, so
+server-rendered text follows. No URL prefix; works for signed-out visitors. Each language is named in itself
+(`cx.language.<code>`: "English", "Français"), so readers can always find their own.
+
+### Import Path
+
+```astro
+import LanguageSwitcher from '@vdatacloud/cx-commons/components/LanguageSwitcher';
+```
+
+### Component Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `locale` | `string` | `Astro.locals.locale`, else `en` | The page's current locale (selected option). |
+| `locales` | `string[]` | every locale cx-commons ships | The locales to offer -- pass the app's own supported list. |
+| `class` | `string` | N/A | Extra classes for the wrapper. |
+
+### Usage Example
+
+```astro
+<LanguageSwitcher locale={Astro.locals.locale} locales={['en', 'fr']} />
+```
+
+---
+
+## SDK: in-page dialogs (`sdk/dialogs`)
+
+Replacements for `window.confirm` / `prompt` / `alert`, which block the page, can't be styled, ignore the page's
+language and lose an error's code and request id. Built with DOM APIs and `textContent` only, so server or
+counterparty text never becomes markup.
+
+| Function | Resolves |
+| :--- | :--- |
+| `confirmDialog(message, { title?, confirmLabel?, cancelLabel?, danger? })` | `true` only on an explicit confirm (Cancel has focus). |
+| `promptDialog(message, field, opts?)` | The trimmed value, or `null` when cancelled. |
+| `formDialog(message, fields, opts?)` | Values by field name, or `null`. |
+| `acknowledge(message, { title? })` | After the reader presses OK (one button). |
+| `notifyError(err, stage?)` | The `ApiError` shown in a stacked `ApiErrorNotice` (envelope kept as-is; anything else normalized). |
+| `showErrorIn(host, err, stage?)` | Renders the error notice into a given element (e.g. a modal's status area). |
+| `notifyInfo(message, ms = 6000)` | A short status message that dismisses itself (`ms = 0` keeps it). |
+
+Button labels are `cx.dialog.confirm|cancel|ok|close`; register the same keys to relabel them.
+
+```ts
+import { confirmDialog, notifyError } from '@vdatacloud/cx-commons/sdk/dialogs';
+
+if (await confirmDialog(t('escrow.confirmRelease'), { confirmLabel: t('escrow.release'), danger: true })) {
+    try { await release(id); } catch (err) { notifyError(err, 'release'); }
+}
+```
