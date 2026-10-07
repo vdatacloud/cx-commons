@@ -1,0 +1,3 @@
+# graphify
+- **graphify** (`.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
+When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else. When `graphify-out/graph.json` exists, prefer `graphify query "<question>"` over raw grep/read for codebase questions (`graphify path "<A>" "<B>"` for relationships, `graphify explain "<concept>"` for one concept). Don't run `graphify update .` locally or commit `graphify-out/`: CI regenerates it on `main` after every merge (`.github/workflows/update-graph.yml`, pinned graphifyy version); pull for a current graph.
