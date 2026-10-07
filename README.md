@@ -42,7 +42,7 @@ This repository publishes `@vdatacloud/cx-commons` with modular export entry poi
  ├── (default)                 --> exports index.ts (Astro integration plugin `cxCommons()`)
  ├── /styles/global.css        --> exports canonical LNF design system tokens & Tailwind rules
  ├── /components/*             --> exports shared Astro UI components (Nav, Footer, StatusBadge, EyebrowLabel, ApiErrorNotice, CantonId, LanguageSwitcher)
- ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, dialogs, api-error, api-error-notice, canton-id, canton-id-view, status-colors)
+ ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, dialogs, api-error, api-error-notice, canton-id, canton-id-view, agreement-sig, status-colors)
  └── /schema/api-error.json    --> the canonical API error JSON Schema
 ```
 
@@ -79,7 +79,16 @@ There are three kinds of Canton id. Each has one parser and one short form, mirr
 - `parsePartyId`, `classifyCantonId`, `shortCantonId`, `isFingerprint` and `partyControlledBy` are the helpers. `api-error`'s `shortId` is `shortCantonId`.
 - `renderCantonId(value, {label, copy})` / `<CantonId value={…} label="Joey Depositor" />` give one display everywhere: the short form or a label, the full value on hover, and a copy button that copies the full value. Prefer a T1 `label` over a raw party id in UX. The error notice shows every id this way.
 
-`test/fixtures/api-error` and `test/fixtures/canton-id` hold copies of the Go goldens, from the commit in `SOURCE`. After changing the Go package, run `npm run sync:api-error-fixtures`; CI fails if the copies drift.
+### Agreement signing (`sdk/agreement-sig`)
+
+How a party signs one version of an agreement, mirroring daml-escrow-commons `agreementsig` byte for byte (daml-escrow PLAN.md Phase 81). A page recomputes the hash of the content it shows, never trusting a server's copy, before a wallet signs.
+
+- `agreementHash(version)` / `agreementCanonical` / `validateAgreementVersion`: `tripart.agreement-version/1`. Terms are a JSON object with safe-integer numbers only; money is a decimal string.
+- `agreementMessage(version, hash, signer)`: the exact text a signer signs, naming their own ledger identity.
+- `verifySignature(alg, publicKey, message, signature)`: `ed25519` (wallets) or `ecdsa-p256-sha256` (KMS keys such as the custodian's; strict DER, low s), through WebCrypto.
+- `draftHash` / `draftMessage`: the frozen `tripart.draft-version/1` (Phase 77 drafts).
+
+`test/fixtures/api-error`, `test/fixtures/canton-id` and `test/fixtures/agreement-sig` hold copies of the Go goldens, from the commit in `SOURCE`. After changing the Go package, run `npm run sync:api-error-fixtures`; CI fails if the copies drift.
 
 ---
 

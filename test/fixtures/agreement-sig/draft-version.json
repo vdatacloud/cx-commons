@@ -1,0 +1,99 @@
+[
+  {
+    "name": "compose-page draft",
+    "draft": {
+      "rootId": "4868595a-80d7-4d0f-bc8f-75ab73970114",
+      "version": 1,
+      "contractType": "Corporate",
+      "amount": 100,
+      "currency": "USD",
+      "depositorId": "lcdepositor::1220381b3668c5c1ad743373ee74e2d443ea066cc37cf4624009967ada5425e49ecd",
+      "beneficiaryEmail": "jimmy@beneficiary.devlocal",
+      "mediatorId": "",
+      "terms": {
+        "milestones": [
+          {
+            "label": "Delivery",
+            "amount": 100,
+            "completed": false
+          }
+        ],
+        "expiryDate": "2026-11-05T00:00:00Z",
+        "custodyThreshold": "0"
+      },
+      "metadata": {
+        "depositors": [
+          "joey@depositor.devlocal"
+        ],
+        "depositorThreshold": 1,
+        "beneficiaries": [
+          "jimmy@beneficiary.devlocal"
+        ],
+        "beneficiaryThreshold": 1,
+        "assetId": "A-1"
+      }
+    },
+    "canonical": "{\"amount\":100,\"beneficiaryEmail\":\"jimmy@beneficiary.devlocal\",\"contractType\":\"Corporate\",\"currency\":\"USD\",\"depositorId\":\"lcdepositor::1220381b3668c5c1ad743373ee74e2d443ea066cc37cf4624009967ada5425e49ecd\",\"mediatorId\":\"\",\"metadata\":{\"assetId\":\"A-1\",\"beneficiaries\":[\"jimmy@beneficiary.devlocal\"],\"beneficiaryThreshold\":1,\"depositorThreshold\":1,\"depositors\":[\"joey@depositor.devlocal\"]},\"rootId\":\"4868595a-80d7-4d0f-bc8f-75ab73970114\",\"schema\":\"tripart.draft-version/1\",\"terms\":{\"custodyThreshold\":\"0\",\"expiryDate\":\"2026-11-05T00:00:00Z\",\"milestones\":[{\"amount\":100,\"completed\":false,\"label\":\"Delivery\"}]},\"version\":1}",
+    "hash": "ef6c368016e78f96e255b37b7d5c16e137c2a775a50532ea79063326fd8d335d",
+    "message": "Tripart\nI approve version 1 of escrow draft 4868595a-80d7-4d0f-bc8f-75ab73970114.\nVersion hash: sha256:ef6c368016e78f96e255b37b7d5c16e137c2a775a50532ea79063326fd8d335d"
+  },
+  {
+    "name": "escapes, numbers and nesting",
+    "draft": {
+      "rootId": "00000000-0000-0000-0000-000000000002",
+      "version": 3,
+      "contractType": "RealEstate",
+      "amount": 1234567.89,
+      "currency": "EUR",
+      "depositorId": "dep::1220aa",
+      "beneficiaryEmail": "Émilie.Dupont@exemple.fr",
+      "mediatorId": "med::1220bb",
+      "terms": {
+        "z": 1e21,
+        "a": 0.1,
+        "m": 1e-7,
+        "n": -2.5,
+        "big": 123456789012,
+        "neg0": -0,
+        "s": "quote \" backslash \\ tab \t nl \n ctl \u0001 sep \u2028 html \u003c\u0026\u003e emoji 😀",
+        "nested": {
+          "b": [
+            true,
+            false,
+            null
+          ],
+          "a": {}
+        }
+      },
+      "metadata": null
+    },
+    "canonical": "{\"amount\":1234567.89,\"beneficiaryEmail\":\"Émilie.Dupont@exemple.fr\",\"contractType\":\"RealEstate\",\"currency\":\"EUR\",\"depositorId\":\"dep::1220aa\",\"mediatorId\":\"med::1220bb\",\"metadata\":null,\"rootId\":\"00000000-0000-0000-0000-000000000002\",\"schema\":\"tripart.draft-version/1\",\"terms\":{\"a\":0.1,\"big\":123456789012,\"m\":1e-7,\"n\":-2.5,\"neg0\":0,\"nested\":{\"a\":{},\"b\":[true,false,null]},\"s\":\"quote \\\" backslash \\\\ tab \\t nl \\n ctl \\u0001 sep \u2028 html \u003c\u0026\u003e emoji 😀\",\"z\":1e+21},\"version\":3}",
+    "hash": "e553562d39609d697e2de7673ee18e924fc12c06115b5e160980cbb40ba1ab18",
+    "message": "Tripart\nI approve version 3 of escrow draft 00000000-0000-0000-0000-000000000002.\nVersion hash: sha256:e553562d39609d697e2de7673ee18e924fc12c06115b5e160980cbb40ba1ab18"
+  },
+  {
+    "name": "key order across scripts",
+    "draft": {
+      "rootId": "00000000-0000-0000-0000-000000000003",
+      "version": 2,
+      "contractType": "ImportExport",
+      "amount": 0.5,
+      "currency": "GBP",
+      "depositorId": "",
+      "beneficiaryEmail": "",
+      "mediatorId": "",
+      "terms": {
+        "ключ": "значение",
+        "Z": "upper",
+        "a": "lower",
+        "é": "accent",
+        "\ud83d\ude00": "astral",
+        "ｚ": "fullwidth"
+      },
+      "metadata": {}
+    },
+    "canonical": "{\"amount\":0.5,\"beneficiaryEmail\":\"\",\"contractType\":\"ImportExport\",\"currency\":\"GBP\",\"depositorId\":\"\",\"mediatorId\":\"\",\"metadata\":{},\"rootId\":\"00000000-0000-0000-0000-000000000003\",\"schema\":\"tripart.draft-version/1\",\"terms\":{\"Z\":\"upper\",\"a\":\"lower\",\"é\":\"accent\",\"ключ\":\"значение\",\"😀\":\"astral\",\"ｚ\":\"fullwidth\"},\"version\":2}",
+    "hash": "0f8c109a408535ea229f775f459795a8f65a3eda6353a812f8b2889cfb438f55",
+    "message": "Tripart\nI approve version 2 of escrow draft 00000000-0000-0000-0000-000000000003.\nVersion hash: sha256:0f8c109a408535ea229f775f459795a8f65a3eda6353a812f8b2889cfb438f55"
+  }
+]

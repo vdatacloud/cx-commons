@@ -1,0 +1,424 @@
+[
+  {
+    "name": "original agreement, version 1",
+    "version": {
+      "agreementId": "agr-0001",
+      "version": 1,
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "escrow-terms/1",
+      "terms": {
+        "asset": {
+          "currency": "USD",
+          "amount": "1250000.5"
+        },
+        "depositors": [
+          "tok-dep-a",
+          "tok-dep-b"
+        ],
+        "depositorThreshold": 2,
+        "beneficiaries": [
+          "tok-ben"
+        ],
+        "beneficiaryThreshold": 1,
+        "milestones": [
+          {
+            "milestoneId": "m1",
+            "description": "Delivery",
+            "amount": "1250000.5"
+          }
+        ],
+        "expiryDate": "2026-12-31T00:00:00Z",
+        "disputeWindowDays": 14
+      }
+    },
+    "canonical": "{\"agreementId\":\"agr-0001\",\"amends\":null,\"document\":{\"mediaType\":\"application/pdf\",\"sha256\":\"d0c0000000000000000000000000000000000000000000000000000000000000\",\"sourceMediaType\":\"text/markdown\",\"sourceSha256\":\"50c0000000000000000000000000000000000000000000000000000000000000\"},\"kind\":\"agreement\",\"parentHash\":null,\"schema\":\"tripart.agreement-version/1\",\"terms\":{\"asset\":{\"amount\":\"1250000.5\",\"currency\":\"USD\"},\"beneficiaries\":[\"tok-ben\"],\"beneficiaryThreshold\":1,\"depositorThreshold\":2,\"depositors\":[\"tok-dep-a\",\"tok-dep-b\"],\"disputeWindowDays\":14,\"expiryDate\":\"2026-12-31T00:00:00Z\",\"milestones\":[{\"amount\":\"1250000.5\",\"description\":\"Delivery\",\"milestoneId\":\"m1\"}]},\"termsSchema\":\"escrow-terms/1\",\"version\":1}",
+    "hash": "c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5",
+    "messages": [
+      {
+        "signer": "dep-a::1220aa",
+        "message": "Tripart\nI, dep-a::1220aa, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5"
+      },
+      {
+        "signer": "custodian::1220cc",
+        "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5"
+      }
+    ]
+  },
+  {
+    "name": "redline, version 2",
+    "version": {
+      "agreementId": "agr-0001",
+      "version": 2,
+      "parentHash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "escrow-terms/1",
+      "terms": {
+        "asset": {
+          "currency": "USD",
+          "amount": "1250000.5"
+        },
+        "depositors": [
+          "tok-dep-a",
+          "tok-dep-b"
+        ],
+        "depositorThreshold": 2,
+        "beneficiaries": [
+          "tok-ben"
+        ],
+        "beneficiaryThreshold": 1,
+        "milestones": [
+          {
+            "milestoneId": "m1",
+            "description": "Delivery",
+            "amount": "1250000.5"
+          }
+        ],
+        "expiryDate": "2026-12-31T00:00:00Z",
+        "disputeWindowDays": 14
+      }
+    },
+    "canonical": "{\"agreementId\":\"agr-0001\",\"amends\":null,\"document\":{\"mediaType\":\"application/pdf\",\"sha256\":\"d0c0000000000000000000000000000000000000000000000000000000000000\",\"sourceMediaType\":\"text/markdown\",\"sourceSha256\":\"50c0000000000000000000000000000000000000000000000000000000000000\"},\"kind\":\"agreement\",\"parentHash\":\"1111111111111111111111111111111111111111111111111111111111111111\",\"schema\":\"tripart.agreement-version/1\",\"terms\":{\"asset\":{\"amount\":\"1250000.5\",\"currency\":\"USD\"},\"beneficiaries\":[\"tok-ben\"],\"beneficiaryThreshold\":1,\"depositorThreshold\":2,\"depositors\":[\"tok-dep-a\",\"tok-dep-b\"],\"disputeWindowDays\":14,\"expiryDate\":\"2026-12-31T00:00:00Z\",\"milestones\":[{\"amount\":\"1250000.5\",\"description\":\"Delivery\",\"milestoneId\":\"m1\"}]},\"termsSchema\":\"escrow-terms/1\",\"version\":2}",
+    "hash": "60c423f6d67123158acbd3ed87c18ac8e6489679d271b49e3b78f148587cacc6",
+    "messages": [
+      {
+        "signer": "dep-a::1220aa",
+        "message": "Tripart\nI, dep-a::1220aa, approve version 2 of agreement agr-0001.\nVersion hash: sha256:60c423f6d67123158acbd3ed87c18ac8e6489679d271b49e3b78f148587cacc6"
+      },
+      {
+        "signer": "custodian::1220cc",
+        "message": "Tripart\nI, custodian::1220cc, approve version 2 of agreement agr-0001.\nVersion hash: sha256:60c423f6d67123158acbd3ed87c18ac8e6489679d271b49e3b78f148587cacc6"
+      }
+    ]
+  },
+  {
+    "name": "amendment after one prior amendment",
+    "version": {
+      "agreementId": "amd-0002",
+      "version": 1,
+      "kind": "amendment",
+      "amends": {
+        "agreementId": "agr-0001",
+        "ratifiedHashes": [
+          "1111111111111111111111111111111111111111111111111111111111111111",
+          "2222222222222222222222222222222222222222222222222222222222222222"
+        ]
+      },
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "escrow-terms/1",
+      "terms": {
+        "expiryDate": "2027-06-30T00:00:00Z"
+      }
+    },
+    "canonical": "{\"agreementId\":\"amd-0002\",\"amends\":{\"agreementId\":\"agr-0001\",\"ratifiedHashes\":[\"1111111111111111111111111111111111111111111111111111111111111111\",\"2222222222222222222222222222222222222222222222222222222222222222\"]},\"document\":{\"mediaType\":\"application/pdf\",\"sha256\":\"d0c0000000000000000000000000000000000000000000000000000000000000\",\"sourceMediaType\":\"text/markdown\",\"sourceSha256\":\"50c0000000000000000000000000000000000000000000000000000000000000\"},\"kind\":\"amendment\",\"parentHash\":null,\"schema\":\"tripart.agreement-version/1\",\"terms\":{\"expiryDate\":\"2027-06-30T00:00:00Z\"},\"termsSchema\":\"escrow-terms/1\",\"version\":1}",
+    "hash": "f6ecfcbaa30026a0ffe78eaf4194a677cf23928be749d1cf7a2f667864a43d58",
+    "messages": [
+      {
+        "signer": "dep-a::1220aa",
+        "message": "Tripart\nI, dep-a::1220aa, approve version 1 of amendment amd-0002 to agreement agr-0001.\nVersion hash: sha256:f6ecfcbaa30026a0ffe78eaf4194a677cf23928be749d1cf7a2f667864a43d58"
+      },
+      {
+        "signer": "custodian::1220cc",
+        "message": "Tripart\nI, custodian::1220cc, approve version 1 of amendment amd-0002 to agreement agr-0001.\nVersion hash: sha256:f6ecfcbaa30026a0ffe78eaf4194a677cf23928be749d1cf7a2f667864a43d58"
+      }
+    ]
+  },
+  {
+    "name": "unicode, escapes, key order and integral numbers",
+    "version": {
+      "agreementId": "agr-é-😀",
+      "version": 3,
+      "parentHash": "3333333333333333333333333333333333333333333333333333333333333333",
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "https://schemas.example/escrow-terms/1.json",
+      "terms": {
+        "ключ": "значение",
+        "Z": 1.0,
+        "a": 1e3,
+        "neg": -0,
+        "big": 9007199254740991,
+        "s": "quote \" backslash \\ tab \t nl \n ctl \u0001 sep \u2028 html \u003c\u0026\u003e",
+        "😀": "astral",
+        "ｚ": [
+          true,
+          false,
+          null,
+          {}
+        ]
+      }
+    },
+    "canonical": "{\"agreementId\":\"agr-é-😀\",\"amends\":null,\"document\":{\"mediaType\":\"application/pdf\",\"sha256\":\"d0c0000000000000000000000000000000000000000000000000000000000000\",\"sourceMediaType\":\"text/markdown\",\"sourceSha256\":\"50c0000000000000000000000000000000000000000000000000000000000000\"},\"kind\":\"agreement\",\"parentHash\":\"3333333333333333333333333333333333333333333333333333333333333333\",\"schema\":\"tripart.agreement-version/1\",\"terms\":{\"Z\":1,\"a\":1000,\"big\":9007199254740991,\"neg\":0,\"s\":\"quote \\\" backslash \\\\ tab \\t nl \\n ctl \\u0001 sep \u2028 html \u003c\u0026\u003e\",\"ключ\":\"значение\",\"😀\":\"astral\",\"ｚ\":[true,false,null,{}]},\"termsSchema\":\"https://schemas.example/escrow-terms/1.json\",\"version\":3}",
+    "hash": "868ba4534c648793d2150b4c7125dc16e7fa17ff0b72e4be4471165c7234978f",
+    "messages": [
+      {
+        "signer": "dep-a::1220aa",
+        "message": "Tripart\nI, dep-a::1220aa, approve version 3 of agreement agr-é-😀.\nVersion hash: sha256:868ba4534c648793d2150b4c7125dc16e7fa17ff0b72e4be4471165c7234978f"
+      },
+      {
+        "signer": "custodian::1220cc",
+        "message": "Tripart\nI, custodian::1220cc, approve version 3 of agreement agr-é-😀.\nVersion hash: sha256:868ba4534c648793d2150b4c7125dc16e7fa17ff0b72e4be4471165c7234978f"
+      }
+    ]
+  },
+  {
+    "name": "terms with a fractional number",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 1,
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {
+        "amount": 0.1
+      }
+    },
+    "invalid": "not a safe integer"
+  },
+  {
+    "name": "terms with an unsafe integer",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 1,
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {
+        "n": 9007199254740993
+      }
+    },
+    "invalid": "not a safe integer"
+  },
+  {
+    "name": "terms that are not an object",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 1,
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": [
+        "a"
+      ]
+    },
+    "invalid": "JSON object"
+  },
+  {
+    "name": "version 1 with a parent",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 1,
+      "parentHash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "no parent"
+  },
+  {
+    "name": "version 2 without a parent",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 2,
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "parent's hash"
+  },
+  {
+    "name": "uppercase parent hash",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 2,
+      "parentHash": "D0C0000000000000000000000000000000000000000000000000000000000000",
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "parent's hash"
+  },
+  {
+    "name": "amendment amending nothing",
+    "version": {
+      "agreementId": "amd-x",
+      "version": 1,
+      "kind": "amendment",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "names what it amends"
+  },
+  {
+    "name": "amendment without the ratified hashes",
+    "version": {
+      "agreementId": "amd-x",
+      "version": 1,
+      "kind": "amendment",
+      "amends": {
+        "agreementId": "agr-x",
+        "ratifiedHashes": null
+      },
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "at least the ratified"
+  },
+  {
+    "name": "agreement that amends",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 1,
+      "kind": "agreement",
+      "amends": {
+        "agreementId": "agr-y",
+        "ratifiedHashes": [
+          "1111111111111111111111111111111111111111111111111111111111111111"
+        ]
+      },
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "amends nothing"
+  },
+  {
+    "name": "unknown kind",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 1,
+      "kind": "contract",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "kind must be"
+  },
+  {
+    "name": "id with a newline",
+    "version": {
+      "agreementId": "agr-x\nI approve everything",
+      "version": 1,
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "control character"
+  },
+  {
+    "name": "missing document hash",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 1,
+      "kind": "agreement",
+      "document": {
+        "sha256": "",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "s",
+      "terms": {}
+    },
+    "invalid": "document hashes"
+  },
+  {
+    "name": "missing terms schema",
+    "version": {
+      "agreementId": "agr-x",
+      "version": 1,
+      "kind": "agreement",
+      "document": {
+        "sha256": "d0c0000000000000000000000000000000000000000000000000000000000000",
+        "mediaType": "application/pdf",
+        "sourceSha256": "50c0000000000000000000000000000000000000000000000000000000000000",
+        "sourceMediaType": "text/markdown"
+      },
+      "termsSchema": "",
+      "terms": {}
+    },
+    "invalid": "terms schema is empty"
+  }
+]

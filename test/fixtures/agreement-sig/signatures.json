@@ -1,0 +1,80 @@
+[
+  {
+    "name": "ed25519, raw public key",
+    "algorithm": "ed25519",
+    "publicKey": "QQCiXgmZ4r4v8Y223yZBDJcz4qA9ha8FagmxDkCuqoM=",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5",
+    "signature": "epXfTuNeN2Aqxk1R1kpXQcopb8sbfF6MJE1B7BIIqi2E1jXBydfJMLhQHpRRN1mp5SkIfWvdoczZCBtVCRVUCQ==",
+    "valid": true
+  },
+  {
+    "name": "ed25519, DER public key",
+    "algorithm": "ed25519",
+    "publicKey": "MCowBQYDK2VwAyEAQQCiXgmZ4r4v8Y223yZBDJcz4qA9ha8FagmxDkCuqoM=",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5",
+    "signature": "epXfTuNeN2Aqxk1R1kpXQcopb8sbfF6MJE1B7BIIqi2E1jXBydfJMLhQHpRRN1mp5SkIfWvdoczZCBtVCRVUCQ==",
+    "valid": true
+  },
+  {
+    "name": "ed25519, other message",
+    "algorithm": "ed25519",
+    "publicKey": "QQCiXgmZ4r4v8Y223yZBDJcz4qA9ha8FagmxDkCuqoM=",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5.",
+    "signature": "epXfTuNeN2Aqxk1R1kpXQcopb8sbfF6MJE1B7BIIqi2E1jXBydfJMLhQHpRRN1mp5SkIfWvdoczZCBtVCRVUCQ==",
+    "valid": false,
+    "reason": "bad"
+  },
+  {
+    "name": "ed25519, tampered signature",
+    "algorithm": "ed25519",
+    "publicKey": "QQCiXgmZ4r4v8Y223yZBDJcz4qA9ha8FagmxDkCuqoM=",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5",
+    "signature": "e5XfTuNeN2Aqxk1R1kpXQcopb8sbfF6MJE1B7BIIqi2E1jXBydfJMLhQHpRRN1mp5SkIfWvdoczZCBtVCRVUCQ==",
+    "valid": false,
+    "reason": "bad"
+  },
+  {
+    "name": "p-256, low s",
+    "algorithm": "ecdsa-p256-sha256",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQrDuyLNP64agE57KZXZQxaNs5U6560YRWDw4ftg5SezmF8WNDfILi0U2+XQKZ1JS8VvPNlZQzADsSfof++/cHQ==",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5",
+    "signature": "MEQCIBrUZmQyQZBkAiX/2uQqkeLYnFGm+Q388blT8B89pcAcAiB3aRV7d+ivERYKZvPJwAXupKWVju1l5OCG1E+6BZQhkQ==",
+    "valid": true
+  },
+  {
+    "name": "p-256, high s",
+    "algorithm": "ecdsa-p256-sha256",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQrDuyLNP64agE57KZXZQxaNs5U6560YRWDw4ftg5SezmF8WNDfILi0U2+XQKZ1JS8VvPNlZQzADsSfof++/cHQ==",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5",
+    "signature": "MEUCIBrUZmQyQZBkAiX/2uQqkeLYnFGm+Q388blT8B89pcAcAiEAiJbqg4gXUO/p9ZkMNj/6ERhBZR65sbmkbOV7CPbPA8A=",
+    "valid": false,
+    "reason": "noncanonical"
+  },
+  {
+    "name": "p-256, other message",
+    "algorithm": "ecdsa-p256-sha256",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQrDuyLNP64agE57KZXZQxaNs5U6560YRWDw4ftg5SezmF8WNDfILi0U2+XQKZ1JS8VvPNlZQzADsSfof++/cHQ==",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5.",
+    "signature": "MEQCIBrUZmQyQZBkAiX/2uQqkeLYnFGm+Q388blT8B89pcAcAiB3aRV7d+ivERYKZvPJwAXupKWVju1l5OCG1E+6BZQhkQ==",
+    "valid": false,
+    "reason": "bad"
+  },
+  {
+    "name": "p-256 signature checked as ed25519",
+    "algorithm": "ed25519",
+    "publicKey": "QQCiXgmZ4r4v8Y223yZBDJcz4qA9ha8FagmxDkCuqoM=",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5",
+    "signature": "MEQCIBrUZmQyQZBkAiX/2uQqkeLYnFGm+Q388blT8B89pcAcAiB3aRV7d+ivERYKZvPJwAXupKWVju1l5OCG1E+6BZQhkQ==",
+    "valid": false,
+    "reason": "bad"
+  },
+  {
+    "name": "unknown algorithm",
+    "algorithm": "rsa-pss-sha256",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQrDuyLNP64agE57KZXZQxaNs5U6560YRWDw4ftg5SezmF8WNDfILi0U2+XQKZ1JS8VvPNlZQzADsSfof++/cHQ==",
+    "message": "Tripart\nI, custodian::1220cc, approve version 1 of agreement agr-0001.\nVersion hash: sha256:c7cf0b014ee0aabf5e4cc81d230d162c5f27c96c2754f6dc15bd9deb20a505e5",
+    "signature": "MEQCIBrUZmQyQZBkAiX/2uQqkeLYnFGm+Q388blT8B89pcAcAiB3aRV7d+ivERYKZvPJwAXupKWVju1l5OCG1E+6BZQhkQ==",
+    "valid": false,
+    "reason": "unsupported"
+  }
+]
