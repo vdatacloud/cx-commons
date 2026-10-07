@@ -1,0 +1,19 @@
+{
+  "0": "api-error.ts",
+  "1": "i18n.ts",
+  "2": "Product CX Commons Platform (`@vdatacloud/cx-commons`)",
+  "3": "package.json",
+  "4": "agreement-sig.ts",
+  "5": "canton-id-view.ts",
+  "6": "Shared Component Catalog & API Reference (`cx-platform`)",
+  "7": "dialogs.ts",
+  "8": "compilerOptions",
+  "9": "Parser",
+  "10": "cx-commons color list",
+  "11": "test-next-version.sh",
+  "12": "Releasing",
+  "13": "EyebrowLabel.astro",
+  "14": "status-colors.ts",
+  "15": "next-version.sh",
+  "16": "sync-api-error-fixtures.sh"
+}
