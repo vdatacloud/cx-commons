@@ -9,6 +9,28 @@ permissions:
   contents: read
 
 jobs:
+  graphify-out-untouched:
+    # graphify-out/ is regenerated and committed on main by update-graph.yml
+    # after merge; a PR that also changes it conflicts with that bot's
+    # commits. Keep it out of PRs.
+    name: graphify-out not modified
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Reject graphify-out changes
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          changed="$(git diff --name-only "$BASE_SHA"...HEAD -- graphify-out/ | head -20)"
+          if [ -n "$changed" ]; then
+            echo "::error::This PR modifies graphify-out/, which is regenerated on main after merge. Drop those changes (git checkout origin/main -- graphify-out) and don't run graphify update locally."
+            echo "$changed"
+            exit 1
+          fi
+
   test:
     runs-on: ubuntu-26.04
     steps:

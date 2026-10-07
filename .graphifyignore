@@ -1,0 +1,9 @@
+# Generated, vendored or tooling output -- not this package's source.
+node_modules/
+dist/
+.astro/
+coverage/
+graphify-out/
+.claude/
+test/fixtures/
+package-lock.json
