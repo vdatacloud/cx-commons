@@ -5,8 +5,8 @@ name: Tag release
 # the same rules as every other repo -- see RELEASING.md): breaking or feat or
 # a Deprecated: footer -> minor, small changes -> patch, docs/test/ci/chore
 # only -> no release. Majors are never automatic (product releases, by hand).
-# When a version is due it is tagged, a floating `latest` tag is moved to it,
-# and the package is published to npm.
+# When a version is due it is released (tag + GitHub release), a floating
+# `latest` tag is moved to it, and the package is published to npm.
 #
 # concurrency.group serializes runs of THIS workflow only -- if two pushes
 # land close together, the second run queues behind the first rather than
@@ -49,35 +49,37 @@ jobs:
         if: steps.version.outputs.next != ''
         run: npm ci && npm run build && npm test
 
-      - name: Push tags
+      # Tags are made server-side through the API, never `git push`: a pushed
+      # tag is refused whenever the release includes a workflow-file change
+      # ("refusing to allow a GitHub App to create or update workflow ...
+      # without `workflows` permission"), which GITHUB_TOKEN can't hold.
+      - name: Tag release
         id: tag
         if: steps.version.outputs.next != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
           for attempt in 1 2 3 4 5; do
             git fetch --tags --force origin
             next="$(bash scripts/next-version.sh)"
             [ -n "$next" ] || { echo "Already released by another run"; exit 0; }
 
-            echo "Attempt $attempt: tagging $next"
-            git tag -a "$next" -m "$next"
-
-            if git push origin "$next"; then
-              git tag -f latest
-              git push --force origin latest
-              echo "Tagged $next and moved latest to it"
+            echo "Attempt $attempt: releasing $next"
+            if gh release create "$next" --target "$GITHUB_SHA" --title "$next" --generate-notes; then
               echo "version=${next#v}" >> "$GITHUB_OUTPUT"
+              # The floating `latest` tag is informational (consumers install
+              # from npm), so failing to move it doesn't fail the release.
+              gh api -X PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/latest" -f sha="$GITHUB_SHA" -F force=true >/dev/null \
+                || gh api "repos/$GITHUB_REPOSITORY/git/refs" -f ref=refs/tags/latest -f sha="$GITHUB_SHA" >/dev/null \
+                || echo "::warning::could not move the latest tag"
               exit 0
             fi
 
-            echo "Push of $next rejected (likely a race with another run) -- retrying"
-            git tag -d "$next"
+            echo "Release of $next refused (likely a race with another run) -- retrying"
             sleep $(( (RANDOM % 5) + 1 ))
           done
 
-          echo "Failed to push a new tag after retries" >&2
+          echo "Failed to create a release after retries" >&2
           exit 1
 
       # Publishes the tagged version as @vdatacloud/cx-commons via npm
