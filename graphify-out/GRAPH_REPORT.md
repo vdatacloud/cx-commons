@@ -1,17 +1,17 @@
-# Graph Report - cx-commons  (2026-10-07)
+# Graph Report - cx-commons  (2026-10-13)
 
 ## Corpus Check
-- 37 files · ~21,835 words
+- 37 files · ~21,837 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 3, .woff2 2, .css 1)
 
 ## Summary
-- 365 nodes · 678 edges · 17 communities (12 shown, 5 thin omitted)
+- 366 nodes · 679 edges · 17 communities (13 shown, 4 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 46 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6c9ac985`
+- Built from commit: `712b5161`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -61,7 +61,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (17 total, 5 thin omitted)
+## Communities (17 total, 4 thin omitted)
 
 ### Community 0 - "api-error.ts"
 Cohesion: 0.07
@@ -77,7 +77,7 @@ Nodes (39): 1. Design System Tokens (Data Cloud LNF Scale), 2. Utility Classes &
 
 ### Community 3 - "package.json"
 Cohesion: 0.05
-Nodes (39): author, description, devDependencies, astro, happy-dom, @tailwindcss/typography, typescript, vitest (+31 more)
+Nodes (40): author, description, devDependencies, astro, happy-dom, @tailwindcss/typography, typescript, vitest (+32 more)
 
 ### Community 4 - "agreement-sig.ts"
 Cohesion: 0.13
@@ -92,12 +92,16 @@ Cohesion: 0.08
 Nodes (26): 1. `Nav.astro`, 2. `Footer.astro`, 3. `StatusBadge.astro`, 4. `EyebrowLabel.astro`, 5. `ApiErrorNotice.astro`, 7. `LanguageSwitcher.astro`, Component Props, Component Props (+18 more)
 
 ### Community 7 - "dialogs.ts"
-Cohesion: 0.18
-Nodes (22): Internationalization (`sdk/i18n`, `sdk/cx-messages`), apiErrorFromUnknown(), isApiError(), mountApiErrorNotice(), acknowledge(), confirmDialog(), DialogSpec, el() (+14 more)
+Cohesion: 0.20
+Nodes (21): Internationalization (`sdk/i18n`, `sdk/cx-messages`), apiErrorFromUnknown(), isApiError(), mountApiErrorNotice(), acknowledge(), confirmDialog(), DialogSpec, el() (+13 more)
 
 ### Community 8 - "compilerOptions"
 Cohesion: 0.17
 Nodes (11): compilerOptions, allowJs, declaration, isolatedModules, module, moduleResolution, outDir, skipLibCheck (+3 more)
+
+### Community 9 - "Parser"
+Cohesion: 0.44
+Nodes (3): formatMessage(), messageParams(), Parser
 
 ### Community 10 - "cx-commons color list"
 Cohesion: 0.25
@@ -112,19 +116,19 @@ Cohesion: 0.50
 Nodes (3): Automated (default), Major releases, Releasing
 
 ## Knowledge Gaps
-- **150 isolated node(s):** `CxCommonsOptions`, `name`, `version`, `description`, `type` (+145 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 166 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **151 isolated node(s):** `CxCommonsOptions`, `name`, `version`, `description`, `type` (+146 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 167 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `vitest` connect `canton-id-view.ts` to `api-error.ts`, `i18n.ts`, `package.json`, `agreement-sig.ts`, `dialogs.ts`?**
-  _High betweenness centrality (0.239) - this node is a cross-community bridge._
+  _High betweenness centrality (0.242) - this node is a cross-community bridge._
 - **Are the 16 inferred relationships involving `Internationalization (`sdk/i18n`, `sdk/cx-messages`)` (e.g. with `renderApiErrorNotice()` and `acknowledge()`) actually correct?**
   _`Internationalization (`sdk/i18n`, `sdk/cx-messages`)` has 16 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `CxCommonsOptions`, `name`, `version` to the rest of the system?**
-  _150 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _151 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `api-error.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.06663141195134849 - nodes in this community are weakly interconnected._
 - **Why does `Shared Component Catalog & API Reference (`cx-platform`)` connect `Shared Component Catalog & API Reference (`cx-platform`)` to `api-error.ts`, `i18n.ts`, `Product CX Commons Platform (`@vdatacloud/cx-commons`)`, `canton-id-view.ts`?**
@@ -132,4 +136,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 3 inferred relationships involving `renderApiErrorNotice()` (e.g. with `Internationalization (`sdk/i18n`, `sdk/cx-messages`)` and `.maybe()`) actually correct?**
   _`renderApiErrorNotice()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Should `i18n.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.07755102040816327 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07673469387755102 - nodes in this community are weakly interconnected._

@@ -1,0 +1,248 @@
+{
+  "index.ts": {
+    "mtime": 1791401126.9802742,
+    "seen": 1791401140.8797302,
+    "ast_hash": "7de14c5b20277c0eba72710f9a2ed5a3",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1791401126.9808733,
+    "seen": 1791401140.8797336,
+    "ast_hash": "3b0b91c7c97d936f011bd0ea90a99a66",
+    "semantic_hash": ""
+  },
+  "scripts/next-version.sh": {
+    "mtime": 1791401126.9808733,
+    "seen": 1791401140.8797355,
+    "ast_hash": "9ef52fd36ce9f9352c4add7395d9a5c5",
+    "semantic_hash": ""
+  },
+  "scripts/sync-api-error-fixtures.sh": {
+    "mtime": 1791401126.9817176,
+    "seen": 1791401140.8797371,
+    "ast_hash": "89dcf8733fc30514e150547da1810744",
+    "semantic_hash": ""
+  },
+  "scripts/test-next-version.sh": {
+    "mtime": 1791401126.9817176,
+    "seen": 1791401140.8797386,
+    "ast_hash": "e1e102721e0238db3b32ae0c3c0b632e",
+    "semantic_hash": ""
+  },
+  "src/components/ApiErrorNotice.astro": {
+    "mtime": 1791401126.9818625,
+    "seen": 1791401140.87974,
+    "ast_hash": "5d04f9eaf74b1b367b19d9ae75d39ec4",
+    "semantic_hash": ""
+  },
+  "src/components/CantonId.astro": {
+    "mtime": 1791401126.9819276,
+    "seen": 1791401140.8797414,
+    "ast_hash": "1998f015ab325e27ae885d51be1100aa",
+    "semantic_hash": ""
+  },
+  "src/components/EyebrowLabel.astro": {
+    "mtime": 1791401126.9819276,
+    "seen": 1791401140.879752,
+    "ast_hash": "63d6b713227e289a1003326a23d061b8",
+    "semantic_hash": ""
+  },
+  "src/components/Footer.astro": {
+    "mtime": 1791401126.9819276,
+    "seen": 1791401140.8797538,
+    "ast_hash": "97a0fa50bdd57201609ba97af9dbe6b9",
+    "semantic_hash": ""
+  },
+  "src/components/LanguageSwitcher.astro": {
+    "mtime": 1791401126.9819276,
+    "seen": 1791401140.8797553,
+    "ast_hash": "e9be996dda076a4d7f4a1797593afddc",
+    "semantic_hash": ""
+  },
+  "src/components/Nav.astro": {
+    "mtime": 1791401126.9819276,
+    "seen": 1791401140.8797567,
+    "ast_hash": "a518233338e8400107d24bf041a540c7",
+    "semantic_hash": ""
+  },
+  "src/components/StatusBadge.astro": {
+    "mtime": 1791401126.9819276,
+    "seen": 1791401140.8797581,
+    "ast_hash": "f7beead77416d6c472901ecc6d7022c4",
+    "semantic_hash": ""
+  },
+  "src/schema/api-error.schema.json": {
+    "mtime": 1791401126.982241,
+    "seen": 1791401140.879759,
+    "ast_hash": "55417a639766e39c383d799a916b3797",
+    "semantic_hash": ""
+  },
+  "src/sdk/agreement-sig.ts": {
+    "mtime": 1791401126.982241,
+    "seen": 1791401140.87976,
+    "ast_hash": "10ce4e17722408a65468345a2acaf3c8",
+    "semantic_hash": ""
+  },
+  "src/sdk/api-error-notice.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797615,
+    "ast_hash": "22013a4cedf139b1d5cfc5e7554da265",
+    "semantic_hash": ""
+  },
+  "src/sdk/api-error.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797624,
+    "ast_hash": "27c953fe980248e5894b131a34c8d2db",
+    "semantic_hash": ""
+  },
+  "src/sdk/canton-id-view.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797634,
+    "ast_hash": "2553fa977962d38c5e9ad6e2c97c8fee",
+    "semantic_hash": ""
+  },
+  "src/sdk/canton-id.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797646,
+    "ast_hash": "5850cf390dba3593f289e68566668c08",
+    "semantic_hash": ""
+  },
+  "src/sdk/cx-messages.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797655,
+    "ast_hash": "d28258209ff6f8796ba153ce25a81d2b",
+    "semantic_hash": ""
+  },
+  "src/sdk/dialogs.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797667,
+    "ast_hash": "7a99f719b2afc42d0473b1cb419e5c20",
+    "semantic_hash": ""
+  },
+  "src/sdk/i18n.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797677,
+    "ast_hash": "b13412b201f3f7f4e9b5336d08a1b36f",
+    "semantic_hash": ""
+  },
+  "src/sdk/status-colors.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797688,
+    "ast_hash": "b6bdf8a925c6bf042ff0a68024160259",
+    "semantic_hash": ""
+  },
+  "test/agreement-sig.test.ts": {
+    "mtime": 1791401126.9824944,
+    "seen": 1791401140.8797703,
+    "ast_hash": "fd05fd7a2303f121316c3dd042926db0",
+    "semantic_hash": ""
+  },
+  "test/api-error-notice.test.ts": {
+    "mtime": 1791401126.9833205,
+    "seen": 1791401140.8797715,
+    "ast_hash": "91ec553a27b4371b01792a72a3e888c1",
+    "semantic_hash": ""
+  },
+  "test/api-error.test.ts": {
+    "mtime": 1791401126.9833205,
+    "seen": 1791401140.8797724,
+    "ast_hash": "52f5c7e7d9b5d2c336c2dbb976627f24",
+    "semantic_hash": ""
+  },
+  "test/canton-id-view.test.ts": {
+    "mtime": 1791401126.9833205,
+    "seen": 1791401140.8797734,
+    "ast_hash": "2c4a67531a8355960ac7642240dab93f",
+    "semantic_hash": ""
+  },
+  "test/canton-id.test.ts": {
+    "mtime": 1791401126.9833205,
+    "seen": 1791401140.8797746,
+    "ast_hash": "619f2b0d985cfcb565fea9bbc6a6c187",
+    "semantic_hash": ""
+  },
+  "test/dialogs.test.ts": {
+    "mtime": 1791401126.9833205,
+    "seen": 1791401140.8797753,
+    "ast_hash": "899866e23be1a4050a0ae34faff3b629",
+    "semantic_hash": ""
+  },
+  "test/i18n.test.ts": {
+    "mtime": 1791401126.9849994,
+    "seen": 1791401140.8797762,
+    "ast_hash": "cd9ed626b6174a9be0401848a53b8048",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1791401126.9849994,
+    "seen": 1791401140.879777,
+    "ast_hash": "b80e98c0eb71e8b14c941e8e065456bf",
+    "semantic_hash": ""
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1791401126.979764,
+    "seen": 1791401140.8797781,
+    "ast_hash": "b99f1096c92db590dbd324cf2e2a2650",
+    "semantic_hash": ""
+  },
+  ".github/workflows/tag-release.yml": {
+    "mtime": 1791401126.9798565,
+    "seen": 1791401140.879779,
+    "ast_hash": "70ae9e42d098cc210cf65e77eb07a3a6",
+    "semantic_hash": ""
+  },
+  ".github/workflows/update-graph.yml": {
+    "mtime": 1791401126.9798565,
+    "seen": 1791401140.8797803,
+    "ast_hash": "fd339f66f31b8b6b5c36e0669fe0092e",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1791401126.9798565,
+    "seen": 1791401140.8797815,
+    "ast_hash": "b3a9329e95c0c54048eca0a1ca806daa",
+    "semantic_hash": ""
+  },
+  "RELEASING.md": {
+    "mtime": 1791401126.9798565,
+    "seen": 1791401140.8797827,
+    "ast_hash": "c2b883dc38e8b30d9e147d623c55447d",
+    "semantic_hash": ""
+  },
+  "docs/ARCHITECTURE.md": {
+    "mtime": 1791401126.9798565,
+    "seen": 1791401140.8797836,
+    "ast_hash": "867f087bcd07f64b66f528b6a4065edc",
+    "semantic_hash": ""
+  },
+  "docs/COMPONENTS.md": {
+    "mtime": 1791401126.9802742,
+    "seen": 1791401140.8797848,
+    "ast_hash": "9993d09c228d4cca58fc004d269aaba6",
+    "semantic_hash": ""
+  },
+  "docs/CONTRIBUTING.md": {
+    "mtime": 1791401126.9802742,
+    "seen": 1791401140.8797858,
+    "ast_hash": "84f0cb0101846a684c1aa8aa5d176333",
+    "semantic_hash": ""
+  },
+  "docs/DEVELOPMENT.md": {
+    "mtime": 1791401126.9802742,
+    "seen": 1791401140.8797867,
+    "ast_hash": "56db9b35bb6984399fb211a62e3b868a",
+    "semantic_hash": ""
+  },
+  "docs/crayola-palette-list.md": {
+    "mtime": 1791401126.9802742,
+    "seen": 1791401140.8797874,
+    "ast_hash": "327323934a4f0ec6fb165d125dcf7f8b",
+    "semantic_hash": ""
+  },
+  "docs/Tripart-design-color-guide.pdf": {
+    "mtime": 1791401126.9802742,
+    "seen": 1791401140.8797889,
+    "ast_hash": "488a4a28ece8d4e5b5b5f1a94d55da98",
+    "semantic_hash": ""
+  }
+}
