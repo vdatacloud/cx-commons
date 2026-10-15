@@ -2161,7 +2161,7 @@
       "file_type": "code",
       "norm_label": "sizestyles",
       "source_file": "src/components/StatusBadge.astro",
-      "source_location": "L36"
+      "source_location": "L38"
     },
     {
       "id": "src_components_statusbadge_statusupper",
@@ -2194,7 +2194,7 @@
       "file_type": "code",
       "norm_label": "cx_locales",
       "source_file": "src/sdk/cx-messages.ts",
-      "source_location": "L145"
+      "source_location": "L149"
     },
     {
       "id": "src_sdk_cx_messages_cxmessages",
@@ -9646,7 +9646,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/StatusBadge.astro",
-      "source_location": "L36",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -10658,7 +10658,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/sdk/cx-messages.ts",
-      "source_location": "L145",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
@@ -12183,5 +12183,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "712b516193ead7eb77fefa0601f6972c42380bca"
+  "built_at_commit": "5ed943a0a27db6802dbc504ffdcb15a30ca24588"
 }
