@@ -94,7 +94,9 @@
   --color-status-disputed: #fd5e53; /* Sunset Orange */
   --color-status-arbitration: #ee204d; /* Red */
   --color-status-settled: #926eae;  /* Violet (Purple) */
-  --color-status-awaiting-custody-approval: #ff7538; /* Orange */
+  --color-status-awaiting-release-approval: #ff7538; /* Orange */
+  /* Deprecated alias (daml-escrow Phase 82.4b renamed the state). */
+  --color-status-awaiting-custody-approval: var(--color-status-awaiting-release-approval);
   --color-status-fiat-pending: #7366bd; /* Blue Violet */
   --color-status-lapsed: #cb4154;   /* Brick Red */
 
