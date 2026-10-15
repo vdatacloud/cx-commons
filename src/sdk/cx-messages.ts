@@ -55,7 +55,9 @@ export const cxMessages = {
                 DISPUTED: 'Disputed',
                 ARBITRATION: 'Arbitration',
                 SETTLED: 'Settled',
-                AWAITING_CUSTODY_APPROVAL: 'Awaiting custody approval',
+                AWAITING_RELEASE_APPROVAL: 'Awaiting release approval',
+                /** @deprecated daml-escrow Phase 82.4b: AWAITING_RELEASE_APPROVAL. */
+                AWAITING_CUSTODY_APPROVAL: 'Awaiting release approval',
                 FIAT_PENDING: 'Fiat payment pending',
                 LAPSED: 'Lapsed',
             },
@@ -121,7 +123,9 @@ export const cxMessages = {
                 DISPUTED: 'En litige',
                 ARBITRATION: 'Arbitrage',
                 SETTLED: 'Réglé',
-                AWAITING_CUSTODY_APPROVAL: 'En attente d’approbation de la conservation',
+                AWAITING_RELEASE_APPROVAL: 'En attente de l’approbation du déblocage',
+                /** @deprecated daml-escrow Phase 82.4b: AWAITING_RELEASE_APPROVAL. */
+                AWAITING_CUSTODY_APPROVAL: 'En attente de l’approbation du déblocage',
                 FIAT_PENDING: 'Paiement fiat en attente',
                 LAPSED: 'Expiré',
             },
