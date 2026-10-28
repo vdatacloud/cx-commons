@@ -2,7 +2,7 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { decisionsFor, mountPendingApprovals, renderPendingApprovals, type ApprovalDecision, type PendingApproval } from '../src/sdk/pending-approvals';
+import { actionsFor, decisionsFor, mountPendingApprovals, renderPendingApprovals, type ApprovalDecision, type PendingApproval } from '../src/sdk/pending-approvals';
 
 // The Go rule's cases (daml-escrow-commons approval/testdata/decisions.json,
 // copied by scripts/sync-api-error-fixtures.sh): the page offers exactly what
@@ -95,6 +95,60 @@ describe('pending approvals (daml-escrow PLAN.md Phase 91.4)', () => {
         [...dialog().querySelectorAll('button')].find((b) => b.textContent === 'Cancel')!.click();
         await tick();
         expect(onDecide).not.toHaveBeenCalled();
+    });
+
+    // daml-escrow PLAN.md Phase 92.5: an act nobody proposed, with its own actions.
+    const release: PendingApproval = {
+        id: '00pd', approvals: ['carl::1220cc'], required: 2, what: 'Release 400 USD',
+        actions: [{ id: 'approve', label: 'Approve', reason: 'none', confirm: 'Approve this release?' }],
+    };
+
+    it('shows no proposer for an act nobody proposed', () => {
+        const item = renderPendingApprovals([release], { onDecide: () => {} }).querySelector('[data-approval]')!;
+        expect(item.textContent).toContain('1 of 2 approvals');
+        expect(item.textContent).not.toContain('Proposed by');
+    });
+
+    it("offers an act's own actions, and none to someone who has approved", () => {
+        expect(actionsFor(release, 'dan::1220dd').map((a) => a.id)).toEqual(['approve']);
+        expect(actionsFor(release, 'carl::1220cc')).toEqual([]);
+        expect(actionsFor(release).map((a) => a.id)).toEqual(['approve']);
+        const host = document.createElement('div');
+        mountPendingApprovals(host, [release], { me: 'dan::1220dd', onDecide: () => {} });
+        expect(host.querySelector('[data-approval-decision]')).toBeNull();
+        expect(host.querySelector('[data-approval-action=approve]')).not.toBeNull();
+    });
+
+    it('an action without a reason only confirms, then hands it over', async () => {
+        const onAction = vi.fn();
+        const onDecide = vi.fn();
+        const host = document.createElement('div');
+        document.body.append(host);
+        mountPendingApprovals(host, [release], { me: 'dan::1220dd', onDecide, onAction });
+        host.querySelector<HTMLButtonElement>('[data-approval-action=approve]')!.click();
+        await tick();
+        expect(dialog().textContent).toContain('Approve this release?');
+        submit();
+        await tick();
+        expect(onAction).toHaveBeenCalledWith(release, 'approve', '');
+        expect(onDecide).not.toHaveBeenCalled();
+    });
+
+    it('an action with a required reason asks for one', async () => {
+        const review: PendingApproval = { ...release, id: '00r', approvals: [], required: 1,
+            actions: [{ id: 'FROZEN', label: 'Freeze', tone: 'danger' }] };
+        const onAction = vi.fn();
+        const host = document.createElement('div');
+        document.body.append(host);
+        mountPendingApprovals(host, [review], { me: 'mlro::1220ee', onDecide: () => {}, onAction });
+        host.querySelector<HTMLButtonElement>('[data-approval-action=FROZEN]')!.click();
+        await tick();
+        submit();
+        await tick();
+        dialog().querySelector('input')!.value = 'sanctions hit';
+        submit();
+        await tick();
+        expect(onAction).toHaveBeenCalledWith(review, 'FROZEN', 'sanctions hit');
     });
 
     it('says when nothing is pending, in the page language', () => {
