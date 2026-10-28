@@ -1,6 +1,19 @@
 // @vitest-environment happy-dom
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { decisionsFor, mountPendingApprovals, renderPendingApprovals, type PendingApproval } from '../src/sdk/pending-approvals';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { decisionsFor, mountPendingApprovals, renderPendingApprovals, type ApprovalDecision, type PendingApproval } from '../src/sdk/pending-approvals';
+
+// The Go rule's cases (daml-escrow-commons approval/testdata/decisions.json,
+// copied by scripts/sync-api-error-fixtures.sh): the page offers exactly what
+// the server allows. A stale request, or one about the viewer, is noApprove.
+interface RuleCase {
+    name: string;
+    request: { proposedBy: string; approvals?: string[]; stale?: boolean; subject?: string };
+    viewer: string;
+    decisions: ApprovalDecision[];
+}
+const ruleCases: RuleCase[] = JSON.parse(readFileSync(join(__dirname, 'fixtures', 'approval', 'decisions.json'), 'utf8'));
 
 const dialog = () => document.querySelector<HTMLDialogElement>('dialog[data-app-dialog]')!;
 const submit = () => dialog().querySelector('form')!.dispatchEvent(new Event('submit', { cancelable: true }));
@@ -47,6 +60,13 @@ describe('pending approvals (daml-escrow PLAN.md Phase 91.4)', () => {
         expect(decisionsFor(grant)).toEqual(['approve', 'reject', 'withdraw']);
         const list = renderPendingApprovals([grant], { me: 'bob::1220bb', onDecide: () => {} });
         expect([...list.querySelectorAll<HTMLElement>('[data-approval-decision]')].map((b) => b.dataset.approvalDecision)).toEqual(['approve', 'reject']);
+    });
+
+    it.each(ruleCases)('follows the shared rule: $name', (c) => {
+        const r = c.request;
+        const item: PendingApproval = { id: 'x', proposedBy: r.proposedBy, approvals: r.approvals ?? [], required: 2, what: '',
+            noApprove: !!r.stale || (!!r.subject && r.subject === c.viewer) };
+        expect(decisionsFor(item, c.viewer || undefined)).toEqual(c.decisions);
     });
 
     it('confirms, asks for a reason, then hands the decision over', async () => {

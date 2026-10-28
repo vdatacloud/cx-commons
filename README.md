@@ -88,13 +88,13 @@ How a party signs one version of an agreement, mirroring daml-escrow-commons `ag
 - `verifySignature(alg, publicKey, message, signature)`: `ed25519` (wallets) or `ecdsa-p256-sha256` (KMS keys such as the custodian's; strict DER, low s), through WebCrypto.
 - `draftHash` / `draftMessage`: the frozen `tripart.draft-version/1` (Phase 77 drafts).
 
-`test/fixtures/api-error`, `test/fixtures/canton-id` and `test/fixtures/agreement-sig` hold copies of the Go goldens, from the commit in `SOURCE`. After changing the Go package, run `npm run sync:api-error-fixtures`; CI fails if the copies drift.
+`test/fixtures/api-error`, `test/fixtures/canton-id`, `test/fixtures/agreement-sig` and `test/fixtures/approval` hold copies of the Go goldens, from the commit in `SOURCE`. After changing the Go package, run `npm run sync:api-error-fixtures`; CI fails if the copies drift.
 
 ---
 
 ### Pending approvals (`sdk/pending-approvals`)
 
-One worklist for acts waiting on several people's approval, whatever the act (daml-escrow PLAN.md Phase 91.4, the shared approval process). `mountPendingApprovals(host, items, { me, onDecide })` shows each request's description, proposer, progress (n of N, with a progress bar) and who approved, with the decisions the viewer may take: the proposer withdraws; someone who approved does nothing more; anyone else approves or rejects (`noApprove` hides approve, e.g. for a stale act or the viewer's own appointment). Each decision confirms and asks for a reason before `onDecide(item, decision, reason)`; the app sends it and reloads. Text is never parsed as markup; pass a `Node` for a rich description. Strings are `cx.approvals.*` (en, fr).
+One worklist for acts waiting on several people's approval, whatever the act (daml-escrow PLAN.md Phase 91.4, the shared approval process). `mountPendingApprovals(host, items, { me, onDecide })` shows each request's description, proposer, progress (n of N, with a progress bar) and who approved, with the decisions the viewer may take: the proposer withdraws; someone who approved does nothing more; anyone else approves or rejects (`noApprove` hides approve, e.g. for a stale act or the viewer's own appointment). Each decision confirms and asks for a reason before `onDecide(item, decision, reason)`; the app sends it and reloads. Text is never parsed as markup; pass a `Node` for a rich description. Strings are `cx.approvals.*` (en, fr). `decisionsFor` is tested against daml-escrow-commons `approval/testdata/decisions.json`, the server's rule.
 
 ---
 

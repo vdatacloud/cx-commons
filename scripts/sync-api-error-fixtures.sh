@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copies the canonical API error, Canton id and agreement-signing fixtures from daml-escrow-commons (the Go
+# Copies the canonical API error, Canton id, agreement-signing and approval-rule fixtures from daml-escrow-commons (the Go
 # source of truth) into test/fixtures/api-error, and records the commit
 # they came from in SOURCE -- CI checks the copies still match that commit.
 #
@@ -24,5 +24,9 @@ cp "$src"/cantonid/testdata/parse.json "$ids/parse.json"
 sigs="$dst/../agreement-sig"
 rm -rf "$sigs" && mkdir -p "$sigs"
 cp "$src"/agreementsig/testdata/*.json "$sigs/"
+# Who may decide a pending approval (approval) -- same source commit.
+rule="$dst/../approval"
+rm -rf "$rule" && mkdir -p "$rule"
+cp "$src"/approval/testdata/decisions.json "$rule/decisions.json"
 git -C "$src" rev-parse HEAD > "$dst/SOURCE"
 echo "synced api-error fixtures from $(cat "$dst/SOURCE")"
