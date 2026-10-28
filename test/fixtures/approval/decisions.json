@@ -1,0 +1,179 @@
+[
+  {
+    "name": "the proposer only withdraws",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice"
+      ]
+    },
+    "viewer": "alice",
+    "decisions": [
+      "withdraw"
+    ],
+    "refusals": {
+      "approve": "already-approved",
+      "reject": "already-approved"
+    }
+  },
+  {
+    "name": "another person approves or rejects",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice"
+      ]
+    },
+    "viewer": "bob",
+    "decisions": [
+      "approve",
+      "reject"
+    ],
+    "refusals": {
+      "withdraw": "not-proposer"
+    }
+  },
+  {
+    "name": "someone who approved decides nothing more",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice",
+        "bob"
+      ]
+    },
+    "viewer": "bob",
+    "decisions": [],
+    "refusals": {
+      "approve": "already-approved",
+      "reject": "already-approved",
+      "withdraw": "not-proposer"
+    }
+  },
+  {
+    "name": "the proposer counts as approved though unlisted",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "bob"
+      ]
+    },
+    "viewer": "alice",
+    "decisions": [
+      "withdraw"
+    ],
+    "refusals": {
+      "approve": "already-approved",
+      "reject": "already-approved"
+    }
+  },
+  {
+    "name": "a stale request is only rejected",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice"
+      ],
+      "stale": true
+    },
+    "viewer": "bob",
+    "decisions": [
+      "reject"
+    ],
+    "refusals": {
+      "approve": "stale",
+      "withdraw": "not-proposer"
+    }
+  },
+  {
+    "name": "the proposer withdraws a stale request",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice"
+      ],
+      "stale": true
+    },
+    "viewer": "alice",
+    "decisions": [
+      "withdraw"
+    ],
+    "refusals": {
+      "approve": "already-approved",
+      "reject": "already-approved"
+    }
+  },
+  {
+    "name": "the subject may not approve",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice"
+      ],
+      "subject": "sam"
+    },
+    "viewer": "sam",
+    "decisions": [
+      "reject"
+    ],
+    "refusals": {
+      "approve": "subject",
+      "withdraw": "not-proposer"
+    }
+  },
+  {
+    "name": "others approve a request about someone",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice"
+      ],
+      "subject": "sam"
+    },
+    "viewer": "bob",
+    "decisions": [
+      "approve",
+      "reject"
+    ],
+    "refusals": {
+      "withdraw": "not-proposer"
+    }
+  },
+  {
+    "name": "no viewer sees every decision",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice"
+      ]
+    },
+    "viewer": "",
+    "decisions": [
+      "approve",
+      "reject",
+      "withdraw"
+    ],
+    "refusals": {
+      "withdraw": "not-proposer"
+    }
+  },
+  {
+    "name": "no viewer sees no approve when stale",
+    "request": {
+      "proposedBy": "alice",
+      "approvals": [
+        "alice"
+      ],
+      "stale": true
+    },
+    "viewer": "",
+    "decisions": [
+      "reject",
+      "withdraw"
+    ],
+    "refusals": {
+      "approve": "stale",
+      "withdraw": "not-proposer"
+    }
+  }
+]
