@@ -98,19 +98,6 @@
       "source_location": "L54"
     },
     {
-      "id": "src_sdk_i18n_translator",
-      "label": "Translator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "translator",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L231"
-    },
-    {
       "id": "src_components_footer_props",
       "label": "Props",
       "_callable": true,
@@ -226,45 +213,6 @@
       "norm_label": "props",
       "source_file": "src/components/EyebrowLabel.astro",
       "source_location": "L2"
-    },
-    {
-      "id": "src_sdk_pending_approvals_approvaldecision",
-      "label": "ApprovalDecision",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "approvaldecision",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_sdk_pending_approvals_pendingapproval",
-      "label": "PendingApproval",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "pendingapproval",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L21"
-    },
-    {
-      "id": "src_sdk_pending_approvals_pendingapprovalsoptions",
-      "label": "PendingApprovalsOptions",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "pendingapprovalsoptions",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L41"
     },
     {
       "id": "index_cxcommonsoptions",
@@ -462,19 +410,6 @@
       "source_location": "L12"
     },
     {
-      "id": "src_sdk_i18n_node",
-      "label": "Node",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "canton-id-view.ts",
-      "file_type": "code",
-      "norm_label": "node",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L36"
-    },
-    {
       "id": "test_canton_id_test_case",
       "label": "Case",
       "_callable": true,
@@ -512,6 +447,84 @@
       "norm_label": "field",
       "source_file": "src/sdk/dialogs.ts",
       "source_location": "L32"
+    },
+    {
+      "id": "src_sdk_i18n_node",
+      "label": "Node",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "node",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_sdk_i18n_translator",
+      "label": "Translator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "translator",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L231"
+    },
+    {
+      "id": "src_sdk_pending_approvals_approvaldecision",
+      "label": "ApprovalDecision",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "approvaldecision",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_sdk_pending_approvals_pendingapproval",
+      "label": "PendingApproval",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "pendingapproval",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_sdk_pending_approvals_pendingapprovalsoptions",
+      "label": "PendingApprovalsOptions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "pendingapprovalsoptions",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "test_pending_approvals_test_rulecase",
+      "label": "RuleCase",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "rulecase",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L10"
     },
     {
       "id": "src_sdk_i18n_parser",
@@ -755,6 +768,18 @@
       "source_location": "L195"
     },
     {
+      "id": "src_sdk_api_error_notice_mountapierrornotice",
+      "label": "mountApiErrorNotice()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "mountapierrornotice()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L184"
+    },
+    {
       "id": "src_sdk_api_error_notice_renderapierrornotice",
       "label": "renderApiErrorNotice()",
       "_callable": true,
@@ -875,18 +900,6 @@
       "source_location": "L230"
     },
     {
-      "id": "src_sdk_i18n_translator_has",
-      "label": ".has()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": ".has()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L237"
-    },
-    {
       "id": "src_sdk_i18n_translator_maybe",
       "label": ".maybe()",
       "_callable": true,
@@ -897,18 +910,6 @@
       "norm_label": ".maybe()",
       "source_file": "src/sdk/i18n.ts",
       "source_location": "L236"
-    },
-    {
-      "id": "src_sdk_i18n_translator_t",
-      "label": ".t()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": ".t()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L234"
     },
     {
       "id": "test_api_error_test_names",
@@ -933,6 +934,18 @@
       "norm_label": "read()",
       "source_file": "test/api-error.test.ts",
       "source_location": "L14"
+    },
+    {
+      "id": "src_sdk_dialogs_formdialog",
+      "label": "formDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "formdialog()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L128"
     },
     {
       "id": "src_sdk_i18n_canonicallocale",
@@ -1007,6 +1020,18 @@
       "source_location": "L398"
     },
     {
+      "id": "src_sdk_i18n_formatdatetime",
+      "label": "formatDateTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "formatdatetime()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L403"
+    },
+    {
       "id": "src_sdk_i18n_formatmessage",
       "label": "formatMessage()",
       "_callable": true,
@@ -1041,6 +1066,18 @@
       "norm_label": "formatnumber()",
       "source_file": "src/sdk/i18n.ts",
       "source_location": "L367"
+    },
+    {
+      "id": "src_sdk_i18n_formatrelativetime",
+      "label": "formatRelativeTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "formatrelativetime()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L408"
     },
     {
       "id": "src_sdk_i18n_gettranslator",
@@ -1185,114 +1222,6 @@
       "norm_label": "getstatushexcolor()",
       "source_file": "src/sdk/status-colors.ts",
       "source_location": "L12"
-    },
-    {
-      "id": "src_sdk_pending_approvals_decide",
-      "label": "decide()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "decide()",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L85"
-    },
-    {
-      "id": "src_sdk_pending_approvals_decisionsfor",
-      "label": "decisionsFor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "decisionsfor()",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L77"
-    },
-    {
-      "id": "src_sdk_pending_approvals_el",
-      "label": "el()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "el()",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L69"
-    },
-    {
-      "id": "src_sdk_pending_approvals_mountpendingapprovals",
-      "label": "mountPendingApprovals()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "mountpendingapprovals()",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L158"
-    },
-    {
-      "id": "src_sdk_pending_approvals_renderitem",
-      "label": "renderItem()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "renderitem()",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L92"
-    },
-    {
-      "id": "src_sdk_pending_approvals_renderpendingapprovals",
-      "label": "renderPendingApprovals()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "renderpendingapprovals()",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L144"
-    },
-    {
-      "id": "test_pending_approvals_test_dialog",
-      "label": "dialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "dialog()",
-      "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "test_pending_approvals_test_submit",
-      "label": "submit()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "submit()",
-      "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "test_pending_approvals_test_tick",
-      "label": "tick()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "tick()",
-      "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L7"
     },
     {
       "id": "index_cxcommons",
@@ -1691,18 +1620,6 @@
       "source_location": "L284"
     },
     {
-      "id": "src_sdk_api_error_notice_mountapierrornotice",
-      "label": "mountApiErrorNotice()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "mountapierrornotice()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L184"
-    },
-    {
       "id": "src_sdk_dialogs_acknowledge",
       "label": "acknowledge()",
       "_callable": true,
@@ -1737,18 +1654,6 @@
       "norm_label": "el()",
       "source_file": "src/sdk/dialogs.ts",
       "source_location": "L25"
-    },
-    {
-      "id": "src_sdk_dialogs_formdialog",
-      "label": "formDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "formdialog()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L128"
     },
     {
       "id": "src_sdk_dialogs_notifyerror",
@@ -1823,28 +1728,100 @@
       "source_location": "L159"
     },
     {
-      "id": "src_sdk_i18n_formatdatetime",
-      "label": "formatDateTime()",
+      "id": "src_sdk_i18n_translator_has",
+      "label": ".has()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "dialogs.ts",
       "file_type": "code",
-      "norm_label": "formatdatetime()",
+      "norm_label": ".has()",
       "source_file": "src/sdk/i18n.ts",
-      "source_location": "L403"
+      "source_location": "L237"
     },
     {
-      "id": "src_sdk_i18n_formatrelativetime",
-      "label": "formatRelativeTime()",
+      "id": "src_sdk_i18n_translator_t",
+      "label": ".t()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "dialogs.ts",
       "file_type": "code",
-      "norm_label": "formatrelativetime()",
+      "norm_label": ".t()",
       "source_file": "src/sdk/i18n.ts",
-      "source_location": "L408"
+      "source_location": "L234"
+    },
+    {
+      "id": "src_sdk_pending_approvals_decide",
+      "label": "decide()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "decide()",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L85"
+    },
+    {
+      "id": "src_sdk_pending_approvals_decisionsfor",
+      "label": "decisionsFor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "decisionsfor()",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L77"
+    },
+    {
+      "id": "src_sdk_pending_approvals_el",
+      "label": "el()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "el()",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L69"
+    },
+    {
+      "id": "src_sdk_pending_approvals_mountpendingapprovals",
+      "label": "mountPendingApprovals()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "mountpendingapprovals()",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L158"
+    },
+    {
+      "id": "src_sdk_pending_approvals_renderitem",
+      "label": "renderItem()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "renderitem()",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L92"
+    },
+    {
+      "id": "src_sdk_pending_approvals_renderpendingapprovals",
+      "label": "renderPendingApprovals()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "renderpendingapprovals()",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L144"
     },
     {
       "id": "test_dialogs_test_buttons",
@@ -1881,6 +1858,42 @@
       "norm_label": "submit()",
       "source_file": "test/dialogs.test.ts",
       "source_location": "L8"
+    },
+    {
+      "id": "test_pending_approvals_test_dialog",
+      "label": "dialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "dialog()",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L18"
+    },
+    {
+      "id": "test_pending_approvals_test_submit",
+      "label": "submit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "submit()",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "test_pending_approvals_test_tick",
+      "label": "tick()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "tick()",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L20"
     },
     {
       "id": "src_sdk_i18n_messageparams",
@@ -2432,6 +2445,18 @@
       "source_location": "L1"
     },
     {
+      "id": "readme_internationalization_sdk_i18n_sdk_cx_messages",
+      "label": "Internationalization (`sdk/i18n`, `sdk/cx-messages`)",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "internationalization (`sdk/i18n`, `sdk/cx-messages`)",
+      "source_file": "README.md",
+      "source_location": "L101"
+    },
+    {
       "id": "docs_crayola_palette_list",
       "label": "crayola-palette-list.md",
       "_origin": "ast",
@@ -2753,61 +2778,6 @@
       "norm_label": "sync-api-error-fixtures.sh script",
       "source_file": "scripts/sync-api-error-fixtures.sh",
       "source_location": "L1"
-    },
-    {
-      "id": "src_sdk_pending_approvals",
-      "label": "pending-approvals.ts",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "pending-approvals.ts",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_sdk_pending_approvals_button_tone",
-      "label": "BUTTON_TONE",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "button_tone",
-      "source_file": "src/sdk/pending-approvals.ts",
-      "source_location": "L63"
-    },
-    {
-      "id": "test_pending_approvals_test",
-      "label": "pending-approvals.test.ts",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "pending-approvals.test.ts",
-      "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_pending_approvals_test_grant",
-      "label": "grant",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "grant",
-      "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pending-approvals.ts",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L45"
     },
     {
       "id": "index",
@@ -4036,18 +4006,6 @@
       "source_location": "L69"
     },
     {
-      "id": "readme_pending_approvals_sdk_pending_approvals",
-      "label": "Pending approvals (`sdk/pending-approvals`)",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "canton-id-view.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "pending approvals (`sdk/pending-approvals`)",
-      "source_file": "README.md",
-      "source_location": "L95"
-    },
-    {
       "id": "docs_components_1_nav_astro",
       "label": "1. `Nav.astro`",
       "_origin": "ast",
@@ -4371,6 +4329,28 @@
       "source_location": "L1"
     },
     {
+      "id": "src_sdk_pending_approvals",
+      "label": "pending-approvals.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "pending-approvals.ts",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sdk_pending_approvals_button_tone",
+      "label": "BUTTON_TONE",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "button_tone",
+      "source_file": "src/sdk/pending-approvals.ts",
+      "source_location": "L63"
+    },
+    {
       "id": "test_dialogs_test",
       "label": "dialogs.test.ts",
       "_origin": "ast",
@@ -4382,16 +4362,60 @@
       "source_location": "L1"
     },
     {
-      "id": "readme_internationalization_sdk_i18n_sdk_cx_messages",
-      "label": "Internationalization (`sdk/i18n`, `sdk/cx-messages`)",
+      "id": "test_pending_approvals_test",
+      "label": "pending-approvals.test.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "pending-approvals.test.ts",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_pending_approvals_test_grant",
+      "label": "grant",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "grant",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L22"
+    },
+    {
+      "id": "test_pending_approvals_test_rulecases",
+      "label": "ruleCases",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "rulecases",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "dialogs.ts",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L45"
+    },
+    {
+      "id": "readme_pending_approvals_sdk_pending_approvals",
+      "label": "Pending approvals (`sdk/pending-approvals`)",
       "_origin": "ast",
       "community": 7,
       "community_name": "dialogs.ts",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "internationalization (`sdk/i18n`, `sdk/cx-messages`)",
+      "norm_label": "pending approvals (`sdk/pending-approvals`)",
       "source_file": "README.md",
-      "source_location": "L101"
+      "source_location": "L95"
     },
     {
       "id": "tsconfig",
@@ -4526,26 +4550,26 @@
       "source_location": "L13"
     },
     {
-      "id": "ref_node_fs",
-      "label": "ref_node_fs",
+      "id": "ref_node_path",
+      "label": "ref_node_path",
       "_origin": "semantic",
-      "community": 0,
-      "community_name": "api-error.ts",
+      "community": 4,
+      "community_name": "agreement-sig.ts",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_node_fs",
+      "norm_label": "ref_node_path",
       "source_file": "",
       "type": "external"
     },
     {
-      "id": "ref_node_path",
-      "label": "ref_node_path",
+      "id": "ref_node_fs",
+      "label": "ref_node_fs",
       "_origin": "semantic",
-      "community": 0,
-      "community_name": "api-error.ts",
+      "community": 7,
+      "community_name": "dialogs.ts",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_node_path",
+      "norm_label": "ref_node_fs",
       "source_file": "",
       "type": "external"
     }
@@ -6348,7 +6372,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L6",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -6456,7 +6480,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L5",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -6468,7 +6492,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L6",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -6480,7 +6504,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L7",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -6529,6 +6553,18 @@
       "context": "field",
       "source_file": "test/agreement-sig.test.ts",
       "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "test_pending_approvals_test_rulecase",
+      "target": "src_sdk_pending_approvals_approvaldecision",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -7939,6 +7975,18 @@
     },
     {
       "source": "test_pending_approvals_test",
+      "target": "src_sdk_pending_approvals_approvaldecision",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "test_pending_approvals_test",
       "target": "src_sdk_pending_approvals_decisionsfor",
       "relation": "imports",
       "_origin": "ast",
@@ -7946,7 +7994,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -7958,7 +8006,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -7970,7 +8018,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -7982,7 +8030,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -8672,7 +8720,7 @@
     },
     {
       "source": "test_pending_approvals_test",
-      "target": "src_sdk_pending_approvals",
+      "target": "ref_node_fs",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8680,6 +8728,30 @@
       "context": "import",
       "source_file": "test/pending-approvals.test.ts",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "test_pending_approvals_test",
+      "target": "ref_node_path",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_pending_approvals_test",
+      "target": "src_sdk_pending_approvals",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -11962,13 +12034,35 @@
     },
     {
       "source": "test_pending_approvals_test",
+      "target": "test_pending_approvals_test_rulecase",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "test_pending_approvals_test",
+      "target": "test_pending_approvals_test_rulecases",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/pending-approvals.test.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "test_pending_approvals_test",
       "target": "test_pending_approvals_test_grant",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "test/pending-approvals.test.ts",
-      "source_location": "L9",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -12589,6 +12683,18 @@
       "weight": 1.0
     },
     {
+      "source": "readme_pending_approvals_sdk_pending_approvals",
+      "target": "src_sdk_pending_approvals_decisionsfor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "decisionsFor",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
       "source": "readme_internationalization_sdk_i18n_sdk_cx_messages",
       "target": "src_sdk_i18n_documentlocale",
       "relation": "references",
@@ -12914,5 +13020,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9216f960407af42179239284ecbbe584cb2fafdb"
+  "built_at_commit": "090bb6857df14584cae1213f91f338b350947364"
 }

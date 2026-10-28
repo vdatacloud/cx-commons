@@ -15,6 +15,5 @@
   "13": "EyebrowLabel.astro",
   "14": "status-colors.ts",
   "15": "next-version.sh",
-  "16": "sync-api-error-fixtures.sh",
-  "17": "pending-approvals.ts"
+  "16": "sync-api-error-fixtures.sh"
 }
