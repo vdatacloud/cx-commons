@@ -1,7 +1,7 @@
 # Graph Report - cx-commons  (2026-10-28)
 
 ## Corpus Check
-- 39 files · ~24,313 words
+- 39 files · ~24,414 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 3, .woff2 2, .css 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d45d1617`
+- Built from commit: `9f6f9560`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
