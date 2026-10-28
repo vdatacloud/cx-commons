@@ -42,7 +42,7 @@ This repository publishes `@vdatacloud/cx-commons` with modular export entry poi
  ├── (default)                 --> exports index.ts (Astro integration plugin `cxCommons()`)
  ├── /styles/global.css        --> exports canonical LNF design system tokens & Tailwind rules
  ├── /components/*             --> exports shared Astro UI components (Nav, Footer, StatusBadge, EyebrowLabel, ApiErrorNotice, CantonId, LanguageSwitcher)
- ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, dialogs, api-error, api-error-notice, canton-id, canton-id-view, agreement-sig, status-colors)
+ ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, dialogs, api-error, api-error-notice, canton-id, canton-id-view, agreement-sig, pending-approvals, status-colors)
  └── /schema/api-error.json    --> the canonical API error JSON Schema
 ```
 
@@ -89,6 +89,12 @@ How a party signs one version of an agreement, mirroring daml-escrow-commons `ag
 - `draftHash` / `draftMessage`: the frozen `tripart.draft-version/1` (Phase 77 drafts).
 
 `test/fixtures/api-error`, `test/fixtures/canton-id` and `test/fixtures/agreement-sig` hold copies of the Go goldens, from the commit in `SOURCE`. After changing the Go package, run `npm run sync:api-error-fixtures`; CI fails if the copies drift.
+
+---
+
+### Pending approvals (`sdk/pending-approvals`)
+
+One worklist for acts waiting on several people's approval, whatever the act (daml-escrow PLAN.md Phase 91.4, the shared approval process). `mountPendingApprovals(host, items, { me, onDecide })` shows each request's description, proposer, progress (n of N, with a progress bar) and who approved, with the decisions the viewer may take: the proposer withdraws; someone who approved does nothing more; anyone else approves or rejects (`noApprove` hides approve, e.g. for a stale act or the viewer's own appointment). Each decision confirms and asks for a reason before `onDecide(item, decision, reason)`; the app sends it and reloads. Text is never parsed as markup; pass a `Node` for a rich description. Strings are `cx.approvals.*` (en, fr).
 
 ---
 
