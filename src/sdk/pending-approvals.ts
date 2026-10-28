@@ -10,6 +10,11 @@
 // withdraws; someone who has approved does nothing more; anyone else may
 // approve or reject. Without `me` all three decisions show (operators,
 // tests) and the server's refusal is the answer.
+//
+// An act that isn't a proposal (daml-escrow PLAN.md Phase 92.5: a staged
+// release its approvers approve, a compliance review's outcome) names no
+// proposer and brings its own actions instead: each with its label, tone and
+// whether it asks for a reason. Someone who has approved is offered none.
 
 import { confirmDialog, promptDialog } from './dialogs';
 import { renderCantonId } from './canton-id-view';
@@ -21,9 +26,9 @@ export type ApprovalDecision = 'approve' | 'reject' | 'withdraw';
 export interface PendingApproval {
     /** The request's id (what the decision is sent for). */
     id: string;
-    /** Who proposed it: also its first approval. */
-    proposedBy: string;
-    /** Who approved so far, in order, the proposer first. */
+    /** Who proposed it: also its first approval. Empty or absent: nobody did (not shown). */
+    proposedBy?: string;
+    /** Who approved so far, in order, the proposer (if any) first. */
     approvals: string[];
     /** How many approvals the act needs, the proposer's included. */
     required: number;
@@ -36,6 +41,22 @@ export interface PendingApproval {
     note?: string;
     /** Approve isn't offered: the act can't stand, or the viewer is its subject. */
     noApprove?: boolean;
+    /** Its own actions in place of approve / reject / withdraw (sent through onAction). */
+    actions?: ApprovalAction[];
+}
+
+/** An act's own action, e.g. "approve" a release or "cleared" a review. */
+export interface ApprovalAction {
+    /** What is sent (onAction's actionId). */
+    id: string;
+    /** The button's text. */
+    label: string;
+    /** "danger" asks with the danger confirmation (default "approve"). */
+    tone?: 'approve' | 'danger';
+    /** Whether a reason is asked: required (default), optional, or none (confirm only). */
+    reason?: 'required' | 'optional' | 'none';
+    /** The confirmation's question (default cx.approvals.confirm with the label). */
+    confirm?: string;
 }
 
 export interface PendingApprovalsOptions {
@@ -43,6 +64,8 @@ export interface PendingApprovalsOptions {
     me?: string;
     /** Sends a decision, with the reason given; the list doesn't change itself (the app reloads). */
     onDecide: (item: PendingApproval, decision: ApprovalDecision, reason: string) => void | Promise<void>;
+    /** Sends one of an item's own actions, with the reason given ('' when none was asked or given). */
+    onAction?: (item: PendingApproval, actionId: string, reason: string) => void | Promise<void>;
     /** Shows a party (default: the shared Canton id display). */
     party?: (party: string) => Node;
     /** Text when nothing is pending (default cx.approvals.empty). */
@@ -76,9 +99,28 @@ function el<K extends keyof HTMLElementTagNameMap>(tag: K, className = '', text?
 /** The decisions viewer `me` is offered on item (all three without `me`). */
 export function decisionsFor(item: PendingApproval, me?: string): ApprovalDecision[] {
     if (!me) return item.noApprove ? ['reject', 'withdraw'] : ['approve', 'reject', 'withdraw'];
-    if (me === item.proposedBy) return ['withdraw'];
+    if (item.proposedBy && me === item.proposedBy) return ['withdraw'];
     if (item.approvals.includes(me)) return [];
     return item.noApprove ? ['reject'] : ['approve', 'reject'];
+}
+
+/** The item's own actions viewer `me` is offered: none once they have approved. */
+export function actionsFor(item: PendingApproval, me?: string): ApprovalAction[] {
+    if (me && item.approvals.includes(me)) return [];
+    return item.actions ?? [];
+}
+
+// act confirms, asks for the reason the action wants, then hands it to the app.
+async function act(t: Translator, item: PendingApproval, a: ApprovalAction, opts: PendingApprovalsOptions): Promise<void> {
+    if (!(await confirmDialog(a.confirm ?? t.t('cx.approvals.confirm', { decision: a.label }), { confirmLabel: a.label, danger: a.tone === 'danger' }))) return;
+    const mode = a.reason ?? 'required';
+    let reason = '';
+    if (mode !== 'none') {
+        const given = await promptDialog(t.t('cx.approvals.reasonPrompt'), { label: t.t('cx.approvals.reason'), required: mode === 'required' });
+        if (given === null || (mode === 'required' && !given)) return;
+        reason = given;
+    }
+    await opts.onAction?.(item, a.id, reason);
 }
 
 // decide confirms, asks for the reason, then hands the decision to the app.
@@ -104,7 +146,9 @@ function renderItem(t: Translator, item: PendingApproval, opts: PendingApprovals
     const count = Math.min(item.approvals.length, item.required);
     const meta = el('div', META);
     if (item.kindLabel) meta.append(el('span', TAG, item.kindLabel));
-    meta.append(t.t('cx.approvals.proposedBy') + ' ', party(item.proposedBy), ` · ${t.t('cx.approvals.progress', { count, required: item.required })}`);
+    const progress = t.t('cx.approvals.progress', { count, required: item.required });
+    if (item.proposedBy) meta.append(t.t('cx.approvals.proposedBy') + ' ', party(item.proposedBy), ` · ${progress}`);
+    else meta.append(progress);
     body.append(meta);
 
     const bar = el('div', BAR);
@@ -129,12 +173,22 @@ function renderItem(t: Translator, item: PendingApproval, opts: PendingApprovals
     body.append(details);
 
     const actions = el('div', 'flex gap-2');
-    for (const d of decisionsFor(item, opts.me)) {
-        const b = el('button', `${BUTTON} ${BUTTON_TONE[d]}`, t.t(`cx.approvals.${d}`));
-        b.type = 'button';
-        b.dataset.approvalDecision = d;
-        b.addEventListener('click', () => void decide(t, item, d, opts));
-        actions.append(b);
+    if (item.actions) {
+        for (const a of actionsFor(item, opts.me)) {
+            const b = el('button', `${BUTTON} ${BUTTON_TONE[a.tone === 'danger' ? 'reject' : 'approve']}`, a.label);
+            b.type = 'button';
+            b.dataset.approvalAction = a.id;
+            b.addEventListener('click', () => void act(t, item, a, opts));
+            actions.append(b);
+        }
+    } else {
+        for (const d of decisionsFor(item, opts.me)) {
+            const b = el('button', `${BUTTON} ${BUTTON_TONE[d]}`, t.t(`cx.approvals.${d}`));
+            b.type = 'button';
+            b.dataset.approvalDecision = d;
+            b.addEventListener('click', () => void decide(t, item, d, opts));
+            actions.append(b);
+        }
     }
     li.append(body, actions);
     return li;
