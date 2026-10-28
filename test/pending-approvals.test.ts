@@ -119,6 +119,14 @@ describe('pending approvals (daml-escrow PLAN.md Phase 91.4)', () => {
         expect(host.querySelector('[data-approval-action=approve]')).not.toBeNull();
     });
 
+    it('someone who has approved is offered only the actions for them', () => {
+        const version: PendingApproval = { ...release, actions: [
+            { id: 'approve', label: 'Approve' }, { id: 'revoke', label: 'Withdraw my approval', approved: true }] };
+        expect(actionsFor(version, 'carl::1220cc').map((a) => a.id)).toEqual(['revoke']);
+        expect(actionsFor(version, 'dan::1220dd').map((a) => a.id)).toEqual(['approve']);
+        expect(actionsFor(version).map((a) => a.id)).toEqual(['approve']);
+    });
+
     it('an action without a reason only confirms, then hands it over', async () => {
         const onAction = vi.fn();
         const onDecide = vi.fn();

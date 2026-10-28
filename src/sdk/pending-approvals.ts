@@ -14,7 +14,8 @@
 // An act that isn't a proposal (daml-escrow PLAN.md Phase 92.5: a staged
 // release its approvers approve, a compliance review's outcome) names no
 // proposer and brings its own actions instead: each with its label, tone and
-// whether it asks for a reason. Someone who has approved is offered none.
+// whether it asks for a reason. Someone who has approved is offered only the
+// actions marked for them (revoking their approval, say).
 
 import { confirmDialog, promptDialog } from './dialogs';
 import { renderCantonId } from './canton-id-view';
@@ -57,6 +58,8 @@ export interface ApprovalAction {
     reason?: 'required' | 'optional' | 'none';
     /** The confirmation's question (default cx.approvals.confirm with the label). */
     confirm?: string;
+    /** Offered only to someone who has approved (e.g. revoking their approval), and to nobody else. */
+    approved?: boolean;
 }
 
 export interface PendingApprovalsOptions {
@@ -104,10 +107,10 @@ export function decisionsFor(item: PendingApproval, me?: string): ApprovalDecisi
     return item.noApprove ? ['reject'] : ['approve', 'reject'];
 }
 
-/** The item's own actions viewer `me` is offered: none once they have approved. */
+/** The item's own actions viewer `me` is offered: once they have approved, only those marked `approved`. */
 export function actionsFor(item: PendingApproval, me?: string): ApprovalAction[] {
-    if (me && item.approvals.includes(me)) return [];
-    return item.actions ?? [];
+    const done = !!me && item.approvals.includes(me);
+    return (item.actions ?? []).filter((a) => !!a.approved === done);
 }
 
 // act confirms, asks for the reason the action wants, then hands it to the app.
