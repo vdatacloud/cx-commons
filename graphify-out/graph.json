@@ -202,6 +202,19 @@
       "source_location": "L20"
     },
     {
+      "id": "src_sdk_i18n_node",
+      "label": "Node",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "node",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L36"
+    },
+    {
       "id": "src_sdk_i18n_params",
       "label": "Params",
       "_callable": true,
@@ -460,19 +473,6 @@
       "norm_label": "case",
       "source_file": "test/canton-id.test.ts",
       "source_location": "L9"
-    },
-    {
-      "id": "src_sdk_i18n_node",
-      "label": "Node",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "pending-approvals.ts",
-      "file_type": "code",
-      "norm_label": "node",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L36"
     },
     {
       "id": "src_sdk_pending_approvals_approvalaction",
@@ -973,6 +973,18 @@
       "source_location": "L115"
     },
     {
+      "id": "src_sdk_dialogs_formdialog",
+      "label": "formDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "formdialog()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L128"
+    },
+    {
       "id": "src_sdk_i18n_canonicallocale",
       "label": "canonicalLocale()",
       "_callable": true,
@@ -1295,18 +1307,6 @@
       "norm_label": "el()",
       "source_file": "src/sdk/dialogs.ts",
       "source_location": "L25"
-    },
-    {
-      "id": "src_sdk_dialogs_formdialog",
-      "label": "formDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "formdialog()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L128"
     },
     {
       "id": "src_sdk_dialogs_notifyerror",
@@ -2228,17 +2228,6 @@
       "source_location": "L13"
     },
     {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L45"
-    },
-    {
       "id": "docs_components_sdk_in_page_dialogs_sdk_dialogs",
       "label": "SDK: in-page dialogs (`sdk/dialogs`)",
       "_origin": "ast",
@@ -2850,6 +2839,17 @@
       "source_location": "L1"
     },
     {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "dialogs.ts",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
+    },
+    {
       "id": "index",
       "label": "index.ts",
       "_origin": "ast",
@@ -2869,7 +2869,7 @@
       "file_type": "concept",
       "norm_label": "astro",
       "source_file": "package.json",
-      "source_location": "L37"
+      "source_location": "L38"
     },
     {
       "id": "docs_architecture",
@@ -3383,7 +3383,7 @@
       "file_type": "code",
       "norm_label": "author",
       "source_file": "package.json",
-      "source_location": "L58"
+      "source_location": "L59"
     },
     {
       "id": "package_description",
@@ -3405,7 +3405,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L40"
+      "source_location": "L41"
     },
     {
       "id": "package_devdependencies_astro",
@@ -3416,7 +3416,7 @@
       "file_type": "code",
       "norm_label": "astro",
       "source_file": "package.json",
-      "source_location": "L42"
+      "source_location": "L43"
     },
     {
       "id": "package_devdependencies_happy_dom",
@@ -3427,7 +3427,7 @@
       "file_type": "code",
       "norm_label": "happy-dom",
       "source_file": "package.json",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "package_devdependencies_tailwindcss_typography",
@@ -3438,7 +3438,7 @@
       "file_type": "code",
       "norm_label": "@tailwindcss/typography",
       "source_file": "package.json",
-      "source_location": "L41"
+      "source_location": "L42"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -3449,7 +3449,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L44"
+      "source_location": "L45"
     },
     {
       "id": "package_devdependencies_vitest",
@@ -3460,7 +3460,7 @@
       "file_type": "code",
       "norm_label": "vitest",
       "source_file": "package.json",
-      "source_location": "L45"
+      "source_location": "L46"
     },
     {
       "id": "package_exports",
@@ -3548,7 +3548,7 @@
       "file_type": "code",
       "norm_label": "keywords",
       "source_file": "package.json",
-      "source_location": "L51"
+      "source_location": "L52"
     },
     {
       "id": "package_license",
@@ -3559,7 +3559,7 @@
       "file_type": "code",
       "norm_label": "license",
       "source_file": "package.json",
-      "source_location": "L59"
+      "source_location": "L60"
     },
     {
       "id": "package_name",
@@ -3581,7 +3581,7 @@
       "file_type": "code",
       "norm_label": "overrides",
       "source_file": "package.json",
-      "source_location": "L47"
+      "source_location": "L48"
     },
     {
       "id": "package_overrides_nanoid",
@@ -3592,7 +3592,7 @@
       "file_type": "code",
       "norm_label": "nanoid",
       "source_file": "package.json",
-      "source_location": "L48"
+      "source_location": "L49"
     },
     {
       "id": "package_overrides_postcss_selector_parser",
@@ -3603,7 +3603,7 @@
       "file_type": "code",
       "norm_label": "postcss-selector-parser",
       "source_file": "package.json",
-      "source_location": "L49"
+      "source_location": "L50"
     },
     {
       "id": "package_peerdependencies",
@@ -3614,7 +3614,7 @@
       "file_type": "code",
       "norm_label": "peerdependencies",
       "source_file": "package.json",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "package_peerdependencies_astro",
@@ -3625,7 +3625,7 @@
       "file_type": "code",
       "norm_label": "astro",
       "source_file": "package.json",
-      "source_location": "L37"
+      "source_location": "L38"
     },
     {
       "id": "package_peerdependencies_tailwindcss",
@@ -3636,7 +3636,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L38"
+      "source_location": "L39"
     },
     {
       "id": "package_peerdependencies_tailwindcss_typography",
@@ -3647,7 +3647,7 @@
       "file_type": "code",
       "norm_label": "@tailwindcss/typography",
       "source_file": "package.json",
-      "source_location": "L36"
+      "source_location": "L37"
     },
     {
       "id": "package_publishconfig",
@@ -3749,6 +3749,17 @@
       "source_location": "L32"
     },
     {
+      "id": "package_scripts_vuln_check",
+      "label": "vuln-check",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "vuln-check",
+      "source_file": "package.json",
+      "source_location": "L34"
+    },
+    {
       "id": "package_type",
       "label": "type",
       "_origin": "ast",
@@ -3779,7 +3790,7 @@
       "file_type": "concept",
       "norm_label": "happy-dom",
       "source_file": "package.json",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "ref_tailwindcss",
@@ -3790,7 +3801,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L38"
+      "source_location": "L39"
     },
     {
       "id": "ref_tailwindcss_typography",
@@ -3801,7 +3812,7 @@
       "file_type": "concept",
       "norm_label": "@tailwindcss/typography",
       "source_file": "package.json",
-      "source_location": "L36"
+      "source_location": "L37"
     },
     {
       "id": "ref_typescript",
@@ -3812,7 +3823,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L44"
+      "source_location": "L45"
     },
     {
       "id": "src_sdk_agreement_sig",
@@ -4590,8 +4601,8 @@
       "id": "ref_node_fs",
       "label": "ref_node_fs",
       "_origin": "semantic",
-      "community": 7,
-      "community_name": "pending-approvals.ts",
+      "community": 0,
+      "community_name": "api-error.ts",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_node_fs",
@@ -4602,8 +4613,8 @@
       "id": "ref_node_path",
       "label": "ref_node_path",
       "_origin": "semantic",
-      "community": 7,
-      "community_name": "pending-approvals.ts",
+      "community": 0,
+      "community_name": "api-error.ts",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_node_path",
@@ -6687,7 +6698,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -6699,7 +6710,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -6711,7 +6722,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -6723,7 +6734,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -6735,7 +6746,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -6747,7 +6758,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -9662,7 +9673,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -9684,7 +9695,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -9695,7 +9706,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -9717,7 +9728,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -9728,7 +9739,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L58",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -9739,7 +9750,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L59",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -9761,7 +9772,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -9772,7 +9783,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -9783,7 +9794,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -9794,7 +9805,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -9805,7 +9816,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -9860,7 +9871,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -9871,7 +9882,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -9882,7 +9893,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -9893,7 +9904,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -9904,7 +9915,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -9971,6 +9982,17 @@
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_vuln_check",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -13174,5 +13196,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9f6f95604d4acd07a3fce3ed1cfaf4861b639d8f"
+  "built_at_commit": "91e38671ccee8166feed783da5fba49bbcc8e95f"
 }

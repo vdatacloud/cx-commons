@@ -1,17 +1,17 @@
-# Graph Report - cx-commons  (2026-10-28)
+# Graph Report - cx-commons  (2026-11-02)
 
 ## Corpus Check
-- 39 files · ~24,414 words
+- 39 files · ~24,523 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 3, .woff2 2, .css 1)
 
 ## Summary
-- 388 nodes · 741 edges · 18 communities (13 shown, 5 thin omitted)
+- 389 nodes · 742 edges · 18 communities (13 shown, 5 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 53 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9f6f9560`
+- Built from commit: `91e38671`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,11 +66,11 @@
 
 ### Community 0 - "api-error.ts"
 Cohesion: 0.07
-Nodes (48): SDK: in-page dialogs (`sdk/dialogs`), vitest, Props, ApiError, ApiErrorCodes, ApiErrorDetail, apiErrorFromResponse(), ApiErrorUpstream (+40 more)
+Nodes (47): SDK: in-page dialogs (`sdk/dialogs`), Props, ApiError, ApiErrorCodes, ApiErrorDetail, apiErrorFromResponse(), ApiErrorUpstream, atDetail() (+39 more)
 
 ### Community 1 - "i18n.ts"
-Cohesion: 0.08
-Nodes (46): Internationalization (`sdk/i18n`, `sdk/cx-messages`), Props, t, year, Props, { t }, NavItem, Props (+38 more)
+Cohesion: 0.07
+Nodes (48): Internationalization (`sdk/i18n`, `sdk/cx-messages`), Props, t, year, Props, { t }, NavItem, Props (+40 more)
 
 ### Community 2 - "Product CX Commons Platform (`@vdatacloud/cx-commons`)"
 Cohesion: 0.05
@@ -78,7 +78,7 @@ Nodes (39): 1. Design System Tokens (Data Cloud LNF Scale), 2. Utility Classes &
 
 ### Community 3 - "package.json"
 Cohesion: 0.05
-Nodes (40): author, description, devDependencies, astro, happy-dom, @tailwindcss/typography, typescript, vitest (+32 more)
+Nodes (41): author, description, devDependencies, astro, happy-dom, @tailwindcss/typography, typescript, vitest (+33 more)
 
 ### Community 4 - "agreement-sig.ts"
 Cohesion: 0.13
@@ -93,8 +93,8 @@ Cohesion: 0.08
 Nodes (26): 1. `Nav.astro`, 2. `Footer.astro`, 3. `StatusBadge.astro`, 4. `EyebrowLabel.astro`, 5. `ApiErrorNotice.astro`, 7. `LanguageSwitcher.astro`, Component Props, Component Props (+18 more)
 
 ### Community 7 - "pending-approvals.ts"
-Cohesion: 0.13
-Nodes (22): Pending approvals (`sdk/pending-approvals`), confirmDialog(), promptDialog(), Node, act(), actionsFor(), ApprovalAction, ApprovalDecision (+14 more)
+Cohesion: 0.16
+Nodes (21): Pending approvals (`sdk/pending-approvals`), confirmDialog(), promptDialog(), act(), actionsFor(), ApprovalAction, ApprovalDecision, BUTTON_TONE (+13 more)
 
 ### Community 8 - "compilerOptions"
 Cohesion: 0.17
@@ -113,28 +113,28 @@ Cohesion: 0.50
 Nodes (3): Automated (default), Major releases, Releasing
 
 ### Community 17 - "dialogs.ts"
-Cohesion: 0.26
-Nodes (15): apiErrorFromUnknown(), isApiError(), mountApiErrorNotice(), DialogSpec, el(), Field, formDialog(), notifyError() (+7 more)
+Cohesion: 0.25
+Nodes (15): vitest, apiErrorFromUnknown(), isApiError(), mountApiErrorNotice(), DialogSpec, el(), Field, notifyError() (+7 more)
 
 ## Knowledge Gaps
-- **155 isolated node(s):** `CxCommonsOptions`, `name`, `version`, `description`, `type` (+150 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 172 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **156 isolated node(s):** `CxCommonsOptions`, `name`, `version`, `description`, `type` (+151 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 173 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `vitest` connect `api-error.ts` to `i18n.ts`, `package.json`, `agreement-sig.ts`, `canton-id-view.ts`, `pending-approvals.ts`, `dialogs.ts`?**
-  _High betweenness centrality (0.237) - this node is a cross-community bridge._
+- **Why does `vitest` connect `dialogs.ts` to `api-error.ts`, `i18n.ts`, `package.json`, `agreement-sig.ts`, `canton-id-view.ts`, `pending-approvals.ts`?**
+  _High betweenness centrality (0.240) - this node is a cross-community bridge._
 - **Are the 16 inferred relationships involving `Internationalization (`sdk/i18n`, `sdk/cx-messages`)` (e.g. with `renderApiErrorNotice()` and `acknowledge()`) actually correct?**
   _`Internationalization (`sdk/i18n`, `sdk/cx-messages`)` has 16 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `CxCommonsOptions`, `name`, `version` to the rest of the system?**
-  _155 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _156 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `api-error.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.06775956284153005 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06663141195134849 - nodes in this community are weakly interconnected._
 - **Why does `Shared Component Catalog & API Reference (`cx-platform`)` connect `Shared Component Catalog & API Reference (`cx-platform`)` to `api-error.ts`, `i18n.ts`, `Product CX Commons Platform (`@vdatacloud/cx-commons`)`, `canton-id-view.ts`?**
-  _High betweenness centrality (0.133) - this node is a cross-community bridge._
+  _High betweenness centrality (0.132) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `renderApiErrorNotice()` (e.g. with `Internationalization (`sdk/i18n`, `sdk/cx-messages`)` and `.maybe()`) actually correct?**
   _`renderApiErrorNotice()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Should `i18n.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.07617051013277429 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07207792207792207 - nodes in this community are weakly interconnected._
