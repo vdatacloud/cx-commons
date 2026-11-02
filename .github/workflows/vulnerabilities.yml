@@ -1,0 +1,36 @@
+name: Vulnerabilities
+
+# daml-escrow PLAN.md TD-5: fail a PR that brings in a high or critical npm
+# advisory, and check main weekly so a newly published advisory surfaces
+# without a push. Same check as `npm run vuln-check`. Remediation windows:
+# daml-escrow docs/PLATFORM_OPS.md, "Vulnerability management".
+on:
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+
+jobs:
+  npm-audit:
+    name: npm audit
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      # Reads package-lock.json; nothing is installed.
+      - name: Run npm audit
+        run: npm audit --audit-level=high

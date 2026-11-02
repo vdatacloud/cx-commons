@@ -30,7 +30,8 @@
   "scripts": {
     "build": "tsc",
     "test": "vitest run",
-    "sync:api-error-fixtures": "scripts/sync-api-error-fixtures.sh"
+    "sync:api-error-fixtures": "scripts/sync-api-error-fixtures.sh",
+    "vuln-check": "npm audit --audit-level=high"
   },
   "peerDependencies": {
     "@tailwindcss/typography": "^0.5.0",
@@ -39,8 +40,8 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",
-    "astro": "^7.3.2",
-    "happy-dom": "^20.14.5",
+    "astro": "^7.4.5",
+    "happy-dom": "^21.0.4",
     "typescript": "^5.7.0",
     "vitest": "^5.0.3"
   },
