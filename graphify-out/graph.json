@@ -7,45 +7,6 @@
   },
   "nodes": [
     {
-      "id": "src_components_apierrornotice_props",
-      "label": "Props",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "props",
-      "source_file": "src/components/ApiErrorNotice.astro",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_sdk_api_error_apierror",
-      "label": "ApiError",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "apierror",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L39"
-    },
-    {
-      "id": "src_sdk_api_error_apierrordetail",
-      "label": "ApiErrorDetail",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "apierrordetail",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L27"
-    },
-    {
       "id": "src_sdk_api_error_apierrorupstream",
       "label": "ApiErrorUpstream",
       "_callable": true,
@@ -59,32 +20,6 @@
       "source_location": "L29"
     },
     {
-      "id": "src_sdk_api_error_notice_apierrornoticeoptions",
-      "label": "ApiErrorNoticeOptions",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "apierrornoticeoptions",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_sdk_api_error_raw",
-      "label": "Raw",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "raw",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L161"
-    },
-    {
       "id": "src_sdk_api_error_signingdetails",
       "label": "SigningDetails",
       "_callable": true,
@@ -96,19 +31,6 @@
       "norm_label": "signingdetails",
       "source_file": "src/sdk/api-error.ts",
       "source_location": "L54"
-    },
-    {
-      "id": "src_sdk_i18n_translator",
-      "label": "Translator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "translator",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L231"
     },
     {
       "id": "src_components_footer_props",
@@ -267,6 +189,123 @@
       "source_location": "L32"
     },
     {
+      "id": "src_components_apierrornotice_props",
+      "label": "Props",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "props",
+      "source_file": "src/components/ApiErrorNotice.astro",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_sdk_api_error_apierror",
+      "label": "ApiError",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "apierror",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L39"
+    },
+    {
+      "id": "src_sdk_api_error_apierrordetail",
+      "label": "ApiErrorDetail",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "apierrordetail",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L27"
+    },
+    {
+      "id": "src_sdk_api_error_notice_apierrornoticeoptions",
+      "label": "ApiErrorNoticeOptions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "apierrornoticeoptions",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_sdk_api_error_raw",
+      "label": "Raw",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "raw",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L161"
+    },
+    {
+      "id": "src_sdk_i18n_translator",
+      "label": "Translator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "translator",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L231"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_authorizationrequest",
+      "label": "AuthorizationRequest",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "authorizationrequest",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L28"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_exchangeoptions",
+      "label": "ExchangeOptions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "exchangeoptions",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L107"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_tokenresponse",
+      "label": "TokenResponse",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "tokenresponse",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L99"
+    },
+    {
       "id": "index_cxcommonsoptions",
       "label": "CxCommonsOptions",
       "_callable": true,
@@ -278,6 +317,45 @@
       "norm_label": "cxcommonsoptions",
       "source_file": "index.ts",
       "source_location": "L3"
+    },
+    {
+      "id": "src_sdk_api_client_apiclient",
+      "label": "ApiClient",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "apiclient",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_sdk_api_client_apiclientoptions",
+      "label": "ApiClientOptions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "apiclientoptions",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_sdk_api_client_apirequesterror",
+      "label": "ApiRequestError",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "apirequesterror",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L13"
     },
     {
       "id": "src_sdk_agreement_sig_agreementkind",
@@ -565,18 +643,6 @@
       "source_location": "L275"
     },
     {
-      "id": "src_sdk_api_error_atdetail",
-      "label": "atDetail()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "atdetail()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L178"
-    },
-    {
       "id": "src_sdk_api_error_bounded",
       "label": "bounded()",
       "_callable": true,
@@ -587,18 +653,6 @@
       "norm_label": "bounded()",
       "source_file": "src/sdk/api-error.ts",
       "source_location": "L352"
-    },
-    {
-      "id": "src_sdk_api_error_canonicalapierror",
-      "label": "canonicalApiError()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "canonicalapierror()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L197"
     },
     {
       "id": "src_sdk_api_error_codeforstatus",
@@ -721,90 +775,6 @@
       "source_location": "L311"
     },
     {
-      "id": "src_sdk_api_error_notice_copybutton",
-      "label": "copyButton()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "copybutton()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L56"
-    },
-    {
-      "id": "src_sdk_api_error_notice_detaillabel",
-      "label": "detailLabel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "detaillabel()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L91"
-    },
-    {
-      "id": "src_sdk_api_error_notice_detailvalue",
-      "label": "detailValue()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "detailvalue()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L100"
-    },
-    {
-      "id": "src_sdk_api_error_notice_el",
-      "label": "el()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "el()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L49"
-    },
-    {
-      "id": "src_sdk_api_error_notice_hydrateapierrornotices",
-      "label": "hydrateApiErrorNotices()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "hydrateapierrornotices()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L195"
-    },
-    {
-      "id": "src_sdk_api_error_notice_renderapierrornotice",
-      "label": "renderApiErrorNotice()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "renderapierrornotice()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L107"
-    },
-    {
-      "id": "src_sdk_api_error_notice_row",
-      "label": "row()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "row()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L73"
-    },
-    {
       "id": "src_sdk_api_error_parseapierror",
       "label": "parseApiError()",
       "_callable": true,
@@ -829,16 +799,16 @@
       "source_location": "L141"
     },
     {
-      "id": "src_sdk_api_error_raw_constructor",
-      "label": ".constructor()",
+      "id": "src_sdk_api_error_shortid",
+      "label": "shortId()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "api-error.ts",
       "file_type": "code",
-      "norm_label": ".constructor()",
+      "norm_label": "shortid()",
       "source_file": "src/sdk/api-error.ts",
-      "source_location": "L162"
+      "source_location": "L126"
     },
     {
       "id": "src_sdk_api_error_shortids",
@@ -901,42 +871,6 @@
       "source_location": "L230"
     },
     {
-      "id": "src_sdk_i18n_translator_has",
-      "label": ".has()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": ".has()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L237"
-    },
-    {
-      "id": "src_sdk_i18n_translator_maybe",
-      "label": ".maybe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": ".maybe()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L236"
-    },
-    {
-      "id": "src_sdk_i18n_translator_t",
-      "label": ".t()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": ".t()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L234"
-    },
-    {
       "id": "test_api_error_test_names",
       "label": "names()",
       "_callable": true,
@@ -971,18 +905,6 @@
       "norm_label": "acknowledge()",
       "source_file": "src/sdk/dialogs.ts",
       "source_location": "L115"
-    },
-    {
-      "id": "src_sdk_dialogs_formdialog",
-      "label": "formDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "i18n.ts",
-      "file_type": "code",
-      "norm_label": "formdialog()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L128"
     },
     {
       "id": "src_sdk_i18n_canonicallocale",
@@ -1285,18 +1207,6 @@
       "source_location": "L284"
     },
     {
-      "id": "src_sdk_api_error_notice_mountapierrornotice",
-      "label": "mountApiErrorNotice()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "mountapierrornotice()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L184"
-    },
-    {
       "id": "src_sdk_dialogs_el",
       "label": "el()",
       "_callable": true,
@@ -1307,6 +1217,18 @@
       "norm_label": "el()",
       "source_file": "src/sdk/dialogs.ts",
       "source_location": "L25"
+    },
+    {
+      "id": "src_sdk_dialogs_formdialog",
+      "label": "formDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "dialogs.ts",
+      "file_type": "code",
+      "norm_label": "formdialog()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L128"
     },
     {
       "id": "src_sdk_dialogs_notifyerror",
@@ -1405,6 +1327,330 @@
       "source_location": "L8"
     },
     {
+      "id": "src_sdk_api_error_atdetail",
+      "label": "atDetail()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "atdetail()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L178"
+    },
+    {
+      "id": "src_sdk_api_error_canonicalapierror",
+      "label": "canonicalApiError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "canonicalapierror()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L197"
+    },
+    {
+      "id": "src_sdk_api_error_notice_copybutton",
+      "label": "copyButton()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "copybutton()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L56"
+    },
+    {
+      "id": "src_sdk_api_error_notice_detaillabel",
+      "label": "detailLabel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "detaillabel()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L91"
+    },
+    {
+      "id": "src_sdk_api_error_notice_detailvalue",
+      "label": "detailValue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "detailvalue()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L100"
+    },
+    {
+      "id": "src_sdk_api_error_notice_el",
+      "label": "el()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "el()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L49"
+    },
+    {
+      "id": "src_sdk_api_error_notice_hydrateapierrornotices",
+      "label": "hydrateApiErrorNotices()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "hydrateapierrornotices()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L195"
+    },
+    {
+      "id": "src_sdk_api_error_notice_mountapierrornotice",
+      "label": "mountApiErrorNotice()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "mountapierrornotice()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L184"
+    },
+    {
+      "id": "src_sdk_api_error_notice_renderapierrornotice",
+      "label": "renderApiErrorNotice()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "renderapierrornotice()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L107"
+    },
+    {
+      "id": "src_sdk_api_error_notice_row",
+      "label": "row()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "row()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L73"
+    },
+    {
+      "id": "src_sdk_api_error_raw_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L162"
+    },
+    {
+      "id": "src_sdk_i18n_translator_has",
+      "label": ".has()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": ".has()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L237"
+    },
+    {
+      "id": "src_sdk_i18n_translator_maybe",
+      "label": ".maybe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": ".maybe()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L236"
+    },
+    {
+      "id": "src_sdk_i18n_translator_t",
+      "label": ".t()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": ".t()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L234"
+    },
+    {
+      "id": "src_sdk_html_esc",
+      "label": "esc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "esc()",
+      "source_file": "src/sdk/html.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_sdk_html_fragment",
+      "label": "fragment()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "fragment()",
+      "source_file": "src/sdk/html.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_base64urlencode",
+      "label": "base64UrlEncode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "base64urlencode()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_codechallenge",
+      "label": "codeChallenge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "codechallenge()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L57"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_exchangecode",
+      "label": "exchangeCode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "exchangecode()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L120"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_generatecodeverifier",
+      "label": "generateCodeVerifier()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "generatecodeverifier()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L50"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_startauthorization",
+      "label": "startAuthorization()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "startauthorization()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L67"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_tokenclaims",
+      "label": "tokenClaims()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "tokenclaims()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L153"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_tokenexpiryseconds",
+      "label": "tokenExpirySeconds()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "tokenexpiryseconds()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L175"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_tokenscopes",
+      "label": "tokenScopes()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "tokenscopes()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L166"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_validatestate",
+      "label": "validateState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "validatestate()",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L93"
+    },
+    {
+      "id": "test_oidc_pkce_test_b64url",
+      "label": "b64url()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "b64url()",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "test_oidc_pkce_test_jwt",
+      "label": "jwt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "jwt()",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L17"
+    },
+    {
       "id": "index_cxcommons",
       "label": "cxCommons()",
       "_callable": true,
@@ -1415,6 +1661,138 @@
       "norm_label": "cxcommons()",
       "source_file": "index.ts",
       "source_location": "L15"
+    },
+    {
+      "id": "src_sdk_api_client_apiclient_delete",
+      "label": ".delete()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": ".delete()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L48"
+    },
+    {
+      "id": "src_sdk_api_client_apiclient_get",
+      "label": ".get()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": ".get()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L44"
+    },
+    {
+      "id": "src_sdk_api_client_apiclient_patch",
+      "label": ".patch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": ".patch()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_sdk_api_client_apiclient_post",
+      "label": ".post()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": ".post()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L45"
+    },
+    {
+      "id": "src_sdk_api_client_apiclient_put",
+      "label": ".put()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": ".put()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L47"
+    },
+    {
+      "id": "src_sdk_api_client_apiclient_request",
+      "label": ".request()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": ".request()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L50"
+    },
+    {
+      "id": "src_sdk_api_client_apirequesterror_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_sdk_api_client_createapiclient",
+      "label": "createApiClient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "createapiclient()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L54"
+    },
+    {
+      "id": "src_sdk_api_client_createapiclient_json",
+      "label": "json()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "json()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L71"
+    },
+    {
+      "id": "src_sdk_api_client_createapiclient_request",
+      "label": "request()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "request()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L58"
+    },
+    {
+      "id": "src_sdk_api_client_errorfromresponse",
+      "label": "errorFromResponse()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "errorfromresponse()",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L25"
     },
     {
       "id": "src_sdk_agreement_sig_agreementcanonical",
@@ -1643,18 +2021,6 @@
       "norm_label": "fixture()",
       "source_file": "test/agreement-sig.test.ts",
       "source_location": "L12"
-    },
-    {
-      "id": "src_sdk_api_error_shortid",
-      "label": "shortId()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "canton-id-view.ts",
-      "file_type": "code",
-      "norm_label": "shortid()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L126"
     },
     {
       "id": "src_sdk_canton_id_classifycantonid",
@@ -2041,17 +2407,6 @@
       "source_location": "L85"
     },
     {
-      "id": "src_components_apierrornotice",
-      "label": "ApiErrorNotice.astro",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "apierrornotice.astro",
-      "source_file": "src/components/ApiErrorNotice.astro",
-      "source_location": "L1"
-    },
-    {
       "id": "src_sdk_api_error",
       "label": "api-error.ts",
       "_origin": "ast",
@@ -2118,39 +2473,6 @@
       "source_location": "L66"
     },
     {
-      "id": "src_sdk_api_error_notice",
-      "label": "api-error-notice.ts",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "api-error-notice.ts",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_sdk_api_error_notice_tone",
-      "label": "TONE",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "tone",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L31"
-    },
-    {
-      "id": "src_sdk_api_error_notice_transient",
-      "label": "TRANSIENT",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "transient",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L30"
-    },
-    {
       "id": "src_sdk_api_error_paragraph_separator",
       "label": "PARAGRAPH_SEPARATOR",
       "_origin": "ast",
@@ -2173,39 +2495,6 @@
       "source_location": "L214"
     },
     {
-      "id": "test_api_error_notice_test",
-      "label": "api-error-notice.test.ts",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "api-error-notice.test.ts",
-      "source_file": "test/api-error-notice.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_api_error_notice_test_full",
-      "label": "full",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "full",
-      "source_file": "test/api-error-notice.test.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "test_api_error_notice_test_signature",
-      "label": "signature",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "signature",
-      "source_file": "test/api-error-notice.test.ts",
-      "source_location": "L9"
-    },
-    {
       "id": "test_api_error_test",
       "label": "api-error.test.ts",
       "_origin": "ast",
@@ -2226,18 +2515,6 @@
       "norm_label": "fix",
       "source_file": "test/api-error.test.ts",
       "source_location": "L13"
-    },
-    {
-      "id": "docs_components_sdk_in_page_dialogs_sdk_dialogs",
-      "label": "SDK: in-page dialogs (`sdk/dialogs`)",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sdk: in-page dialogs (`sdk/dialogs`)",
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L232"
     },
     {
       "id": "src_components_footer",
@@ -2482,6 +2759,54 @@
       "source_location": "L1"
     },
     {
+      "id": "docs_components_7_languageswitcher_astro",
+      "label": "7. `LanguageSwitcher.astro`",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. `languageswitcher.astro`",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L204"
+    },
+    {
+      "id": "docs_components_component_props_216",
+      "label": "Component Props",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "component props",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L216"
+    },
+    {
+      "id": "docs_components_import_path_210",
+      "label": "Import Path",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "import path",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L210"
+    },
+    {
+      "id": "docs_components_usage_example_224",
+      "label": "Usage Example",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "usage example",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L224"
+    },
+    {
       "id": "readme_internationalization_sdk_i18n_sdk_cx_messages",
       "label": "Internationalization (`sdk/i18n`, `sdk/cx-messages`)",
       "_origin": "ast",
@@ -2491,7 +2816,7 @@
       "node_kind": "heading",
       "norm_label": "internationalization (`sdk/i18n`, `sdk/cx-messages`)",
       "source_file": "README.md",
-      "source_location": "L103"
+      "source_location": "L116"
     },
     {
       "id": "docs_crayola_palette_list",
@@ -2839,15 +3164,181 @@
       "source_location": "L1"
     },
     {
-      "id": "ref_vitest",
-      "label": "vitest",
+      "id": "src_components_apierrornotice",
+      "label": "ApiErrorNotice.astro",
       "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "apierrornotice.astro",
+      "source_file": "src/components/ApiErrorNotice.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sdk_api_error_notice",
+      "label": "api-error-notice.ts",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "api-error-notice.ts",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sdk_api_error_notice_tone",
+      "label": "TONE",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "tone",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L31"
+    },
+    {
+      "id": "src_sdk_api_error_notice_transient",
+      "label": "TRANSIENT",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "transient",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L30"
+    },
+    {
+      "id": "test_api_error_notice_test",
+      "label": "api-error-notice.test.ts",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "api-error-notice.test.ts",
+      "source_file": "test/api-error-notice.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_api_error_notice_test_full",
+      "label": "full",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "full",
+      "source_file": "test/api-error-notice.test.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "test_api_error_notice_test_signature",
+      "label": "signature",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "api-error-notice.ts",
+      "file_type": "code",
+      "norm_label": "signature",
+      "source_file": "test/api-error-notice.test.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_sdk_html",
+      "label": "html.ts",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "html.ts",
+      "source_file": "src/sdk/html.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sdk_html_entities",
+      "label": "ENTITIES",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "entities",
+      "source_file": "src/sdk/html.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_sdk_oidc_pkce",
+      "label": "oidc-pkce.ts",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "oidc-pkce.ts",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sdk_oidc_pkce_pkce_keys",
+      "label": "PKCE_KEYS",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "pkce_keys",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L21"
+    },
+    {
+      "id": "test_html_test",
+      "label": "html.test.ts",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "html.test.ts",
+      "source_file": "test/html.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_oidc_pkce_test",
+      "label": "oidc-pkce.test.ts",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "code",
+      "norm_label": "oidc-pkce.test.ts",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "docref_rfc_6749",
+      "label": "RFC-6749",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
       "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L46"
+      "norm_label": "rfc-6749",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L2"
+    },
+    {
+      "id": "docref_rfc_7636",
+      "label": "RFC-7636",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "concept",
+      "norm_label": "rfc-7636",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L2"
+    },
+    {
+      "id": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "label": "Sign-in, API calls and markup (`sdk/oidc-pkce`, `sdk/api-client`, `sdk/html`)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sign-in, api calls and markup (`sdk/oidc-pkce`, `sdk/api-client`, `sdk/html`)",
+      "source_file": "README.md",
+      "source_location": "L103"
     },
     {
       "id": "index",
@@ -3280,6 +3771,18 @@
       "source_location": "L27"
     },
     {
+      "id": "readme_4_architecture_package_exports",
+      "label": "4. Architecture & Package Exports",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "Product CX Commons Platform (`@vdatacloud/cx-commons`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. architecture & package exports",
+      "source_file": "README.md",
+      "source_location": "L36"
+    },
+    {
       "id": "readme_5_quick_start_integration_guide",
       "label": "5. Quick Start & Integration Guide",
       "_origin": "ast",
@@ -3289,7 +3792,7 @@
       "node_kind": "heading",
       "norm_label": "5. quick start & integration guide",
       "source_file": "README.md",
-      "source_location": "L131"
+      "source_location": "L144"
     },
     {
       "id": "readme_6_developer_documentation_index",
@@ -3301,7 +3804,7 @@
       "node_kind": "heading",
       "norm_label": "6. developer documentation index",
       "source_file": "README.md",
-      "source_location": "L193"
+      "source_location": "L206"
     },
     {
       "id": "readme_7_license",
@@ -3313,7 +3816,19 @@
       "node_kind": "heading",
       "norm_label": "7. license",
       "source_file": "README.md",
-      "source_location": "L204"
+      "source_location": "L217"
+    },
+    {
+      "id": "readme_canonical_api_errors_sdk_api_error_sdk_api_error_notice_components_apierrornotice",
+      "label": "Canonical API errors (`sdk/api-error`, `sdk/api-error-notice`, `components/ApiErrorNotice`)",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "Product CX Commons Platform (`@vdatacloud/cx-commons`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "canonical api errors (`sdk/api-error`, `sdk/api-error-notice`, `components/apierrornotice`)",
+      "source_file": "README.md",
+      "source_location": "L49"
     },
     {
       "id": "readme_product_cx_commons_platform_vdatacloud_cx_commons",
@@ -3337,7 +3852,7 @@
       "node_kind": "heading",
       "norm_label": "step 1: install or link package",
       "source_file": "README.md",
-      "source_location": "L133"
+      "source_location": "L146"
     },
     {
       "id": "readme_step_2_register_the_astro_plugin",
@@ -3349,7 +3864,7 @@
       "node_kind": "heading",
       "norm_label": "step 2: register the astro plugin",
       "source_file": "README.md",
-      "source_location": "L145"
+      "source_location": "L158"
     },
     {
       "id": "readme_step_3_consume_shared_layout_components",
@@ -3361,7 +3876,51 @@
       "node_kind": "heading",
       "norm_label": "step 3: consume shared layout components",
       "source_file": "README.md",
-      "source_location": "L160"
+      "source_location": "L173"
+    },
+    {
+      "id": "src_sdk_api_client",
+      "label": "api-client.ts",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "api-client.ts",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_api_client_test",
+      "label": "api-client.test.ts",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "api-client.test.ts",
+      "source_file": "test/api-client.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_api_client_test_envelope",
+      "label": "envelope",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "envelope",
+      "source_file": "test/api-client.test.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "vitest",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
     },
     {
       "id": "package",
@@ -4051,30 +4610,6 @@
       "source_location": "L195"
     },
     {
-      "id": "readme_4_architecture_package_exports",
-      "label": "4. Architecture & Package Exports",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "canton-id-view.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. architecture & package exports",
-      "source_file": "README.md",
-      "source_location": "L36"
-    },
-    {
-      "id": "readme_canonical_api_errors_sdk_api_error_sdk_api_error_notice_components_apierrornotice",
-      "label": "Canonical API errors (`sdk/api-error`, `sdk/api-error-notice`, `components/ApiErrorNotice`)",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "canton-id-view.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "canonical api errors (`sdk/api-error`, `sdk/api-error-notice`, `components/apierrornotice`)",
-      "source_file": "README.md",
-      "source_location": "L49"
-    },
-    {
       "id": "readme_canton_ids_sdk_canton_id_sdk_canton_id_view_components_cantonid",
       "label": "Canton ids (`sdk/canton-id`, `sdk/canton-id-view`, `components/CantonId`)",
       "_origin": "ast",
@@ -4147,18 +4682,6 @@
       "source_location": "L137"
     },
     {
-      "id": "docs_components_7_languageswitcher_astro",
-      "label": "7. `LanguageSwitcher.astro`",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Shared Component Catalog & API Reference (`cx-platform`)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7. `languageswitcher.astro`",
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L204"
-    },
-    {
       "id": "docs_components_component_props",
       "label": "Component Props",
       "_origin": "ast",
@@ -4193,18 +4716,6 @@
       "norm_label": "component props",
       "source_file": "docs/COMPONENTS.md",
       "source_location": "L150"
-    },
-    {
-      "id": "docs_components_component_props_216",
-      "label": "Component Props",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Shared Component Catalog & API Reference (`cx-platform`)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "component props",
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L216"
     },
     {
       "id": "docs_components_component_props_89",
@@ -4279,18 +4790,6 @@
       "source_location": "L144"
     },
     {
-      "id": "docs_components_import_path_210",
-      "label": "Import Path",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Shared Component Catalog & API Reference (`cx-platform`)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "import path",
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L210"
-    },
-    {
       "id": "docs_components_import_path_59",
       "label": "Import Path",
       "_origin": "ast",
@@ -4313,6 +4812,18 @@
       "norm_label": "import path",
       "source_file": "docs/COMPONENTS.md",
       "source_location": "L83"
+    },
+    {
+      "id": "docs_components_sdk_in_page_dialogs_sdk_dialogs",
+      "label": "SDK: in-page dialogs (`sdk/dialogs`)",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Shared Component Catalog & API Reference (`cx-platform`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sdk: in-page dialogs (`sdk/dialogs`)",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L232"
     },
     {
       "id": "docs_components_shared_component_catalog_api_reference_cx_platform",
@@ -4361,18 +4872,6 @@
       "norm_label": "usage example",
       "source_file": "docs/COMPONENTS.md",
       "source_location": "L158"
-    },
-    {
-      "id": "docs_components_usage_example_224",
-      "label": "Usage Example",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Shared Component Catalog & API Reference (`cx-platform`)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "usage example",
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L224"
     },
     {
       "id": "docs_components_usage_example_71",
@@ -4601,8 +5100,8 @@
       "id": "ref_node_fs",
       "label": "ref_node_fs",
       "_origin": "semantic",
-      "community": 0,
-      "community_name": "api-error.ts",
+      "community": 4,
+      "community_name": "agreement-sig.ts",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_node_fs",
@@ -4613,11 +5112,22 @@
       "id": "ref_node_path",
       "label": "ref_node_path",
       "_origin": "semantic",
-      "community": 0,
-      "community_name": "api-error.ts",
+      "community": 4,
+      "community_name": "agreement-sig.ts",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_node_path",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_crypto",
+      "label": "ref_node_crypto",
+      "community": 19,
+      "community_name": "oidc-pkce.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_crypto",
       "source_file": "",
       "type": "external"
     }
@@ -4957,6 +5467,66 @@
       "context": "call",
       "source_file": "src/sdk/agreement-sig.ts",
       "source_location": "L272",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_createapiclient_json",
+      "target": "src_sdk_api_client_createapiclient_request",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_createapiclient_request",
+      "target": "src_sdk_api_client_errorfromresponse",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_errorfromresponse",
+      "target": "src_sdk_api_error_parseapierror",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_errorfromresponse",
+      "target": "src_sdk_api_client_apiclient_get",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_errorfromresponse",
+      "target": "src_sdk_api_client_apirequesterror",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -6208,6 +6778,78 @@
       "weight": 1.0
     },
     {
+      "source": "src_sdk_oidc_pkce_codechallenge",
+      "target": "src_sdk_oidc_pkce_base64urlencode",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce_generatecodeverifier",
+      "target": "src_sdk_oidc_pkce_base64urlencode",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce_startauthorization",
+      "target": "src_sdk_oidc_pkce_generatecodeverifier",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce_startauthorization",
+      "target": "src_sdk_oidc_pkce_codechallenge",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce_tokenexpiryseconds",
+      "target": "src_sdk_oidc_pkce_tokenclaims",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L176",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce_tokenscopes",
+      "target": "src_sdk_oidc_pkce_tokenclaims",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
       "source": "src_sdk_pending_approvals_act",
       "target": "src_sdk_dialogs_confirmdialog",
       "relation": "calls",
@@ -6460,6 +7102,30 @@
       "weight": 1.0
     },
     {
+      "source": "test_oidc_pkce_test_b64url",
+      "target": "src_sdk_oidc_pkce_base64urlencode",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test_jwt",
+      "target": "test_oidc_pkce_test_b64url",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
       "source": "test_pending_approvals_test_submit",
       "target": "test_pending_approvals_test_dialog",
       "relation": "calls",
@@ -6481,6 +7147,18 @@
       "context": "call",
       "source_file": "src/components/Nav.astro",
       "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_createapiclient",
+      "target": "src_sdk_api_client_createapiclient_json",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -6565,6 +7243,18 @@
       "context": "call",
       "source_file": "test/dialogs.test.ts",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "test_oidc_pkce_test_jwt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -6963,6 +7653,42 @@
       "context": "import",
       "source_file": "src/components/StatusBadge.astro",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_error_apierror",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_error_formatapierror",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_error_parseapierror",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -7407,6 +8133,42 @@
       "context": "import",
       "source_file": "test/agreement-sig.test.ts",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_api_client_test",
+      "target": "src_sdk_api_client_apirequesterror",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/api-client.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "test_api_client_test",
+      "target": "src_sdk_api_client_createapiclient",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/api-client.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "test_api_client_test",
+      "target": "src_sdk_api_client_errorfromresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/api-client.test.ts",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -7878,6 +8640,30 @@
       "weight": 1.0
     },
     {
+      "source": "test_html_test",
+      "target": "src_sdk_html_esc",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/html.test.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "test_html_test",
+      "target": "src_sdk_html_fragment",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/html.test.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "test_i18n_test",
       "target": "src_sdk_cx_messages_cx_locales",
       "relation": "imports",
@@ -8067,6 +8853,114 @@
       "context": "import",
       "source_file": "test/i18n.test.ts",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_base64urlencode",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_codechallenge",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_exchangecode",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_pkce_keys",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_startauthorization",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_tokenclaims",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_tokenexpiryseconds",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_tokenscopes",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce_validatestate",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -8296,6 +9190,18 @@
       "context": "import",
       "source_file": "src/components/StatusBadge.astro",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_error",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -8551,6 +9457,30 @@
       "weight": 1.0
     },
     {
+      "source": "test_api_client_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/api-client.test.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "test_api_client_test",
+      "target": "src_sdk_api_client",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/api-client.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "test_api_error_notice_test",
       "target": "ref_vitest",
       "relation": "imports_from",
@@ -8779,6 +9709,30 @@
       "weight": 1.0
     },
     {
+      "source": "test_html_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/html.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "test_html_test",
+      "target": "src_sdk_html",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/html.test.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "test_i18n_test",
       "target": "ref_vitest",
       "relation": "imports_from",
@@ -8812,6 +9766,42 @@
       "context": "import",
       "source_file": "test/i18n.test.ts",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "ref_node_crypto",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "src_sdk_oidc_pkce",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -8860,6 +9850,40 @@
       "context": "import",
       "source_file": "test/pending-approvals.test.ts",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_apirequesterror_constructor",
+      "target": "src_sdk_api_error_apierror",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "docref_rfc_6749",
+      "relation": "cites",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "docref_rfc_7636",
+      "relation": "cites",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -10008,13 +11032,24 @@
     },
     {
       "source": "readme_4_architecture_package_exports",
-      "target": "readme_internationalization_sdk_i18n_sdk_cx_messages",
+      "target": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
       "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_4_architecture_package_exports",
+      "target": "readme_internationalization_sdk_i18n_sdk_cx_messages",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -10069,7 +11104,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L133",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -10080,7 +11115,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L145",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -10091,7 +11126,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L160",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -10102,7 +11137,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L131",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -10124,7 +11159,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L193",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -10135,7 +11170,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L204",
+      "source_location": "L217",
       "weight": 1.0
     },
     {
@@ -10697,6 +11732,61 @@
       "confidence_score": 1.0,
       "source_file": "src/sdk/agreement-sig.ts",
       "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_client_apirequesterror",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_client_errorfromresponse",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_client_apiclientoptions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_client_apiclient",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client",
+      "target": "src_sdk_api_client_createapiclient",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -11558,6 +12648,39 @@
       "weight": 1.0
     },
     {
+      "source": "src_sdk_html",
+      "target": "src_sdk_html_esc",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/html.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_html",
+      "target": "src_sdk_html_fragment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/html.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_html",
+      "target": "src_sdk_html_entities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/html.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "src_sdk_i18n",
       "target": "src_sdk_i18n_parsed",
       "relation": "contains",
@@ -11932,6 +13055,149 @@
       "weight": 1.0
     },
     {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_exchangeoptions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_exchangecode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_tokenclaims",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_tokenscopes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_tokenexpiryseconds",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_pkce_keys",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_authorizationrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_base64urlencode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_generatecodeverifier",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_codechallenge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_startauthorization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_validatestate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_oidc_pkce",
+      "target": "src_sdk_oidc_pkce_tokenresponse",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/oidc-pkce.ts",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
       "source": "src_sdk_pending_approvals",
       "target": "src_sdk_pending_approvals_decisionsfor",
       "relation": "contains",
@@ -12130,6 +13396,17 @@
       "weight": 1.0
     },
     {
+      "source": "test_api_client_test",
+      "target": "test_api_client_test_envelope",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/api-client.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "test_api_error_notice_test",
       "target": "test_api_error_notice_test_full",
       "relation": "contains",
@@ -12182,6 +13459,17 @@
       "confidence_score": 1.0,
       "source_file": "test/canton-id.test.ts",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "test_oidc_pkce_test",
+      "target": "test_oidc_pkce_test_b64url",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/oidc-pkce.test.ts",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -12383,6 +13671,83 @@
       "weight": 1.0
     },
     {
+      "source": "src_sdk_api_client_apiclient",
+      "target": "src_sdk_api_client_apiclient_get",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_apiclient",
+      "target": "src_sdk_api_client_apiclient_post",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_apiclient",
+      "target": "src_sdk_api_client_apiclient_patch",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_apiclient",
+      "target": "src_sdk_api_client_apiclient_put",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_apiclient",
+      "target": "src_sdk_api_client_apiclient_delete",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_apiclient",
+      "target": "src_sdk_api_client_apiclient_request",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "src_sdk_api_client_apirequesterror",
+      "target": "src_sdk_api_client_apirequesterror_constructor",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
       "source": "src_sdk_api_error_raw",
       "target": "src_sdk_api_error_raw_constructor",
       "relation": "method",
@@ -12522,7 +13887,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L197",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -12533,7 +13898,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L198",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -12544,7 +13909,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L199",
+      "source_location": "L212",
       "weight": 1.0
     },
     {
@@ -12555,7 +13920,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L200",
+      "source_location": "L213",
       "weight": 1.0
     },
     {
@@ -12715,6 +14080,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_sdk_api_client_createapiclient",
+      "target": "src_sdk_api_client_createapiclient_request",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "collection",
+      "source_file": "src/sdk/api-client.ts",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
       "source": "docs_components_component_props_150",
       "target": "src_sdk_api_error_apierror",
       "relation": "references",
@@ -12739,6 +14116,18 @@
       "weight": 1.0
     },
     {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_api_client_apirequesterror",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "ApiRequestError",
+      "source_file": "README.md",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
       "source": "readme_pending_approvals_sdk_pending_approvals",
       "target": "src_sdk_i18n_node",
       "relation": "references",
@@ -12759,7 +14148,7 @@
       "confidence_score": 0.95,
       "context": "acknowledge",
       "source_file": "README.md",
-      "source_location": "L126",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -12807,7 +14196,7 @@
       "confidence_score": 0.95,
       "context": "chooseLocale()",
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -12831,7 +14220,7 @@
       "confidence_score": 0.95,
       "context": "confirmDialog",
       "source_file": "README.md",
-      "source_location": "L126",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -12879,7 +14268,7 @@
       "confidence_score": 0.95,
       "context": "documentLocale()",
       "source_file": "README.md",
-      "source_location": "L116",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -12919,6 +14308,42 @@
       "weight": 1.0
     },
     {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_api_client_errorfromresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "errorFromResponse",
+      "source_file": "README.md",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_html_esc",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "esc",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_oidc_pkce_exchangecode",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "exchangeCode",
+      "source_file": "README.md",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
       "source": "readme_internationalization_sdk_i18n_sdk_cx_messages",
       "target": "src_sdk_dialogs_formdialog",
       "relation": "references",
@@ -12927,7 +14352,7 @@
       "confidence_score": 0.95,
       "context": "formDialog",
       "source_file": "README.md",
-      "source_location": "L126",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -12939,7 +14364,7 @@
       "confidence_score": 0.95,
       "context": "formatDate",
       "source_file": "README.md",
-      "source_location": "L118",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -12951,7 +14376,7 @@
       "confidence_score": 0.95,
       "context": "formatDateTime",
       "source_file": "README.md",
-      "source_location": "L118",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -12963,7 +14388,7 @@
       "confidence_score": 0.95,
       "context": "formatMoney",
       "source_file": "README.md",
-      "source_location": "L117",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -12975,7 +14400,7 @@
       "confidence_score": 0.95,
       "context": "formatNumber",
       "source_file": "README.md",
-      "source_location": "L117",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -12987,7 +14412,19 @@
       "confidence_score": 0.95,
       "context": "formatRelativeTime",
       "source_file": "README.md",
-      "source_location": "L118",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_html_fragment",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "fragment",
+      "source_file": "README.md",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -13023,7 +14460,7 @@
       "confidence_score": 0.95,
       "context": "localeCookie()",
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -13035,7 +14472,7 @@
       "confidence_score": 0.95,
       "context": "notifyError",
       "source_file": "README.md",
-      "source_location": "L126",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -13047,7 +14484,7 @@
       "confidence_score": 0.95,
       "context": "notifyInfo",
       "source_file": "README.md",
-      "source_location": "L127",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -13083,7 +14520,7 @@
       "confidence_score": 0.95,
       "context": "promptDialog",
       "source_file": "README.md",
-      "source_location": "L126",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -13107,7 +14544,7 @@
       "confidence_score": 0.95,
       "context": "renderApiErrorNotice",
       "source_file": "README.md",
-      "source_location": "L122",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -13179,7 +14616,55 @@
       "confidence_score": 0.95,
       "context": "showErrorIn",
       "source_file": "README.md",
-      "source_location": "L127",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_oidc_pkce_startauthorization",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "startAuthorization",
+      "source_file": "README.md",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_oidc_pkce_tokenclaims",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "tokenClaims",
+      "source_file": "README.md",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_oidc_pkce_tokenexpiryseconds",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "tokenExpirySeconds",
+      "source_file": "README.md",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_oidc_pkce_tokenscopes",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "tokenScopes",
+      "source_file": "README.md",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -13193,8 +14678,20 @@
       "source_file": "README.md",
       "source_location": "L86",
       "weight": 1.0
+    },
+    {
+      "source": "readme_sign_in_api_calls_and_markup_sdk_oidc_pkce_sdk_api_client_sdk_html",
+      "target": "src_sdk_oidc_pkce_validatestate",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "validateState",
+      "source_file": "README.md",
+      "source_location": "L108",
+      "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "91e38671ccee8166feed783da5fba49bbcc8e95f"
+  "built_at_commit": "0bdcb1b60e8c2d0ac68fd6f012f9ae46b0abf02b"
 }
