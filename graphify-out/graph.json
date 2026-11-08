@@ -7,6 +7,45 @@
   },
   "nodes": [
     {
+      "id": "src_components_apierrornotice_props",
+      "label": "Props",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "props",
+      "source_file": "src/components/ApiErrorNotice.astro",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_sdk_api_error_apierror",
+      "label": "ApiError",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "apierror",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L39"
+    },
+    {
+      "id": "src_sdk_api_error_apierrordetail",
+      "label": "ApiErrorDetail",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "apierrordetail",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L27"
+    },
+    {
       "id": "src_sdk_api_error_apierrorupstream",
       "label": "ApiErrorUpstream",
       "_callable": true,
@@ -20,6 +59,32 @@
       "source_location": "L29"
     },
     {
+      "id": "src_sdk_api_error_notice_apierrornoticeoptions",
+      "label": "ApiErrorNoticeOptions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "apierrornoticeoptions",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_sdk_api_error_raw",
+      "label": "Raw",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "raw",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L161"
+    },
+    {
       "id": "src_sdk_api_error_signingdetails",
       "label": "SigningDetails",
       "_callable": true,
@@ -31,6 +96,19 @@
       "norm_label": "signingdetails",
       "source_file": "src/sdk/api-error.ts",
       "source_location": "L54"
+    },
+    {
+      "id": "src_sdk_i18n_translator",
+      "label": "Translator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "translator",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L231"
     },
     {
       "id": "src_components_footer_props",
@@ -98,6 +176,32 @@
       "source_location": "L5"
     },
     {
+      "id": "src_sdk_dialogs_dialogspec",
+      "label": "DialogSpec",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "dialogspec",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_sdk_dialogs_field",
+      "label": "Field",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "field",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L32"
+    },
+    {
       "id": "src_sdk_i18n_catalogs",
       "label": "Catalogs",
       "_callable": true,
@@ -163,110 +267,6 @@
       "source_location": "L2"
     },
     {
-      "id": "src_sdk_dialogs_dialogspec",
-      "label": "DialogSpec",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "dialogspec",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L41"
-    },
-    {
-      "id": "src_sdk_dialogs_field",
-      "label": "Field",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "field",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L32"
-    },
-    {
-      "id": "src_components_apierrornotice_props",
-      "label": "Props",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "props",
-      "source_file": "src/components/ApiErrorNotice.astro",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_sdk_api_error_apierror",
-      "label": "ApiError",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "apierror",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L39"
-    },
-    {
-      "id": "src_sdk_api_error_apierrordetail",
-      "label": "ApiErrorDetail",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "apierrordetail",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L27"
-    },
-    {
-      "id": "src_sdk_api_error_notice_apierrornoticeoptions",
-      "label": "ApiErrorNoticeOptions",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "apierrornoticeoptions",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_sdk_api_error_raw",
-      "label": "Raw",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "raw",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L161"
-    },
-    {
-      "id": "src_sdk_i18n_translator",
-      "label": "Translator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "translator",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L231"
-    },
-    {
       "id": "src_sdk_oidc_pkce_authorizationrequest",
       "label": "AuthorizationRequest",
       "_callable": true,
@@ -325,7 +325,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "apiclient",
       "source_file": "src/sdk/api-client.ts",
@@ -338,7 +338,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "apiclientoptions",
       "source_file": "src/sdk/api-client.ts",
@@ -351,11 +351,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "apirequesterror",
       "source_file": "src/sdk/api-client.ts",
       "source_location": "L13"
+    },
+    {
+      "id": "src_components_appshell_props",
+      "label": "Props",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "props",
+      "source_file": "src/components/AppShell.astro",
+      "source_location": "L17"
     },
     {
       "id": "src_sdk_agreement_sig_agreementkind",
@@ -643,6 +656,18 @@
       "source_location": "L275"
     },
     {
+      "id": "src_sdk_api_error_atdetail",
+      "label": "atDetail()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "atdetail()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L178"
+    },
+    {
       "id": "src_sdk_api_error_bounded",
       "label": "bounded()",
       "_callable": true,
@@ -653,6 +678,18 @@
       "norm_label": "bounded()",
       "source_file": "src/sdk/api-error.ts",
       "source_location": "L352"
+    },
+    {
+      "id": "src_sdk_api_error_canonicalapierror",
+      "label": "canonicalApiError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "canonicalapierror()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L197"
     },
     {
       "id": "src_sdk_api_error_codeforstatus",
@@ -701,18 +738,6 @@
       "norm_label": "expectedhash()",
       "source_file": "src/sdk/api-error.ts",
       "source_location": "L345"
-    },
-    {
-      "id": "src_sdk_api_error_formatapierror",
-      "label": "formatApiError()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "api-error.ts",
-      "file_type": "code",
-      "norm_label": "formatapierror()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L291"
     },
     {
       "id": "src_sdk_api_error_fromcantonerror",
@@ -775,6 +800,90 @@
       "source_location": "L311"
     },
     {
+      "id": "src_sdk_api_error_notice_copybutton",
+      "label": "copyButton()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "copybutton()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L56"
+    },
+    {
+      "id": "src_sdk_api_error_notice_detaillabel",
+      "label": "detailLabel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "detaillabel()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L91"
+    },
+    {
+      "id": "src_sdk_api_error_notice_detailvalue",
+      "label": "detailValue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "detailvalue()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L100"
+    },
+    {
+      "id": "src_sdk_api_error_notice_el",
+      "label": "el()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "el()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L49"
+    },
+    {
+      "id": "src_sdk_api_error_notice_hydrateapierrornotices",
+      "label": "hydrateApiErrorNotices()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "hydrateapierrornotices()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L195"
+    },
+    {
+      "id": "src_sdk_api_error_notice_renderapierrornotice",
+      "label": "renderApiErrorNotice()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "renderapierrornotice()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L107"
+    },
+    {
+      "id": "src_sdk_api_error_notice_row",
+      "label": "row()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "row()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L73"
+    },
+    {
       "id": "src_sdk_api_error_parseapierror",
       "label": "parseApiError()",
       "_callable": true,
@@ -799,16 +908,16 @@
       "source_location": "L141"
     },
     {
-      "id": "src_sdk_api_error_shortid",
-      "label": "shortId()",
+      "id": "src_sdk_api_error_raw_constructor",
+      "label": ".constructor()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "api-error.ts",
       "file_type": "code",
-      "norm_label": "shortid()",
+      "norm_label": ".constructor()",
       "source_file": "src/sdk/api-error.ts",
-      "source_location": "L126"
+      "source_location": "L162"
     },
     {
       "id": "src_sdk_api_error_shortids",
@@ -871,6 +980,42 @@
       "source_location": "L230"
     },
     {
+      "id": "src_sdk_i18n_translator_has",
+      "label": ".has()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": ".has()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L237"
+    },
+    {
+      "id": "src_sdk_i18n_translator_maybe",
+      "label": ".maybe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": ".maybe()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L236"
+    },
+    {
+      "id": "src_sdk_i18n_translator_t",
+      "label": ".t()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": ".t()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L234"
+    },
+    {
       "id": "test_api_error_test_names",
       "label": "names()",
       "_callable": true,
@@ -895,6 +1040,42 @@
       "source_location": "L14"
     },
     {
+      "id": "src_sdk_api_error_apierrorfromunknown",
+      "label": "apiErrorFromUnknown()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "apierrorfromunknown()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L438"
+    },
+    {
+      "id": "src_sdk_api_error_isapierror",
+      "label": "isApiError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "isapierror()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L284"
+    },
+    {
+      "id": "src_sdk_api_error_notice_mountapierrornotice",
+      "label": "mountApiErrorNotice()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "mountapierrornotice()",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L184"
+    },
+    {
       "id": "src_sdk_dialogs_acknowledge",
       "label": "acknowledge()",
       "_callable": true,
@@ -905,6 +1086,90 @@
       "norm_label": "acknowledge()",
       "source_file": "src/sdk/dialogs.ts",
       "source_location": "L115"
+    },
+    {
+      "id": "src_sdk_dialogs_el",
+      "label": "el()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "el()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_sdk_dialogs_formdialog",
+      "label": "formDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "formdialog()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L128"
+    },
+    {
+      "id": "src_sdk_dialogs_notifyerror",
+      "label": "notifyError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "notifyerror()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L149"
+    },
+    {
+      "id": "src_sdk_dialogs_notifyinfo",
+      "label": "notifyInfo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "notifyinfo()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L166"
+    },
+    {
+      "id": "src_sdk_dialogs_open",
+      "label": "open()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "open()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_sdk_dialogs_region",
+      "label": "region()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "region()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L133"
+    },
+    {
+      "id": "src_sdk_dialogs_showerrorin",
+      "label": "showErrorIn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "showerrorin()",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L159"
     },
     {
       "id": "src_sdk_i18n_canonicallocale",
@@ -989,18 +1254,6 @@
       "norm_label": "formatdatetime()",
       "source_file": "src/sdk/i18n.ts",
       "source_location": "L403"
-    },
-    {
-      "id": "src_sdk_i18n_formatmessage",
-      "label": "formatMessage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "i18n.ts",
-      "file_type": "code",
-      "norm_label": "formatmessage()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L173"
     },
     {
       "id": "src_sdk_i18n_formatmoney",
@@ -1171,132 +1424,12 @@
       "source_location": "L146"
     },
     {
-      "id": "src_sdk_status_colors_getstatushexcolor",
-      "label": "getStatusHexColor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "status-colors.ts",
-      "file_type": "code",
-      "norm_label": "getstatushexcolor()",
-      "source_file": "src/sdk/status-colors.ts",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_sdk_api_error_apierrorfromunknown",
-      "label": "apiErrorFromUnknown()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "apierrorfromunknown()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L438"
-    },
-    {
-      "id": "src_sdk_api_error_isapierror",
-      "label": "isApiError()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "isapierror()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L284"
-    },
-    {
-      "id": "src_sdk_dialogs_el",
-      "label": "el()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "el()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_sdk_dialogs_formdialog",
-      "label": "formDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "formdialog()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L128"
-    },
-    {
-      "id": "src_sdk_dialogs_notifyerror",
-      "label": "notifyError()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "notifyerror()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L149"
-    },
-    {
-      "id": "src_sdk_dialogs_notifyinfo",
-      "label": "notifyInfo()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "notifyinfo()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L166"
-    },
-    {
-      "id": "src_sdk_dialogs_open",
-      "label": "open()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "open()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L53"
-    },
-    {
-      "id": "src_sdk_dialogs_region",
-      "label": "region()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "region()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L133"
-    },
-    {
-      "id": "src_sdk_dialogs_showerrorin",
-      "label": "showErrorIn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "showerrorin()",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L159"
-    },
-    {
       "id": "test_dialogs_test_buttons",
       "label": "buttons()",
       "_callable": true,
       "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
+      "community": 1,
+      "community_name": "i18n.ts",
       "file_type": "code",
       "norm_label": "buttons()",
       "source_file": "test/dialogs.test.ts",
@@ -1307,8 +1440,8 @@
       "label": "dialog()",
       "_callable": true,
       "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
+      "community": 1,
+      "community_name": "i18n.ts",
       "file_type": "code",
       "norm_label": "dialog()",
       "source_file": "test/dialogs.test.ts",
@@ -1319,180 +1452,24 @@
       "label": "submit()",
       "_callable": true,
       "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
+      "community": 1,
+      "community_name": "i18n.ts",
       "file_type": "code",
       "norm_label": "submit()",
       "source_file": "test/dialogs.test.ts",
       "source_location": "L8"
     },
     {
-      "id": "src_sdk_api_error_atdetail",
-      "label": "atDetail()",
+      "id": "src_sdk_status_colors_getstatushexcolor",
+      "label": "getStatusHexColor()",
       "_callable": true,
       "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
+      "community": 14,
+      "community_name": "status-colors.ts",
       "file_type": "code",
-      "norm_label": "atdetail()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L178"
-    },
-    {
-      "id": "src_sdk_api_error_canonicalapierror",
-      "label": "canonicalApiError()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "canonicalapierror()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L197"
-    },
-    {
-      "id": "src_sdk_api_error_notice_copybutton",
-      "label": "copyButton()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "copybutton()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L56"
-    },
-    {
-      "id": "src_sdk_api_error_notice_detaillabel",
-      "label": "detailLabel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "detaillabel()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L91"
-    },
-    {
-      "id": "src_sdk_api_error_notice_detailvalue",
-      "label": "detailValue()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "detailvalue()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L100"
-    },
-    {
-      "id": "src_sdk_api_error_notice_el",
-      "label": "el()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "el()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L49"
-    },
-    {
-      "id": "src_sdk_api_error_notice_hydrateapierrornotices",
-      "label": "hydrateApiErrorNotices()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "hydrateapierrornotices()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L195"
-    },
-    {
-      "id": "src_sdk_api_error_notice_mountapierrornotice",
-      "label": "mountApiErrorNotice()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "mountapierrornotice()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L184"
-    },
-    {
-      "id": "src_sdk_api_error_notice_renderapierrornotice",
-      "label": "renderApiErrorNotice()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "renderapierrornotice()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L107"
-    },
-    {
-      "id": "src_sdk_api_error_notice_row",
-      "label": "row()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "row()",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L73"
-    },
-    {
-      "id": "src_sdk_api_error_raw_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/sdk/api-error.ts",
-      "source_location": "L162"
-    },
-    {
-      "id": "src_sdk_i18n_translator_has",
-      "label": ".has()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": ".has()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L237"
-    },
-    {
-      "id": "src_sdk_i18n_translator_maybe",
-      "label": ".maybe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": ".maybe()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L236"
-    },
-    {
-      "id": "src_sdk_i18n_translator_t",
-      "label": ".t()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": ".t()",
-      "source_file": "src/sdk/i18n.ts",
-      "source_location": "L234"
+      "norm_label": "getstatushexcolor()",
+      "source_file": "src/sdk/status-colors.ts",
+      "source_location": "L12"
     },
     {
       "id": "src_sdk_html_esc",
@@ -1668,7 +1645,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": ".delete()",
       "source_file": "src/sdk/api-client.ts",
@@ -1680,7 +1657,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": ".get()",
       "source_file": "src/sdk/api-client.ts",
@@ -1692,7 +1669,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": ".patch()",
       "source_file": "src/sdk/api-client.ts",
@@ -1704,7 +1681,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": ".post()",
       "source_file": "src/sdk/api-client.ts",
@@ -1716,7 +1693,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": ".put()",
       "source_file": "src/sdk/api-client.ts",
@@ -1728,7 +1705,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": ".request()",
       "source_file": "src/sdk/api-client.ts",
@@ -1740,7 +1717,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": ".constructor()",
       "source_file": "src/sdk/api-client.ts",
@@ -1752,7 +1729,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "createapiclient()",
       "source_file": "src/sdk/api-client.ts",
@@ -1764,7 +1741,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "json()",
       "source_file": "src/sdk/api-client.ts",
@@ -1776,7 +1753,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "request()",
       "source_file": "src/sdk/api-client.ts",
@@ -1788,11 +1765,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "errorfromresponse()",
       "source_file": "src/sdk/api-client.ts",
       "source_location": "L25"
+    },
+    {
+      "id": "src_sdk_api_error_formatapierror",
+      "label": "formatApiError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "api-client.ts",
+      "file_type": "code",
+      "norm_label": "formatapierror()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L291"
     },
     {
       "id": "src_sdk_agreement_sig_agreementcanonical",
@@ -2021,6 +2010,18 @@
       "norm_label": "fixture()",
       "source_file": "test/agreement-sig.test.ts",
       "source_location": "L12"
+    },
+    {
+      "id": "src_sdk_api_error_shortid",
+      "label": "shortId()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "canton-id-view.ts",
+      "file_type": "code",
+      "norm_label": "shortid()",
+      "source_file": "src/sdk/api-error.ts",
+      "source_location": "L126"
     },
     {
       "id": "src_sdk_canton_id_classifycantonid",
@@ -2299,6 +2300,18 @@
       "source_location": "L20"
     },
     {
+      "id": "src_sdk_i18n_formatmessage",
+      "label": "formatMessage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "Parser",
+      "file_type": "code",
+      "norm_label": "formatmessage()",
+      "source_file": "src/sdk/i18n.ts",
+      "source_location": "L173"
+    },
+    {
       "id": "src_sdk_i18n_messageparams",
       "label": "messageParams()",
       "_callable": true,
@@ -2407,6 +2420,17 @@
       "source_location": "L85"
     },
     {
+      "id": "src_components_apierrornotice",
+      "label": "ApiErrorNotice.astro",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "apierrornotice.astro",
+      "source_file": "src/components/ApiErrorNotice.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_sdk_api_error",
       "label": "api-error.ts",
       "_origin": "ast",
@@ -2473,6 +2497,39 @@
       "source_location": "L66"
     },
     {
+      "id": "src_sdk_api_error_notice",
+      "label": "api-error-notice.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "api-error-notice.ts",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sdk_api_error_notice_tone",
+      "label": "TONE",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "tone",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L31"
+    },
+    {
+      "id": "src_sdk_api_error_notice_transient",
+      "label": "TRANSIENT",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "transient",
+      "source_file": "src/sdk/api-error-notice.ts",
+      "source_location": "L30"
+    },
+    {
       "id": "src_sdk_api_error_paragraph_separator",
       "label": "PARAGRAPH_SEPARATOR",
       "_origin": "ast",
@@ -2493,6 +2550,39 @@
       "norm_label": "status_text",
       "source_file": "src/sdk/api-error.ts",
       "source_location": "L214"
+    },
+    {
+      "id": "test_api_error_notice_test",
+      "label": "api-error-notice.test.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "api-error-notice.test.ts",
+      "source_file": "test/api-error-notice.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_api_error_notice_test_full",
+      "label": "full",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "full",
+      "source_file": "test/api-error-notice.test.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "test_api_error_notice_test_signature",
+      "label": "signature",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "api-error.ts",
+      "file_type": "code",
+      "norm_label": "signature",
+      "source_file": "test/api-error-notice.test.ts",
+      "source_location": "L9"
     },
     {
       "id": "test_api_error_test",
@@ -2682,6 +2772,17 @@
       "source_location": "L9"
     },
     {
+      "id": "src_sdk_dialogs",
+      "label": "dialogs.ts",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "dialogs.ts",
+      "source_file": "src/sdk/dialogs.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_sdk_i18n",
       "label": "i18n.ts",
       "_origin": "ast",
@@ -2746,6 +2847,17 @@
       "norm_label": "pluralrules",
       "source_file": "src/sdk/i18n.ts",
       "source_location": "L138"
+    },
+    {
+      "id": "test_dialogs_test",
+      "label": "dialogs.test.ts",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "i18n.ts",
+      "file_type": "code",
+      "norm_label": "dialogs.test.ts",
+      "source_file": "test/dialogs.test.ts",
+      "source_location": "L1"
     },
     {
       "id": "test_i18n_test",
@@ -3142,105 +3254,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_sdk_dialogs",
-      "label": "dialogs.ts",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "dialogs.ts",
-      "source_file": "src/sdk/dialogs.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_dialogs_test",
-      "label": "dialogs.test.ts",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "dialogs.ts",
-      "file_type": "code",
-      "norm_label": "dialogs.test.ts",
-      "source_file": "test/dialogs.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apierrornotice",
-      "label": "ApiErrorNotice.astro",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "apierrornotice.astro",
-      "source_file": "src/components/ApiErrorNotice.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_sdk_api_error_notice",
-      "label": "api-error-notice.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "api-error-notice.ts",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_sdk_api_error_notice_tone",
-      "label": "TONE",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "tone",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L31"
-    },
-    {
-      "id": "src_sdk_api_error_notice_transient",
-      "label": "TRANSIENT",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "transient",
-      "source_file": "src/sdk/api-error-notice.ts",
-      "source_location": "L30"
-    },
-    {
-      "id": "test_api_error_notice_test",
-      "label": "api-error-notice.test.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "api-error-notice.test.ts",
-      "source_file": "test/api-error-notice.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_api_error_notice_test_full",
-      "label": "full",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "full",
-      "source_file": "test/api-error-notice.test.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "test_api_error_notice_test_signature",
-      "label": "signature",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "api-error-notice.ts",
-      "file_type": "code",
-      "norm_label": "signature",
-      "source_file": "test/api-error-notice.test.ts",
-      "source_location": "L9"
-    },
-    {
       "id": "src_sdk_html",
       "label": "html.ts",
       "_origin": "ast",
@@ -3350,17 +3363,6 @@
       "norm_label": "index.ts",
       "source_file": "index.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "ref_astro",
-      "label": "astro",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Product CX Commons Platform (`@vdatacloud/cx-commons`)",
-      "file_type": "concept",
-      "norm_label": "astro",
-      "source_file": "package.json",
-      "source_location": "L38"
     },
     {
       "id": "docs_architecture",
@@ -3771,18 +3773,6 @@
       "source_location": "L27"
     },
     {
-      "id": "readme_4_architecture_package_exports",
-      "label": "4. Architecture & Package Exports",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Product CX Commons Platform (`@vdatacloud/cx-commons`)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. architecture & package exports",
-      "source_file": "README.md",
-      "source_location": "L36"
-    },
-    {
       "id": "readme_5_quick_start_integration_guide",
       "label": "5. Quick Start & Integration Guide",
       "_origin": "ast",
@@ -3804,7 +3794,7 @@
       "node_kind": "heading",
       "norm_label": "6. developer documentation index",
       "source_file": "README.md",
-      "source_location": "L206"
+      "source_location": "L224"
     },
     {
       "id": "readme_7_license",
@@ -3816,19 +3806,7 @@
       "node_kind": "heading",
       "norm_label": "7. license",
       "source_file": "README.md",
-      "source_location": "L217"
-    },
-    {
-      "id": "readme_canonical_api_errors_sdk_api_error_sdk_api_error_notice_components_apierrornotice",
-      "label": "Canonical API errors (`sdk/api-error`, `sdk/api-error-notice`, `components/ApiErrorNotice`)",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Product CX Commons Platform (`@vdatacloud/cx-commons`)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "canonical api errors (`sdk/api-error`, `sdk/api-error-notice`, `components/apierrornotice`)",
-      "source_file": "README.md",
-      "source_location": "L49"
+      "source_location": "L235"
     },
     {
       "id": "readme_product_cx_commons_platform_vdatacloud_cx_commons",
@@ -3883,7 +3861,7 @@
       "label": "api-client.ts",
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "api-client.ts",
       "source_file": "src/sdk/api-client.ts",
@@ -3894,7 +3872,7 @@
       "label": "api-client.test.ts",
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "api-client.test.ts",
       "source_file": "test/api-client.test.ts",
@@ -3905,22 +3883,11 @@
       "label": "envelope",
       "_origin": "ast",
       "community": 20,
-      "community_name": "vitest",
+      "community_name": "api-client.ts",
       "file_type": "code",
       "norm_label": "envelope",
       "source_file": "test/api-client.test.ts",
       "source_location": "L4"
-    },
-    {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 20,
-      "community_name": "vitest",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L46"
     },
     {
       "id": "package",
@@ -4341,6 +4308,50 @@
       "source_location": "L3"
     },
     {
+      "id": "src_components_appshell",
+      "label": "AppShell.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "appshell.astro",
+      "source_file": "src/components/AppShell.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_app_shell_test",
+      "label": "app-shell.test.ts",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "app-shell.test.ts",
+      "source_file": "test/app-shell.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "vitest_config",
+      "label": "vitest.config.ts",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "vitest.config.ts",
+      "source_file": "vitest.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_astro",
+      "label": "astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "astro",
+      "source_file": "package.json",
+      "source_location": "L38"
+    },
+    {
       "id": "ref_happy_dom",
       "label": "happy-dom",
       "_origin": "ast",
@@ -4383,6 +4394,17 @@
       "norm_label": "typescript",
       "source_file": "package.json",
       "source_location": "L45"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
     },
     {
       "id": "src_sdk_agreement_sig",
@@ -4608,6 +4630,30 @@
       "norm_label": "usage example",
       "source_file": "docs/COMPONENTS.md",
       "source_location": "L195"
+    },
+    {
+      "id": "readme_4_architecture_package_exports",
+      "label": "4. Architecture & Package Exports",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "canton-id-view.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. architecture & package exports",
+      "source_file": "README.md",
+      "source_location": "L36"
+    },
+    {
+      "id": "readme_canonical_api_errors_sdk_api_error_sdk_api_error_notice_components_apierrornotice",
+      "label": "Canonical API errors (`sdk/api-error`, `sdk/api-error-notice`, `components/ApiErrorNotice`)",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "canton-id-view.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "canonical api errors (`sdk/api-error`, `sdk/api-error-notice`, `components/apierrornotice`)",
+      "source_file": "README.md",
+      "source_location": "L49"
     },
     {
       "id": "readme_canton_ids_sdk_canton_id_sdk_canton_id_view_components_cantonid",
@@ -5100,8 +5146,8 @@
       "id": "ref_node_fs",
       "label": "ref_node_fs",
       "_origin": "semantic",
-      "community": 4,
-      "community_name": "agreement-sig.ts",
+      "community": 0,
+      "community_name": "api-error.ts",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_node_fs",
@@ -5112,8 +5158,8 @@
       "id": "ref_node_path",
       "label": "ref_node_path",
       "_origin": "semantic",
-      "community": 4,
-      "community_name": "agreement-sig.ts",
+      "community": 0,
+      "community_name": "api-error.ts",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_node_path",
@@ -5123,6 +5169,7 @@
     {
       "id": "ref_node_crypto",
       "label": "ref_node_crypto",
+      "_origin": "semantic",
       "community": 19,
       "community_name": "oidc-pkce.ts",
       "external": true,
@@ -9577,6 +9624,42 @@
       "weight": 1.0
     },
     {
+      "source": "test_app_shell_test",
+      "target": "ref_astro",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/app-shell.test.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "test_app_shell_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/app-shell.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "test_app_shell_test",
+      "target": "src_components_appshell",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/app-shell.test.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "test_canton_id_test",
       "target": "ref_vitest",
       "relation": "imports_from",
@@ -9850,6 +9933,18 @@
       "context": "import",
       "source_file": "test/pending-approvals.test.ts",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "vitest_config",
+      "target": "ref_astro",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "vitest.config.ts",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -11159,7 +11254,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L206",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -11170,7 +11265,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L217",
+      "source_location": "L235",
       "weight": 1.0
     },
     {
@@ -11281,6 +11376,17 @@
       "confidence_score": 1.0,
       "source_file": "src/components/ApiErrorNotice.astro",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appshell",
+      "target": "src_components_appshell_props",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/AppShell.astro",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -13887,7 +13993,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L210",
+      "source_location": "L228",
       "weight": 1.0
     },
     {
@@ -13898,7 +14004,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L211",
+      "source_location": "L229",
       "weight": 1.0
     },
     {
@@ -13909,7 +14015,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L212",
+      "source_location": "L230",
       "weight": 1.0
     },
     {
@@ -13920,7 +14026,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L213",
+      "source_location": "L231",
       "weight": 1.0
     },
     {
@@ -14693,5 +14799,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0bdcb1b60e8c2d0ac68fd6f012f9ae46b0abf02b"
+  "built_at_commit": "4c8fff9b9de09b4a1bca92c7d8ace671ea02890b"
 }
