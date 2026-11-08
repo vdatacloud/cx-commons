@@ -201,6 +201,24 @@ const { title } = Astro.props;
 </html>
 ```
 
+For a signed-in app (the escrow portal, the operator console), `components/AppShell` is the whole frame: head,
+sticky header with the mark and name, main column and footer. The app fills the slots:
+
+```astro
+---
+import AppShell from '@vdatacloud/cx-commons/components/AppShell';
+---
+<AppShell title={title} brandName="Operator console" brandTitle="Platform operator console">
+  <div slot="nav">…navigation, sign-in, language…</div>
+  <slot />
+  <Footer slot="footer" />
+</AppShell>
+<script>/* the app's own header behavior */</script>
+```
+
+Slots: `head` (extra head tags), `nav` (right of the name), `below-nav` (under the header row), the default
+(page) and `footer`.
+
 ---
 
 ## 6. Developer Documentation Index
