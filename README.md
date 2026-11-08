@@ -42,7 +42,7 @@ This repository publishes `@vdatacloud/cx-commons` with modular export entry poi
  ├── (default)                 --> exports index.ts (Astro integration plugin `cxCommons()`)
  ├── /styles/global.css        --> exports canonical LNF design system tokens & Tailwind rules
  ├── /components/*             --> exports shared Astro UI components (Nav, Footer, StatusBadge, EyebrowLabel, ApiErrorNotice, CantonId, LanguageSwitcher)
- ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, dialogs, api-error, api-error-notice, canton-id, canton-id-view, agreement-sig, pending-approvals, status-colors)
+ ├── /sdk/*                    --> exports browser SDK helpers (i18n, cx-messages, dialogs, api-error, api-error-notice, canton-id, canton-id-view, agreement-sig, pending-approvals, status-colors, oidc-pkce, api-client, html)
  └── /schema/api-error.json    --> the canonical API error JSON Schema
 ```
 
@@ -99,6 +99,19 @@ One worklist for acts waiting on several people's approval, whatever the act (da
 An act that isn't a proposal (daml-escrow PLAN.md Phase 92.5: a staged release its approvers approve, a compliance review's outcome) leaves `proposedBy` out and passes its own `actions` (`{ id, label, tone?, reason?: 'required' | 'optional' | 'none', confirm?, approved? }`) in place of approve / reject / withdraw: each confirms, asks for a reason as it says, then calls `onAction(item, actionId, reason)`. Someone who has approved is offered only the actions marked `approved: true` (e.g. revoking their approval), which nobody else sees (`actionsFor`).
 
 ---
+
+### Sign-in, API calls and markup (`sdk/oidc-pkce`, `sdk/api-client`, `sdk/html`)
+
+Shared by the escrow portal and the operator console (daml-escrow PLAN.md Phase 104).
+
+- `sdk/oidc-pkce`: Authorization Code + PKCE against Okta or the dev issuer (daml-escrow-commons `devoidc`):
+  `startAuthorization` (stores verifier, state, issuer, client; returns the authorize URL), `validateState` (one use),
+  `exchangeCode`; `tokenScopes`, `tokenExpirySeconds`, `tokenClaims` for display only (servers enforce from the
+  verified token). Which scopes to ask for and the app's session store stay in the app.
+- `sdk/api-client`: `createApiClient({ baseUrl, token, onError })` sends the bearer token and JSON, and throws
+  `ApiRequestError` (the parsed envelope, for `ApiErrorNotice`) on any refusal; `errorFromResponse` for apps that call
+  `fetch` themselves.
+- `sdk/html`: `esc` for every value interpolated into markup built as a string, `fragment` to turn it into nodes.
 
 ### Internationalization (`sdk/i18n`, `sdk/cx-messages`)
 
